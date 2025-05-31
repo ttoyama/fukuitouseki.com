@@ -27,4 +27,4 @@
 （詳細は後で追加）
 
 ---
-[← 前：第2段階](02-facility-response.md) | [目次](index.md) | [次：復旧段階 →](04-recovery.md)
+[← 前：第2段階](02-facility-response.md) | [目次](index.md)
