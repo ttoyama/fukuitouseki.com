@@ -1,2 +1,12 @@
-# fukuitouseki.com
-透析患者のための防災マニュアル / Disaster Preparedness Manual for Dialysis Patients
+# 透析防災マニュアル
+
+## 概要
+透析患者とその家族のための災害時対応マニュアルです。
+
+## 目的
+- 災害時の透析継続方法
+- 緊急時の対応手順
+- 必要な準備品リスト
+
+## 状況
+現在作成中です。完成次第、fukuitouseki.com で公開予定です。
