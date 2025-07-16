@@ -3,7 +3,7 @@
 ## 概要
 福井県透析施設ネットワーク（事務局：福井大学医学部附属病院）において、災害時対策マニュアルを整備しており、このマニュアルに基づき、災害発生時の施設間相互の連携を図り、スムーズな受入体制を確保しています。<BR>
 《福井県内透析施設一覧》<BR>
-<img width="1173" height="544" alt="image" src="https://github.com/user-attachments/assets/1f3c6999-1ff8-4ec6-aacf-6f7104e96f25" />
+<img width="1170" height="542" alt="image" src="https://github.com/user-attachments/assets/0a4ed43d-b02f-46fb-a341-4e7a97ad2ee0" />
 
 ## 主要項目
 
