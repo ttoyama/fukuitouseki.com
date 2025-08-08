@@ -8,63 +8,63 @@
 他都道府県の災害時透析医療に関するマニュアルや資料を都道府県別に整理しています。
 
 #### 三重県
-- **ファイル名**: `001087168.pdf`
+- **ファイル名**: `mie_saigai_touseki_manual_20250808.pdf`
 - **内容**: 三重県の災害時透析医療対応マニュアル
 - **出典**: 三重県
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 #### 埼玉県
-- **ファイル名**: `saigaijitousekimanyuaru.pdf`
+- **ファイル名**: `saitama_saigai_touseki_manual_20250808.pdf`
 - **内容**: 埼玉県災害時透析マニュアル
 - **出典**: 埼玉県
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 #### 大阪府
-- **ファイル名**: `manual_ver1.pdf`
+- **ファイル名**: `osaka_saigai_touseki_manual_v1_20250808.pdf`
 - **内容**: 大阪府の災害時透析医療対応マニュアル
 - **出典**: 大阪府
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 #### 新潟県
-- **ファイル名**: `dialysis_accident_manual.pdf`
+- **ファイル名**: `niigata_dialysis_accident_manual_20250808.pdf`
 - **内容**: 新潟県透析事故対応マニュアル
 - **出典**: 新潟県
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 #### 東京都
 - **ファイル名**: 
-  - `r0602_torikumizirei.pdf` - 取り組み事例資料
-  - `r305_saigaitousekimanual_1_mokuji.pdf` - 災害時透析マニュアル（目次）
-  - `r305_saigaitousekimanual_2_1syou.pdf` - 災害時透析マニュアル（第1章）
-  - `r305_saigaitousekimanual_3_2syou.pdf` - 災害時透析マニュアル（第2章）
-  - `r305_saigaitousekimanual_4_3syou.pdf` - 災害時透析マニュアル（第3章）
-  - `r305_saigaitousekimanual_5_shiryou.pdf` - 災害時透析マニュアル（資料）
-  - `saigai_touseki-card0602.pdf` - 災害時透析カード
-  - `令和7年4月15日現在　都区部・三多摩ブロック長・副ブロック長リスト.pdf` - ブロック長リスト
+  - `tokyo_torikumi_jirei_20250808.pdf` - 取り組み事例資料
+  - `tokyo_saigai_touseki_manual_mokuji_20250808.pdf` - 災害時透析マニュアル（目次）
+  - `tokyo_saigai_touseki_manual_1sho_20250808.pdf` - 災害時透析マニュアル（第1章）
+  - `tokyo_saigai_touseki_manual_2sho_20250808.pdf` - 災害時透析マニュアル（第2章）
+  - `tokyo_saigai_touseki_manual_3sho_20250808.pdf` - 災害時透析マニュアル（第3章）
+  - `tokyo_saigai_touseki_manual_shiryou_20250808.pdf` - 災害時透析マニュアル（資料）
+  - `tokyo_saigai_touseki_card_20250808.pdf` - 災害時透析カード
+  - `tokyo_block_leader_list_r7_20250808.pdf` - ブロック長リスト
 - **内容**: 東京都の災害時透析医療対応マニュアル一式
 - **出典**: 東京都
-- **取得日**: 2024年頃
+- **取得日**: 2025-08-08
 
 #### 神奈川県
-- **ファイル名**: `saigaiji-tousekikanjya-shienmanual.pdf`
+- **ファイル名**: `kanagawa_saigai_touseki_shien_manual_20250808.pdf`
 - **内容**: 神奈川県災害時透析患者支援マニュアル
 - **出典**: 神奈川県
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 #### 静岡県
-- **ファイル名**: `全国自治体における災害時透析患者対応マニュアルの体系まとめ.pdf`
+- **ファイル名**: `shizuoka_zenkoku_saigai_touseki_taikei_matome_20250808.pdf`
 - **内容**: 全国自治体の災害時透析患者対応マニュアルの体系的まとめ
 - **出典**: 静岡県関連機関
-- **取得日**: 不明
+- **取得日**: 2025-08-08
 
 ### 全腎協マニュアル
 全国腎臓病協議会（全腎協）の災害時透析関連資料を格納しています。
 
 #### 全腎協資料
-- **ファイル名**: `20191025-165746-5185.pdf`
+- **ファイル名**: `zenjinkyo_saigai_touseki_shiryou_20250808.pdf`
 - **内容**: 全腎協の災害時透析対応関連資料
 - **出典**: 全国腎臓病協議会
-- **取得日**: 2019年10月25日頃
+- **取得日**: 2025-08-08
 
 ## 利用方法
 
