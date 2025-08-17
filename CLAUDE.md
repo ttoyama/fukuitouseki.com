@@ -52,6 +52,14 @@ Note: No Gemfile was found in the current repository structure, so Jekyll may ne
 - Target audience includes medical professionals, patients, families, and administrators
 - Content should be practical and actionable for disaster scenarios
 
+## Git Commit Guidelines
+
+When working with this Japanese content repository:
+
+- **Commit messages**: Write commit messages and comments in Japanese when adding or modifying Japanese content, templates, or documentation
+- **Example**: Instead of "Add initial response templates", use "初動対応用の様式テンプレートを追加"
+- **Rationale**: Since this is a Japanese disaster response manual for Japanese medical professionals, commit messages in Japanese provide better context and accessibility for the intended audience
+
 ## File Locations
 
 - Site configuration: `fukuitouseki.com/_config.yml`
