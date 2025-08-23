@@ -4,10 +4,10 @@
 
 ### マニュアル構成
 - [マニュアル概要](docs/index.md)
-- [第0段階：平時の準備](docs/00-preparation.md)
-- [第1段階：初動対応](docs/01-initial-response.md)
-- [第2段階：施設別対応](docs/02-facility-response.md)
-- [第3段階：ネットワーク調整](docs/03-network-coordination.md)
+- [第0段階：平時の準備](docs/00-平時の準備.md)
+- [第1段階：初動対応](docs/01-初動対応.md)
+- [第2段階：施設別対応](docs/02-施設別対応.md)
+- [第3段階：ネットワーク調整](docs/03-ネットワーク調整.md)
 
 ## 概要
 透析患者とその家族のための災害時対応マニュアルです。

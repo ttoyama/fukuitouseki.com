@@ -17,15 +17,9 @@ else
     echo "プロキシ設定をスキップします"
 fi
 
-echo "GitHubリポジトリを開きますか？ (y/n)"
-read -r github_response
-if [[ $github_response == "y" || $github_response == "Y" ]]; then
-    open https://github.com/ttoyama/fukuitouseki.com
-fi
+echo "GitHubリポジトリをバックグラウンドで開いています..."
+open -g https://github.com/ttoyama/fukuitouseki.com
 
-echo "Claudeを起動しますか？ (y/n)"
-read -r response
-if [[ $response == "y" || $response == "Y" ]]; then
-    claude
-fi
+echo "Claude Codeを起動します..."
+claude
 exec bash
