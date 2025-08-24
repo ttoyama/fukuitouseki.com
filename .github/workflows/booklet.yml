@@ -50,9 +50,14 @@ jobs:
           mkdir -p pdfs
           xargs -0 pandoc \
             --pdf-engine=xelatex \
-            --metadata-file=book/metadata.yaml \
-            --include-in-header=book/fonts.tex \
-            --include-in-header=book/header.tex \
+            --toc \
+            --toc-depth=2 \
+            --number-sections \
+            -V lang=ja \
+            -V geometry:margin=20mm \
+            -V documentclass=article \
+            -V title="災害時透析医療オペレーション手引き" \
+            -V author="福井透析ネットワーク本部" \
             -o pdfs/fukuitouseki_booklet.pdf < order.nul
           ls -lah pdfs
 
