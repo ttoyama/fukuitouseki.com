@@ -58,17 +58,15 @@ jobs:
             head -3 "$file" || echo "Failed to read: $file"
           done < .bookorder.with_cover
           
-      - name: Test single file first
-        run: |
-          echo "Testing single file pandoc..."
-          pandoc book/cover.md -o test_single.pdf --pdf-engine=xelatex || echo "Single file test failed"
-          
-      - name: Build booklet (Pandoc → XeLaTeX)
+      - name: Build complete booklet (Pandoc → XeLaTeX)
         run: |
           mkdir -p pdfs
-          # Test with just two files first
-          echo "Testing with cover and first doc..."
-          pandoc book/cover.md "docs/00-平時の準備.md" \
+          # Create file list for pandoc (space-separated)
+          files=$(cat .bookorder.with_cover | tr '\n' ' ')
+          echo "Processing all files: $files"
+          
+          # Use pandoc with all files
+          pandoc $files \
             --pdf-engine=xelatex \
             --toc \
             --toc-depth=2 \
@@ -79,7 +77,7 @@ jobs:
             -V documentclass=article \
             -V title="災害時透析医療オペレーション手引き" \
             -V author="福井透析ネットワーク本部" \
-            -o pdfs/fukuitouseki_booklet.pdf || echo "Two file test failed"
+            -o pdfs/fukuitouseki_booklet.pdf
           ls -lah pdfs
 
       - name: Upload artifact
