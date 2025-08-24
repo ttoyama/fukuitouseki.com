@@ -1,10 +1,11 @@
 ---
-title: "災害時透析医療オペレーション手引き"
-author: "福井透析ネットワーク本部"
+title: 災害時透析医療オペレーション手引き
+author: 福井透析ネットワーク本部
 lang: ja
 toc: true
 toc-depth: 2
 geometry: margin=20mm
-documentclass: bxjsbook
+documentclass: article
 colorlinks: true
 linkcolor: blue
+---
