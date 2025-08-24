@@ -1,0 +1,67 @@
+name: Build booklet PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.bookorder'
+      - '**/*.md'
+      - 'book/**'
+      - '.github/workflows/booklet.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc & TeX & fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
+            texlive-fonts-recommended texlive-lang-cjk fonts-noto-cjk
+
+      - name: Prepare ordered list
+        id: order
+        run: |
+          # コメント・空行を除去
+          grep -v '^\s*#' .bookorder | sed '/^\s*$/d' > .bookorder.clean
+          # 表紙を先頭に差し込む（存在すれば）
+          if [ -f book/cover.md ]; then
+            printf 'book/cover.md\n' | cat - .bookorder.clean > .bookorder.with_cover
+          else
+            cp .bookorder.clean .bookorder.with_cover
+          fi
+          # 存在チェック
+          missing=0
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            if [ ! -f "$f" ]; then
+              echo "::error file=.bookorder::指定ファイルが見つかりません: $f"
+              missing=1
+            fi
+          done < .bookorder.with_cover
+          [ $missing -eq 0 ] || exit 1
+          tr '\n' '\0' < .bookorder.with_cover > order.nul
+
+      - name: Build booklet (Pandoc → XeLaTeX)
+        run: |
+          mkdir -p pdfs
+          xargs -0 pandoc \
+            --pdf-engine=xelatex \
+            --toc --toc-depth=2 \
+            --number-sections \
+            -V geometry:margin=20mm \
+            -V documentclass=bxjsbook \
+            --metadata-file=book/metadata.yaml \
+            --include-in-header=book/fonts.tex \
+            --include-in-header=book/header.tex \
+            -o pdfs/fukuitouseki_booklet.pdf < order.nul
+          ls -lah pdfs
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: booklet-pdf
+          path: pdfs/fukuitouseki_booklet.pdf
