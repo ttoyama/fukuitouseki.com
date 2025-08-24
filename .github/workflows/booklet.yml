@@ -50,7 +50,13 @@ jobs:
           echo "=== File order debug ==="
           cat .bookorder.with_cover
           echo "=== First file content check ==="
-          head -5 "$(head -1 .bookorder.with_cover)"
+          head -10 "$(head -1 .bookorder.with_cover)"
+          echo "=== All files content check ==="
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            echo "=== Content of: $file ==="
+            head -3 "$file" || echo "Failed to read: $file"
+          done < .bookorder.with_cover
           
       - name: Build booklet (Pandoc → XeLaTeX)
         run: |
