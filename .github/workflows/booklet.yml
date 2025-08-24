@@ -50,10 +50,6 @@ jobs:
           mkdir -p pdfs
           xargs -0 pandoc \
             --pdf-engine=xelatex \
-            --toc --toc-depth=2 \
-            --number-sections \
-            -V geometry:margin=20mm \
-            -V documentclass=bxjsbook \
             --metadata-file=book/metadata.yaml \
             --include-in-header=book/fonts.tex \
             --include-in-header=book/header.tex \
