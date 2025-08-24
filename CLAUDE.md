@@ -66,3 +66,70 @@ When working with this Japanese content repository:
 - Main content: `fukuitouseki.com/docs/*.md`
 - Site index: `fukuitouseki.com/index.md`
 - Project overview: `fukuitouseki.com/README.md`
+
+## PDF Generation with Pandoc
+
+This repository includes automated PDF generation via GitHub Actions (`.github/workflows/booklet.yml`). The following lessons learned should be considered for future maintenance:
+
+### Common Pandoc + YAML Issues and Solutions
+
+**Root Cause of Previous PDF Generation Failures:**
+
+1. **YAML Frontmatter Conflicts**
+   - **Problem**: Multiple Markdown files with individual YAML frontmatters cause conflicts when combined by Pandoc
+   - **Error**: `YAML parse exception at line 1, column 9: did not find expected <document start>`
+   - **Solution**: Strip individual YAML frontmatters and use a single unified YAML header
+
+2. **Missing YAML Frontmatter**
+   - **Problem**: Markdown files starting directly with content (e.g., `# 第0段階：平時の準備`) without YAML frontmatter
+   - **Pandoc behavior**: Interprets first line as malformed YAML
+   - **Solution**: Add proper YAML frontmatter to all files:
+     ```yaml
+     ---
+     title: "Document Title"
+     ---
+     ```
+
+3. **Japanese Filenames in Command Line**
+   - **Problem**: Files like `docs/00-平時の準備.md` may not be processed correctly in shell commands
+   - **Solution**: Always quote filenames: `"docs/00-平時の準備.md"`
+
+4. **xargs Compatibility Issues**
+   - **Problem**: `xargs -0 pandoc` command parsing issues with multiple files
+   - **Solution**: Use direct pandoc command with explicit file list or file combination approach
+
+### Working PDF Generation Approach
+
+The current successful method combines files before Pandoc processing:
+
+```bash
+# Create unified YAML header
+echo "---" > combined.md
+echo "title: 災害時透析医療オペレーション手引き" >> combined.md
+echo "author: 福井透析ネットワーク本部" >> combined.md
+echo "lang: ja" >> combined.md
+echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
+# ... additional metadata
+
+# Combine files, stripping individual YAML frontmatters
+for file in [file_list]; do
+  echo "\\newpage" >> combined.md
+  sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
+done
+
+# Generate PDF from single combined file
+pandoc combined.md --pdf-engine=xelatex --toc --number-sections -o output.pdf
+```
+
+### File Requirements for PDF Generation
+
+All Markdown files intended for PDF inclusion must have:
+- Proper YAML frontmatter with `---` delimiters
+- UTF-8 encoding for Japanese content
+- Consistent heading structure for TOC generation
+
+### Font Configuration for Japanese Content
+
+- **Engine**: XeLaTeX (required for CJK font support)
+- **Font**: `CJKmainfont: 'Noto Sans CJK JP'` (available in GitHub Actions Ubuntu environment)
+- **Language**: `lang: ja` for proper document formatting
