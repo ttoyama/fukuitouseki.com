@@ -61,20 +61,23 @@ jobs:
       - name: Build booklet (Pandoc → XeLaTeX)
         run: |
           mkdir -p pdfs
-          # Set locale for Japanese support
-          export LANG=ja_JP.UTF-8
-          export LC_ALL=ja_JP.UTF-8
-          xargs -0 pandoc \
+          # Create file list for pandoc (space-separated)
+          files=$(cat .bookorder.with_cover | tr '\n' ' ')
+          echo "Files to process: $files"
+          
+          # Use pandoc directly with file list
+          pandoc $files \
             --pdf-engine=xelatex \
             --toc \
             --toc-depth=2 \
             --number-sections \
             -V lang=ja \
+            -V CJKmainfont="Noto Sans CJK JP" \
             -V geometry:margin=20mm \
             -V documentclass=article \
             -V title="災害時透析医療オペレーション手引き" \
             -V author="福井透析ネットワーク本部" \
-            -o pdfs/fukuitouseki_booklet.pdf < order.nul
+            -o pdfs/fukuitouseki_booklet.pdf
           ls -lah pdfs
 
       - name: Upload artifact
