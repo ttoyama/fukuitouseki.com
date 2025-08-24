@@ -45,9 +45,19 @@ jobs:
           [ $missing -eq 0 ] || exit 1
           tr '\n' '\0' < .bookorder.with_cover > order.nul
 
+      - name: Debug file order
+        run: |
+          echo "=== File order debug ==="
+          cat .bookorder.with_cover
+          echo "=== First file content check ==="
+          head -5 "$(head -1 .bookorder.with_cover)"
+          
       - name: Build booklet (Pandoc → XeLaTeX)
         run: |
           mkdir -p pdfs
+          # Set locale for Japanese support
+          export LANG=ja_JP.UTF-8
+          export LC_ALL=ja_JP.UTF-8
           xargs -0 pandoc \
             --pdf-engine=xelatex \
             --toc \
