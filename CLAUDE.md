@@ -1,135 +1,136 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+このファイルは、このリポジトリでClaude Code (claude.ai/code) が作業する際のガイダンスを提供します。
 
-## Project Overview
+## プロジェクト概要
 
-This is a Jekyll-based disaster response manual website for dialysis patients in Fukui Prefecture, Japan. The site is designed to provide comprehensive disaster preparedness and response guidance for dialysis patients, their families, and medical professionals.
+これは福井県の透析患者向け災害対応マニュアルのJekyllベースのウェブサイトです。透析患者、その家族、医療従事者向けの包括的な災害準備・対応ガイダンスを提供するよう設計されています。
 
-## Site Structure and Content
+## サイト構造とコンテンツ
 
-The project is organized as a Jekyll static site with Japanese content:
+プロジェクトは日本語コンテンツを含むJekyll静的サイトとして構成されています：
 
-- **Main site**: `/fukuitouseki.com/` - Jekyll site root
-- **Documentation**: `/fukuitouseki.com/docs/` - Manual content organized in phases:
-  - `00-preparation.md` - Pre-disaster preparation
-  - `01-initial-response.md` - Initial disaster response  
-  - `02-facility-response.md` - Facility-specific responses
-  - `03-network-coordination.md` - Network coordination
-  - `index.md` - Manual table of contents
-- **References**: `/references/` - Reference materials from other prefectures
+- **メインサイト**: `/fukuitouseki.com/` - Jekyllサイトルート
+- **ドキュメント**: `/fukuitouseki.com/docs/` - 段階別に整理されたマニュアルコンテンツ:
+  - `00-平時の準備.md` - 災害前の準備
+  - `01-初動対応.md` - 初期災害対応  
+  - `02-施設別対応.md` - 施設別対応
+  - `03-ネットワーク調整.md` - ネットワーク調整
+  - `index.md` - マニュアル目次
+- **参考資料**: `/references/` - 他県からの参考資料
 
-## Jekyll Configuration
+## Jekyll設定
 
-The site uses Jekyll with the following key settings:
-- **Theme**: minima
-- **Language**: Japanese (ja)
-- **Timezone**: Asia/Tokyo
-- **Plugins**: jekyll-feed, jekyll-sitemap
+サイトは以下の主要設定でJekyllを使用しています：
+- **テーマ**: minima
+- **言語**: 日本語 (ja)
+- **タイムゾーン**: Asia/Tokyo
+- **プラグイン**: jekyll-feed, jekyll-sitemap
 - **Markdown**: kramdown with rouge highlighter
 
-## Development Commands
+## 開発コマンド
 
-Since this is a Jekyll site, typical commands would be:
+Jekyllサイトのため、一般的なコマンドは：
 ```bash
-# Install dependencies (if Gemfile exists)
+# 依存関係をインストール（Gemfileが存在する場合）
 bundle install
 
-# Serve locally
+# ローカルサーバー起動
 bundle exec jekyll serve
 
-# Build site
+# サイトビルド
 bundle exec jekyll build
 ```
 
-Note: No Gemfile was found in the current repository structure, so Jekyll may need to be set up if local development is required.
+注：現在のリポジトリ構造にはGemfileが見つからないため、ローカル開発が必要な場合はJekyllのセットアップが必要かもしれません。
 
-## Content Guidelines
+## コンテンツガイドライン
 
-- All content is in Japanese
-- Focus on disaster preparedness for dialysis patients
-- Organized in a phase-based response structure (0-3 stages)
-- Target audience includes medical professionals, patients, families, and administrators
-- Content should be practical and actionable for disaster scenarios
+- 全コンテンツは日本語
+- 透析患者の災害準備に焦点
+- 段階別対応構造（0-3段階）で整理
+- 対象読者には医療従事者、患者、家族、管理者を含む
+- コンテンツは災害シナリオで実用的で行動可能であること
 
-## Git Commit Guidelines
+## コミュニケーションガイドライン
 
-When working with this Japanese content repository:
+この日本語災害対応マニュアルリポジトリで作業する際：
 
-- **Commit messages**: Write commit messages and comments in Japanese when adding or modifying Japanese content, templates, or documentation
-- **Example**: Instead of "Add initial response templates", use "初動対応用の様式テンプレートを追加"
-- **Rationale**: Since this is a Japanese disaster response manual for Japanese medical professionals, commit messages in Japanese provide better context and accessibility for the intended audience
+- **言語**: ユーザーの入力が英語か日本語かに関わらず、常に日本語で応答する
+- **コミットメッセージ**: 日本語コンテンツ、テンプレート、ドキュメントを追加・修正する際は、コミットメッセージとコメントを日本語で書く
+- **例**: "Add initial response templates" ではなく "初動対応用の様式テンプレートを追加" を使用
+- **理由**: これは日本の医療従事者向けの日本語災害対応マニュアルであるため、すべてのコミュニケーションを日本語で行うことで、対象読者により良いコンテキストとアクセシビリティを提供する
 
-## File Locations
+## ファイルの場所
 
-- Site configuration: `fukuitouseki.com/_config.yml`
-- Main content: `fukuitouseki.com/docs/*.md`
-- Site index: `fukuitouseki.com/index.md`
-- Project overview: `fukuitouseki.com/README.md`
+- サイト設定: `fukuitouseki.com/_config.yml`
+- メインコンテンツ: `fukuitouseki.com/docs/*.md`
+- サイトインデックス: `fukuitouseki.com/index.md`
+- プロジェクト概要: `fukuitouseki.com/README.md`
 
-## PDF Generation with Pandoc
+## PandocによるPDF生成
 
-This repository includes automated PDF generation via GitHub Actions (`.github/workflows/booklet.yml`). The following lessons learned should be considered for future maintenance:
+このリポジトリには、GitHub Actions（`.github/workflows/booklet.yml`）による自動PDF生成が含まれています。将来のメンテナンスのために考慮すべき学習事項は以下の通りです：
 
-### Common Pandoc + YAML Issues and Solutions
+### よくあるPandoc + YAML問題と解決策
 
-**Root Cause of Previous PDF Generation Failures:**
+**以前のPDF生成失敗の根本原因：**
 
-1. **YAML Frontmatter Conflicts**
-   - **Problem**: Multiple Markdown files with individual YAML frontmatters cause conflicts when combined by Pandoc
-   - **Error**: `YAML parse exception at line 1, column 9: did not find expected <document start>`
-   - **Solution**: Strip individual YAML frontmatters and use a single unified YAML header
+1. **YAMLフロントマターの競合**
+   - **問題**: 個別のYAMLフロントマターを持つ複数のMarkdownファイルをPandocで結合する際の競合
+   - **エラー**: `YAML parse exception at line 1, column 9: did not find expected <document start>`
+   - **解決策**: 個別のYAMLフロントマターを削除し、統一されたYAMLヘッダーを使用
 
-2. **Missing YAML Frontmatter**
-   - **Problem**: Markdown files starting directly with content (e.g., `# 第0段階：平時の準備`) without YAML frontmatter
-   - **Pandoc behavior**: Interprets first line as malformed YAML
-   - **Solution**: Add proper YAML frontmatter to all files:
+2. **YAMLフロントマターの不足**
+   - **問題**: YAMLフロントマターなしで直接コンテンツで始まるMarkdownファイル（例：`# 第0段階：平時の準備`）
+   - **Pandocの動作**: 最初の行を不正なYAMLとして解釈
+   - **解決策**: すべてのファイルに適切なYAMLフロントマターを追加：
      ```yaml
      ---
-     title: "Document Title"
+     title: "ドキュメントタイトル"
      ---
      ```
 
-3. **Japanese Filenames in Command Line**
-   - **Problem**: Files like `docs/00-平時の準備.md` may not be processed correctly in shell commands
-   - **Solution**: Always quote filenames: `"docs/00-平時の準備.md"`
+3. **コマンドラインでの日本語ファイル名**
+   - **問題**: `docs/00-平時の準備.md` のようなファイルがシェルコマンドで正しく処理されない場合
+   - **解決策**: 常にファイル名を引用符で囲む：`"docs/00-平時の準備.md"`
 
-4. **xargs Compatibility Issues**
-   - **Problem**: `xargs -0 pandoc` command parsing issues with multiple files
-   - **Solution**: Use direct pandoc command with explicit file list or file combination approach
+4. **xargs互換性問題**
+   - **問題**: 複数ファイルでの`xargs -0 pandoc`コマンド解析問題
+   - **解決策**: 明示的なファイルリストまたはファイル結合アプローチで直接pandocコマンドを使用
 
-### Working PDF Generation Approach
+### 動作するPDF生成アプローチ
 
-The current successful method combines files before Pandoc processing:
+現在の成功している方法は、Pandoc処理前にファイルを結合します：
 
 ```bash
-# Create unified YAML header
+# 統一YAMLヘッダーの作成
 echo "---" > combined.md
 echo "title: 災害時透析医療オペレーション手引き" >> combined.md
 echo "author: 福井透析ネットワーク本部" >> combined.md
 echo "lang: ja" >> combined.md
 echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
-# ... additional metadata
+# ... 追加メタデータ
 
-# Combine files, stripping individual YAML frontmatters
-for file in [file_list]; do
+# ファイルの結合、個別YAMLフロントマターを削除
+for file in [ファイルリスト]; do
   echo "\\newpage" >> combined.md
   sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
 done
 
-# Generate PDF from single combined file
+# 結合されたファイルからPDF生成
 pandoc combined.md --pdf-engine=xelatex --toc --number-sections -o output.pdf
 ```
 
-### File Requirements for PDF Generation
+### PDF生成のファイル要件
 
-All Markdown files intended for PDF inclusion must have:
-- Proper YAML frontmatter with `---` delimiters
-- UTF-8 encoding for Japanese content
-- Consistent heading structure for TOC generation
+PDF生成に含まれる予定のすべてのMarkdownファイルには以下が必要：
+- `---`区切り文字による適切なYAMLフロントマター
+- 日本語コンテンツ用のUTF-8エンコーディング
+- 目次生成のための一貫した見出し構造
 
-### Font Configuration for Japanese Content
+### 日本語コンテンツのフォント設定
 
-- **Engine**: XeLaTeX (required for CJK font support)
-- **Font**: `CJKmainfont: 'Noto Sans CJK JP'` (available in GitHub Actions Ubuntu environment)
-- **Language**: `lang: ja` for proper document formatting
+- **エンジン**: XeLaTeX（CJKフォントサポートに必要）
+- **フォント**: `CJKmainfont: 'Noto Sans CJK JP'`（GitHub Actions Ubuntuで利用可能）
+- **言語**: 適切なドキュメント書式設定のための`lang: ja`
