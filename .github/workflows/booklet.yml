@@ -8,7 +8,7 @@ on:
       - '**/*.md'
       - 'book/**'
       - '.github/workflows/booklet.yml'
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   build:
