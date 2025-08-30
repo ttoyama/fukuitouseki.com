@@ -8,7 +8,7 @@ on:
       - '**/*.md'
       - 'book/**'
       - '.github/workflows/booklet.yml'
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 jobs:
   build:
@@ -92,28 +92,19 @@ jobs:
           
           ls -lah pdfs
 
-      - name: Commit and push PDF to repository
+      - name: Commit PDF to repository
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Copy PDF to a permanent location in the repo
           mkdir -p booklet-pdf
           cp pdfs/fukuitouseki_booklet.pdf booklet-pdf/
-          
-          # Add and commit if there are changes
           git add booklet-pdf/fukuitouseki_booklet.pdf
           if ! git diff --staged --quiet; then
-            git commit -m "PDF生成完了: 災害時透析医療オペレーション手引き
-
-🤖 Generated with GitHub Actions"
+            git commit -m "PDF生成完了: 災害時透析医療オペレーション手引き"
             git push
-            echo "PDF committed and pushed to repository"
-          else
-            echo "No changes to commit"
           fi
 
-      - name: Upload artifact (backup)
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: booklet-pdf
