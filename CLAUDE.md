@@ -28,6 +28,21 @@
 - **プラグイン**: jekyll-feed, jekyll-sitemap
 - **Markdown**: kramdown with rouge highlighter
 
+## Claude Code設定
+
+このプロジェクトでは**Claude Sonnet**をデフォルトモデルとして使用します：
+
+```bash
+# デフォルトモデルをSonnetに設定
+/model sonnet
+```
+
+理由：
+- 日本語コンテンツの高品質な編集・翻訳能力
+- 医療・災害対応という専門分野での正確性
+- 長文マニュアルの一貫性維持
+- PDF生成ワークフローとの統合における安定性
+
 ## 開発コマンド
 
 Jekyllサイトのため、一般的なコマンドは：
