@@ -62,6 +62,23 @@ jobs:
         run: |
           mkdir -p pdfs
           
+          # 日付とバージョン管理のためのファイル名生成
+          DATE=$(date '+%Y%m%d')
+          PDF_BASE_NAME="fukuitouseki_booklet_${DATE}"
+          
+          # 同日に複数バージョンが存在する場合の対応
+          if [ -f "booklet-pdf/${PDF_BASE_NAME}.pdf" ]; then
+            VERSION=2
+            while [ -f "booklet-pdf/${PDF_BASE_NAME}-${VERSION}.pdf" ]; do
+              VERSION=$((VERSION + 1))
+            done
+            PDF_NAME="${PDF_BASE_NAME}-${VERSION}.pdf"
+          else
+            PDF_NAME="${PDF_BASE_NAME}.pdf"
+          fi
+          
+          echo "Generated PDF name: $PDF_NAME"
+          
           # Try a different approach - use cat to combine files first
           echo "---" > combined.md
           echo "title: 災害時透析医療オペレーション手引き" >> combined.md
@@ -76,7 +93,7 @@ jobs:
           echo "" >> combined.md
           
           # Combine all files, stripping individual YAML frontmatters
-          for file in book/cover.md "docs/00-平時の準備.md" "docs/01-施設の初動対応（発災直後）.md" "docs/02-施設の応急対応（発災〜2週間）.md" "docs/03-施設の中期対応（2週以降）.md" "docs/04-福井県透析施設ネットワークの役割と対応（全期間）.md" "docs/資料/資料_福井県内透析施設一覧.md" "docs/資料/資料_透析患者向け食品栄養成分表.md" "docs/資料/01-初動対応_様式01_災害時透析医療機関状況報告書_初動報告用.md" "docs/資料/01-初動対応_チェックリスト_01_0-30分.md" "docs/資料/01-初動対応_チェックリスト_02_1-3時間.md" "docs/資料/01-初動対応_チェックリスト_03_3-24時間.md"; do
+          for file in book/cover.md "docs/00-平時の準備.md" "docs/01-施設の初動対応（発災直後）.md" "docs/02-施設の応急対応（発災〜2週間）.md" "docs/03-施設の中期対応（2週以降）.md" "docs/04-福井県透析施設ネットワークの役割と対応.md" "docs/資料/資料_福井県内透析施設一覧.md" "docs/資料/資料_透析患者向け食品栄養成分表.md" "docs/資料/01-初動対応_様式01_災害時透析医療機関状況報告書_初動報告用.md" "docs/資料/01-初動対応_チェックリスト_01_0-30分.md" "docs/資料/01-初動対応_チェックリスト_02_1-3時間.md" "docs/資料/01-初動対応_チェックリスト_03_3-24時間.md"; do
             echo "" >> combined.md
             echo "\\newpage" >> combined.md
             echo "" >> combined.md
@@ -91,7 +108,10 @@ jobs:
             --toc-depth=2 \
             --number-sections \
             -V linestretch=1.2 \
-            -o pdfs/fukuitouseki_booklet.pdf
+            -o "pdfs/${PDF_NAME}"
+          
+          # PDF名を環境変数として保存
+          echo "PDF_NAME=${PDF_NAME}" >> $GITHUB_ENV
           
           ls -lah pdfs
 
@@ -100,10 +120,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           mkdir -p booklet-pdf
-          cp pdfs/fukuitouseki_booklet.pdf booklet-pdf/
-          git add booklet-pdf/fukuitouseki_booklet.pdf
+          cp "pdfs/${PDF_NAME}" "booklet-pdf/${PDF_NAME}"
+          git add "booklet-pdf/${PDF_NAME}"
           if ! git diff --staged --quiet; then
-            git commit -m "PDF生成完了: 災害時透析医療オペレーション手引き"
+            git commit -m "PDF生成完了: 災害時透析医療オペレーション手引き (${PDF_NAME})"
             git push
           fi
 
@@ -111,4 +131,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: booklet-pdf
-          path: pdfs/fukuitouseki_booklet.pdf
+          path: pdfs/${{ env.PDF_NAME }}
