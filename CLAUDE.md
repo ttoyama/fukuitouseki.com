@@ -150,3 +150,80 @@ PDF生成に含まれる予定のすべてのMarkdownファイルには以下が
 - **エンジン**: XeLaTeX（CJKフォントサポートに必要）
 - **フォント**: `CJKmainfont: 'Noto Sans CJK JP'`（GitHub Actions Ubuntuで利用可能）
 - **言語**: 適切なドキュメント書式設定のための`lang: ja`
+
+## Git管理とPDF生成ワークフロー
+
+### 自動PDF生成の仕組み
+
+このプロジェクトは **GitHub Actions** による自動PDF生成ワークフローを採用しています：
+
+1. **トリガー**: `main`ブランチへのpushで自動実行
+2. **処理内容**: 
+   - Markdownファイルを結合
+   - PandocでPDF生成（XeLaTeX + 日本語フォント対応）
+   - 生成されたPDFを `booklet-pdf/fukuitouseki_booklet.pdf` に配置
+   - 自動コミット・プッシュでリポジトリに反映
+
+### コミット・プッシュのタイミング
+
+**重要**: マニュアル内容を修正した場合は、以下のワークフローに従ってください：
+
+#### 1. 作業完了後の必須手順
+```bash
+# 変更状況を確認
+git status
+
+# 最新版を取得（PDF更新を反映）
+git pull
+
+# 変更をステージング
+git add .
+
+# 日本語で意味のあるコミットメッセージでコミット
+git commit -m "マニュアル修正内容の概要
+
+詳細な変更内容
+- 具体的な修正点1
+- 具体的な修正点2
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <noreply@anthropic.com>"
+
+# リモートにプッシュ
+git push
+```
+
+#### 2. PDF生成の確認
+- プッシュ後、GitHub Actionsが自動実行される（約2-3分）
+- 生成されたPDFは次回 `git pull` で取得可能
+- GitHub ActionsのStatusは[Actions タブ](https://github.com/ttoyama/fukuitouseki.com/actions)で確認
+
+#### 3. 作業のベストプラクティス
+
+**必ずプッシュする場面**：
+- マニュアル内容の修正・追加が完了した時
+- 新しい章や節を追加した時
+- 重要な構造変更を行った時
+- 作業セッション終了時
+
+**プッシュのメリット**：
+- 最新PDFが自動生成され、常に内容が同期される
+- 他の協力者が最新版にアクセス可能
+- バージョン履歴が適切に管理される
+- GitHub Pagesでの公開内容が最新化される
+
+#### 4. トラブルシューティング
+
+**PDF生成が失敗した場合**：
+1. GitHub Actionsログを確認
+2. YAMLフロントマターの構文エラーをチェック
+3. 日本語ファイル名の引用符漏れを確認
+4. Pandoc互換性問題の対処（上記「よくあるPandoc + YAML問題」参照）
+
+**コンフリクトが発生した場合**：
+```bash
+# 最新版を強制取得してマージ
+git pull --rebase
+# または
+git pull --no-rebase
+```
