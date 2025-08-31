@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
-            texlive-fonts-recommended texlive-lang-cjk fonts-noto-cjk
+            texlive-fonts-recommended texlive-lang-cjk fonts-noto-cjk fonts-noto
 
       - name: Prepare ordered list
         id: order
@@ -68,6 +68,7 @@ jobs:
           echo "author: 福井透析ネットワーク本部" >> combined.md
           echo "lang: ja" >> combined.md
           echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
+          echo "mainfont: 'Noto Sans'" >> combined.md
           echo "geometry: margin=20mm" >> combined.md
           echo "documentclass: article" >> combined.md
           echo "fontsize: 12pt" >> combined.md
