@@ -80,7 +80,7 @@ jobs:
           
           # Try a different approach - use cat to combine files first
           echo "---" > combined.md
-          echo "title: 災害時透析医療オペレーション手引き" >> combined.md
+          echo "title: 災害時透析医療オペレーション手引き（${DATETIME}版）" >> combined.md
           echo "author: 福井透析ネットワーク本部" >> combined.md
           echo "lang: ja" >> combined.md
           echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
