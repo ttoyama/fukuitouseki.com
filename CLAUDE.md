@@ -224,3 +224,67 @@ git pull --rebase
 # または
 git pull --no-rebase
 ```
+
+## PDF版のバージョン管理とアーカイブ化
+
+### 自動生成PDFのアーカイブ化方針
+
+現在のPDF生成システムは最新版のみを `booklet-pdf/fukuitouseki_booklet.pdf` に配置しますが、重要な改訂があった際の履歴保持のために以下のアーカイブ化方針を採用します：
+
+#### アーカイブ化の実施タイミング
+
+以下のような重要な変更時にPDFをアーカイブ化します：
+
+1. **大規模な構造変更**（例：双方向対応化のような全面改訂）
+2. **新しい章・節の追加**
+3. **内容の大幅な更新**（30%以上の変更）
+4. **制度・法令の変更に伴う修正**
+5. **年度更新時**
+
+#### アーカイブ化の手順
+
+重要な改訂完了後、以下の手順でPDFをアーカイブ化します：
+
+```bash
+# 1. 最新のPDFが生成されるまで待機（GitHub Actions完了後）
+git pull
+
+# 2. アーカイブディレクトリの作成（まだ存在しない場合）
+mkdir -p booklet-pdf/archived
+
+# 3. 日付付きファイル名でアーカイブ化
+cp booklet-pdf/fukuitouseki_booklet.pdf "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d).pdf"
+
+# 4. アーカイブをコミット
+git add "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d).pdf"
+git commit -m "PDF版をアーカイブ化: $(date +%Y%m%d) 版
+
+主要変更内容:
+- 変更内容の概要を記載
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <noreply@anthropic.com>"
+
+# 5. プッシュ
+git push
+```
+
+#### アーカイブファイルの命名規則
+
+- **基本形式**: `fukuitouseki_booklet_YYYYMMDD.pdf`
+- **例**: `fukuitouseki_booklet_20250901.pdf`
+- **特別版**: 大きな改訂の場合は `fukuitouseki_booklet_YYYYMMDD_改訂内容.pdf`
+  - 例: `fukuitouseki_booklet_20250901_双方向対応版.pdf`
+
+#### アーカイブ管理の考慮事項
+
+- **ファイルサイズ**: PDFファイルはサイズが大きいため、過度なアーカイブ化は避ける
+- **保持期間**: 直近3-5版程度を保持し、古いバージョンは適宜削除
+- **リリースノート**: 各アーカイブ版の変更内容をREADMEまたはCHANGELOGに記録
+- **GitHub Releases**: 重要なマイルストーンではGitHub Releasesとしてタグ付けも検討
+
+### 現在のアーカイブ状況
+
+**双方向対応版（2025年9月1日）**: 次回のGitHub Actions完了後にアーカイブ化予定
+- 主要変更: 被災地・支援地双方向対応構造の導入
+- ファイルサイズ: 約90%増（188行→356行）
