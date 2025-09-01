@@ -227,9 +227,25 @@ git pull --no-rebase
 
 ## PDF版のバージョン管理とアーカイブ化
 
-### 自動生成PDFのアーカイブ化方針
+### 自動PDF生成ファイル名の規則
 
-現在のPDF生成システムは最新版のみを `booklet-pdf/fukuitouseki_booklet.pdf` に配置しますが、重要な改訂があった際の履歴保持のために以下のアーカイブ化方針を採用します：
+GitHub ActionsによるPDF生成では、以下の命名規則を採用しています：
+
+#### ファイル名の形式
+
+- **基本形式**: `fukuitouseki_booklet_YYYYMMDD_HHMM.pdf`
+- **例**: `fukuitouseki_booklet_20250902_0617.pdf`
+- **同一時刻重複時**: `fukuitouseki_booklet_YYYYMMDD_HHMM-2.pdf`
+
+#### タイムゾーンとバージョン管理
+
+- **タイムゾーン**: JST（Asia/Tokyo）を使用
+- **時刻形式**: 24時間形式（HHMM）
+- **重複対応**: 同一時刻に複数回生成された場合は末尾に連番（-2, -3, ...）を追加
+
+### アーカイブ化方針
+
+重要な改訂があった際の履歴保持のために以下のアーカイブ化方針を採用します：
 
 #### アーカイブ化の実施タイミング
 
@@ -252,12 +268,12 @@ git pull
 # 2. アーカイブディレクトリの作成（まだ存在しない場合）
 mkdir -p booklet-pdf/archived
 
-# 3. 日付付きファイル名でアーカイブ化
-cp booklet-pdf/fukuitouseki_booklet.pdf "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d).pdf"
+# 3. 重要版のアーカイブ化（日時付きファイル名から識別しやすい名前に）
+cp "booklet-pdf/fukuitouseki_booklet_$(date +%Y%m%d_)*.pdf" "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d)_重要版.pdf"
 
 # 4. アーカイブをコミット
-git add "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d).pdf"
-git commit -m "PDF版をアーカイブ化: $(date +%Y%m%d) 版
+git add "booklet-pdf/archived/fukuitouseki_booklet_$(date +%Y%m%d)_重要版.pdf"
+git commit -m "PDF版をアーカイブ化: $(date +%Y%m%d) 重要版
 
 主要変更内容:
 - 変更内容の概要を記載

@@ -62,16 +62,19 @@ jobs:
         run: |
           mkdir -p pdfs
           
-          # 日付とバージョン管理のためのファイル名生成（毎回日付-連番形式）
-          DATE=$(date '+%Y%m%d')
-          PDF_BASE_NAME="fukuitouseki_booklet_${DATE}"
+          # 日付と時刻でのファイル名生成（JST時刻使用）
+          export TZ='Asia/Tokyo'
+          DATETIME=$(date '+%Y%m%d_%H%M')
+          PDF_BASE_NAME="fukuitouseki_booklet_${DATETIME}"
           
-          # 常に日付-連番形式でバージョン管理
-          VERSION=1
-          while [ -f "booklet-pdf/${PDF_BASE_NAME}-${VERSION}.pdf" ]; do
-            VERSION=$((VERSION + 1))
+          # 同一時刻での重複回避のためのバージョン管理
+          VERSION=""
+          COUNTER=1
+          while [ -f "booklet-pdf/${PDF_BASE_NAME}${VERSION}.pdf" ]; do
+            VERSION="-${COUNTER}"
+            COUNTER=$((COUNTER + 1))
           done
-          PDF_NAME="${PDF_BASE_NAME}-${VERSION}.pdf"
+          PDF_NAME="${PDF_BASE_NAME}${VERSION}.pdf"
           
           echo "Generated PDF name: $PDF_NAME"
           
