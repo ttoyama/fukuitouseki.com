@@ -314,37 +314,47 @@ git push
 2. **昇格**: より重要な項目はレベル3に昇格させる
 3. **箇条書き**: 詳細項目は箇条書きや**太字**で強調表示に変更
 
-### 同日複数PDF生成時のバージョン管理
+### PDF生成のバージョン管理
 
-同一日に複数のPDFが生成される場合のファイル命名規則：
+すべてのPDF生成は日付+連番形式で管理されます：
 
 #### 基本ルール
 
-1. **初回生成**: `fukuitouseki_booklet_YYYYMMDD.pdf`
+**常に日付-連番形式**：
+1. **初回生成**: `fukuitouseki_booklet_YYYYMMDD-1.pdf`
 2. **同日2回目**: `fukuitouseki_booklet_YYYYMMDD-2.pdf`
-3. **同日3回目以降**: `fukuitouseki_booklet_YYYYMMDD-3.pdf` (数字を増やす)
+3. **同日3回目以降**: `fukuitouseki_booklet_YYYYMMDD-3.pdf` (連番で継続)
 
-#### アーカイブ化時の対応
+#### GitHub Actions の動作
 
-同日に複数バージョンが存在する場合：
+- GitHub ActionsはUTC時間でYYYYMMDD日付を生成
+- 既存の同日版があれば自動的に連番を増やす
+- 毎回必ず `-1`, `-2`, `-3`... の連番が付く
+
+#### アーカイブ化の方針
+
+重要な改訂時のアーカイブ化：
 
 ```bash
-# 古いバージョンに -1 を追加してアーカイブ
-mv booklet-pdf/fukuitouseki_booklet_20250902.pdf booklet-pdf/archived/fukuitouseki_booklet_20250902-1.pdf
+# 最新版以外をarchivedフォルダに移動
+mv booklet-pdf/fukuitouseki_booklet_YYYYMMDD-1.pdf booklet-pdf/archived/
+mv booklet-pdf/fukuitouseki_booklet_YYYYMMDD-2.pdf booklet-pdf/archived/
 
-# 最新バージョンを -2 として保存
-cp booklet-pdf/fukuitouseki_booklet_20250902-2.pdf booklet-pdf/fukuitouseki_booklet_20250902.pdf
+# 最新版のみルートに残す
+# 例: fukuitouseki_booklet_20250902-3.pdf が最新版として残る
 
-# コミット時に変更内容を明記
-git commit -m "同日複数PDF生成: 20250902-2 版を最新として採用
+git commit -m "PDF版のアーカイブ化: YYYYMMDD-X 版
 
-変更内容:
-- 具体的な修正内容
+アーカイブした版:
+- YYYYMMDD-1: 概要
+- YYYYMMDD-2: 概要
 
 🤖 Generated with [Claude Code](https://claude.ai/code)
 Co-Authored-By: Claude <noreply@anthropic.com>"
 ```
 
-#### GitHub Actions との連携
+#### 利点
 
-GitHub Actions ワークフローは既に同日複数生成に対応済みで、自動的に `-2`, `-3` を付与します。手動でのアーカイブ化時は上記ルールに従ってファイル名を調整してください。
+- **一貫性**: すべてのPDFが同じ命名規則
+- **追跡性**: 連番でバージョン履歴が明確
+- **自動化**: GitHub Actionsが自動的に適切な連番を生成
