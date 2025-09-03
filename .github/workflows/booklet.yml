@@ -85,7 +85,7 @@ jobs:
           echo "lang: ja" >> combined.md
           echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
           echo "mainfont: 'Noto Sans'" >> combined.md
-          echo "geometry: margin=20mm" >> combined.md
+          echo "geometry: top=25mm,left=20mm,right=20mm,bottom=30mm" >> combined.md
           echo "documentclass: article" >> combined.md
           echo "fontsize: 12pt" >> combined.md
           echo "---" >> combined.md
@@ -107,6 +107,7 @@ jobs:
             --toc-depth=2 \
             --number-sections \
             -V linestretch=1.2 \
+            -V pagestyle=plain \
             -o "pdfs/${PDF_NAME}"
           
           # PDF名を環境変数として保存
