@@ -85,9 +85,16 @@ jobs:
           echo "lang: ja" >> combined.md
           echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
           echo "mainfont: 'Noto Sans'" >> combined.md
-          echo "geometry: top=25mm,left=20mm,right=20mm,bottom=30mm" >> combined.md
+          echo "geometry: top=30mm,left=20mm,right=20mm,bottom=30mm" >> combined.md
           echo "documentclass: article" >> combined.md
           echo "fontsize: 12pt" >> combined.md
+          echo "header-includes: |" >> combined.md
+          echo "  \\usepackage{fancyhdr}" >> combined.md
+          echo "  \\pagestyle{fancy}" >> combined.md
+          echo "  \\fancyhf{}" >> combined.md
+          echo "  \\fancyhead[R]{\\small 災害時透析医療オペレーション手引き 2025版}" >> combined.md
+          echo "  \\fancyfoot[C]{\\thepage}" >> combined.md
+          echo "  \\renewcommand{\\headrulewidth}{0.5pt}" >> combined.md
           echo "---" >> combined.md
           echo "" >> combined.md
           
