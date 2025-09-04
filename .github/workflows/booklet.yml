@@ -65,6 +65,7 @@ jobs:
           # 日付と時刻でのファイル名生成（JST時刻使用）
           export TZ='Asia/Tokyo'
           DATETIME=$(date '+%Y%m%d_%H%M')
+          DATE_VERSION=$(date '+%Y.%m.%d')
           PDF_BASE_NAME="fukuitouseki_booklet_${DATETIME}"
           
           # 同一時刻での重複回避のためのバージョン管理
@@ -92,7 +93,7 @@ jobs:
           echo "  \\usepackage{fancyhdr}" >> combined.md
           echo "  \\pagestyle{fancy}" >> combined.md
           echo "  \\fancyhf{}" >> combined.md
-          echo "  \\fancyhead[R]{\\small 災害時透析医療オペレーション手引き 2025版}" >> combined.md
+          echo "  \\fancyhead[R]{\\small 災害時透析医療オペレーション手引き ${DATE_VERSION}版}" >> combined.md
           echo "  \\fancyfoot[C]{\\thepage}" >> combined.md
           echo "  \\renewcommand{\\headrulewidth}{0.5pt}" >> combined.md
           echo "---" >> combined.md
