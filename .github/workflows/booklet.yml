@@ -6,7 +6,6 @@ on:
     paths:
       - '.bookorder'
       - '**/*.md'
-      - 'book/**'
       - '.github/workflows/booklet.yml'
   workflow_dispatch:
 
@@ -27,12 +26,8 @@ jobs:
         run: |
           # コメント・空行を除去
           grep -v '^\s*#' .bookorder | sed '/^\s*$/d' > .bookorder.clean
-          # 表紙を先頭に差し込む（存在すれば）
-          if [ -f book/cover.md ]; then
-            printf 'book/cover.md\n' | cat - .bookorder.clean > .bookorder.with_cover
-          else
-            cp .bookorder.clean .bookorder.with_cover
-          fi
+          # bookフォルダは削除済みのため、表紙処理をスキップ
+          cp .bookorder.clean .bookorder.with_cover
           # 存在チェック
           missing=0
           while IFS= read -r f; do
@@ -100,13 +95,16 @@ jobs:
           echo "" >> combined.md
           
           # Combine all files, stripping individual YAML frontmatters
-          for file in book/cover.md "docs/01-各施設の役割と対応.md" "docs/02-福井県透析施設ネットワークの役割と対応.md" "docs/資料/資料_福井県内透析施設一覧.md" "docs/資料/資料_透析患者向け食品栄養成分表.md" "docs/資料/01-初動対応_様式01_災害時透析医療機関状況報告書_初動報告用.md" "docs/資料/01-初動対応_チェックリスト_01_0-30分.md" "docs/資料/01-初動対応_チェックリスト_02_1-3時間.md" "docs/資料/01-初動対応_チェックリスト_03_3-24時間.md"; do
+          # ファイル一覧を.bookorderから動的に読み込み（コメント行除く）
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [[ "$file" =~ ^[[:space:]]*# ]] && continue
             echo "" >> combined.md
             echo "\\newpage" >> combined.md
             echo "" >> combined.md
             # Skip YAML frontmatter and add content
             sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
-          done
+          done < .bookorder.with_cover
           
           # Build PDF from combined file
           pandoc combined.md \
