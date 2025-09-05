@@ -1,0 +1,233 @@
+% 初動対応チェックシート（発災後0～30分）
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=30mm, bottom=30mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 101 初動対応チェックシート（0-30分） 2025.09.04版}
+\def\@evenhead{\hfill\small 101 初動対応チェックシート（0-30分） 2025.09.04版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{初動対応チェックシート（発災後0～30分）}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{施設名：} \underlinespace{8cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{記録者：} \underlinespace{4cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{発災日時：} \underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日 \quad \circlecheck 午前 \quad \circlecheck 午後 \quad \underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{5mm}
+
+\section*{1. 患者・スタッフ安全確保}
+
+\subsection*{1-1. 施設内患者安全確保}
+
+\checkbox \textbf{施設内患者（透析中・待機中）の安全を確保する}
+
+\quad 確認時刻：\underlinespace{1cm}時\underlinespace{1cm}分 \quad 対応者：\underlinespace{4cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{負傷者の有無を確認し、応急処置を実施する}
+
+\quad 負傷者数：\underlinespace{2cm}人 \quad 処置内容：\underlinespace{6cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{パニック患者のそばに駆け寄り、心理的ケアを行う}
+
+\quad 対象患者数：\underlinespace{2cm}人 \quad 対応者：\underlinespace{4cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{透析中患者の治療中止・継続を判断する}
+
+\quad 透析中患者数：\underlinespace{2cm}人 \quad 継続：\underlinespace{2cm}人 \quad 中止：\underlinespace{2cm}人
+
+\vspace{5mm}
+
+\subsection*{1-2. スタッフ安否確認}
+
+\checkbox \textbf{緊急連絡網を使用して全スタッフの安否を確認する}
+
+\quad 確認完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\checkbox \textbf{参集可能スタッフに速やかな施設参集を要請する}
+
+\quad 要請完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{5mm}
+
+\section*{2. 施設設備点検}
+
+\checkbox \textbf{建物本体の損傷を点検する}
+
+\quad \circlecheck 安全 \quad \circlecheck 要注意 \quad \circlecheck 危険 \quad 点検者：\underlinespace{4cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{透析装置の稼働状況・警報発生の有無を確認する}
+
+\quad 稼働可能台数：\underlinespace{2cm}台／総\underlinespace{2cm}台 \quad 警報発生：\checkbox あり \checkbox なし
+
+\vspace{3mm}
+
+\checkbox \textbf{水処理装置の異常を確認する}
+
+\quad \circlecheck 正常 \quad \circlecheck 異常あり（詳細：\underlinespace{6cm}）
+
+\vspace{3mm}
+
+\checkbox \textbf{自家発電設備の動作状況を点検する}
+
+\quad \circlecheck 正常 \quad \circlecheck 異常あり \quad \circlecheck 未確認 \quad 燃料残量：\underlinespace{3cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{医療ガス設備を確認する}
+
+\quad \circlecheck 正常 \quad \circlecheck 異常あり（詳細：\underlinespace{6cm}）
+
+\vspace{3mm}
+
+\checkbox \textbf{医薬品・医療材料の保管状況を確認する}
+
+\quad \circlecheck 問題なし \quad \circlecheck 破損あり（詳細：\underlinespace{6cm}）
+
+\vspace{3mm}
+
+\checkbox \textbf{ライフライン状況を詳細に確認する}
+
+\quad \textbf{電力：} \circlecheck 正常 \circlecheck 停電 \quad \textbf{水道：} \circlecheck 正常 \circlecheck 断水
+
+\quad \textbf{ガス：} \circlecheck 正常 \circlecheck 停止 \quad \textbf{通信：} \circlecheck 正常 \circlecheck 不通
+
+\vspace{5mm}
+
+\newpage
+
+\section*{3. 初動報告（発災後30分以内）}
+
+\subsection*{3-1. 福井県透析施設ネットワーク本部への報告}
+
+\checkbox \textbf{施設職員・患者の安否確認結果を報告する}
+
+\quad 報告完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分 \quad 報告者：\underlinespace{4cm}
+
+\quad 患者安否：安全\underlinespace{2cm}人、負傷\underlinespace{2cm}人、不明\underlinespace{2cm}人
+
+\quad スタッフ安否：安全\underlinespace{2cm}人、負傷\underlinespace{2cm}人、不明\underlinespace{2cm}人
+
+\vspace{4mm}
+
+\checkbox \textbf{建物の緊急危険度を判定して報告する}
+
+\quad \circlecheck 安全（継続使用可能） \quad \circlecheck 要注意（一部制限） \quad \circlecheck 危険（使用不可）
+
+\vspace{4mm}
+
+\checkbox \textbf{即座に必要な緊急支援の有無を報告する}
+
+\quad \checkbox 緊急支援不要 \quad \checkbox 緊急支援必要
+
+\quad 必要支援内容：\underlinespace{10cm}
+
+\vspace{5mm}
+
+\subsection*{3-2. 詳細状況確認（30分～1時間の準備）}
+
+\checkbox \textbf{施設周辺道路状況を確認する}
+
+\quad 主要アクセス路：\circlecheck 通行可能 \circlecheck 通行困難 \circlecheck 通行不可
+
+\quad 詳細：\underlinespace{10cm}
+
+\vspace{3mm}
+
+\checkbox \textbf{公共交通機関の運行状況を確認する}
+
+\quad \circlecheck 正常運行 \quad \circlecheck 運行停止 \quad \circlecheck 情報収集中
+
+\vspace{3mm}
+
+\checkbox \textbf{緊急車両通行ルート・指定優先道路の状況を把握する}
+
+\quad 緊急車両通行：\circlecheck 可能 \circlecheck 困難 \circlecheck 不可
+
+\vspace{3mm}
+
+\checkbox \textbf{透析液供給システムの損傷を確認する}
+
+\quad \circlecheck 正常 \quad \circlecheck 一部損傷 \quad \circlecheck 大幅損傷
+
+\vspace{5mm}
+
+\section*{4. 緊急時連絡先}
+
+\subsection*{4-1. 報告先}
+\checkbox 福井県透析施設ネットワーク本部
+
+\checkbox 福井県災害対策本部
+
+\checkbox 日本透析医会災害情報ネットワーク
+
+\checkbox 所在地市町村災害対策本部
+
+\subsection*{4-2. 通信手段（優先順位）}
+1. LINE・Teams
+
+2. メーリングリスト
+
+3. 衛星電話・MCA無線
+
+4. 市町村経由報告
+
+\vspace{5mm}
+
+\noindent
+\textbf{総合確認：} \\
+\checkbox 患者・スタッフの安全確保完了 \\
+\checkbox 施設設備点検完了 \\
+\checkbox 初動報告（30分以内）完了 \\
+\checkbox 次段階準備完了
+
+\vspace{5mm}
+
+\noindent
+最終確認者：\underlinespace{4cm} \\
+\vspace{3mm}
+確認日時：\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日 \quad \circlecheck 午前 \quad \circlecheck 午後 \quad \underlinespace{1cm}時\underlinespace{1cm}分
+
+\end{document}

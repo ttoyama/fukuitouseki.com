@@ -2,19 +2,15 @@
 cd "$(dirname "$0")"
 echo "災害透析マニュアル作業ディレクトリに移動しました"
 
-# 福井大学内LANからの接続かチェック
-echo "福井大学内のLANから接続していますか？ (y/n)"
-read -r proxy_response
-
-if [[ $proxy_response == "y" || $proxy_response == "Y" ]]; then
-    echo "プロキシ設定を適用します..."
+# 福井大学内LANからの接続の場合のみプロキシを適用
+if [[ $(hostname) == *"u-fukui.ac.jp" ]]; then
     export http_proxy="http://ufproxy.m.cii.u-fukui.ac.jp:8080/"
     export https_proxy="http://ufproxy.m.cii.u-fukui.ac.jp:8080/"
-    echo "プロキシが設定されました:"
+    echo "福井大学内LANから接続中: プロキシを設定しました"
     echo "  HTTP Proxy: $http_proxy"
     echo "  HTTPS Proxy: $https_proxy"
 else
-    echo "プロキシ設定をスキップします"
+    echo "大学外からの接続: プロキシ設定をスキップします"
 fi
 
 echo "GitHubリポジトリをバックグラウンドで開いています..."
