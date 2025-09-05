@@ -266,6 +266,35 @@ GitHub ActionsによるPDF生成では、以下の命名規則を採用してい
 - **時刻形式**: 24時間形式（HHMM）
 - **重複対応**: 同一時刻に複数回生成された場合は末尾に連番（-2, -3, ...）を追加
 
+### PDFアーカイブ管理の実践
+
+#### booklet-pdf/直下の管理方針
+
+**重要**: `booklet-pdf/`直下には常に最新版のPDFファイル1つのみを配置します：
+
+```bash
+# 最新状態の確認
+ls -la booklet-pdf/
+
+# 期待される構成:
+booklet-pdf/
+├── archived/           # 古いバージョンのアーカイブ
+└── fukuitouseki_booklet_YYYYMMDD_HHMM.pdf  # 最新版のみ
+
+# 古いファイルが存在する場合の整理手順:
+mv booklet-pdf/fukuitouseki_booklet_古い日時.pdf booklet-pdf/archived/
+git add . && git commit -m "PDF版のアーカイブ化: 古いバージョンの整理"
+```
+
+#### pull後の自動整理
+
+`git pull`で最新PDFを取得した後は必ず以下を実行：
+
+1. **booklet-pdf/の内容確認**
+2. **最新版以外をarchived/に移動**
+3. **LaTeX中間ファイルの削除**（.dvi、.aux、.log）
+4. **変更をコミット・プッシュ**
+
 ### アーカイブ化方針
 
 重要な改訂があった際の履歴保持のために以下のアーカイブ化方針を採用します：
