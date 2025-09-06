@@ -1,18 +1,238 @@
-% 患者緊急連絡先チェックシート
+% 患者緊急連絡先チェックシート（平時の準備）
 % LaTeX template for disaster dialysis manual forms
 
-\documentclass[a4paper,11pt]{jarticle}
-\usepackage[margin=20mm]{geometry}
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=30mm, bottom=30mm, left=15mm, right=15mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.2}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
 
-\title{患者緊急連絡先チェックシート}
-\date{}
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 214 患者緊急連絡先チェックシート（平時の準備） 2025.09.06版}
+\def\@evenhead{\hfill\small 214 患者緊急連絡先チェックシート（平時の準備） 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
 
 \begin{document}
-\maketitle
 
-% Content to be developed
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{患者緊急連絡先チェックシート（平時の準備）}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{施設名：} \underlinespace{8cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{作成者：} \underlinespace{4cm} \quad \textbf{作成日：} \underlinespace{3cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{更新者：} \underlinespace{4cm} \quad \textbf{更新日：} \underlinespace{3cm}
+
+\vspace{8mm}
+
+% 患者緊急連絡先一覧
+\begin{center}
+\textbf{\large 患者緊急連絡先一覧}
+\end{center}
+
+\vspace{3mm}
+
+\begin{longtable}{|p{0.8cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{1cm}|}
+\hline
+\textbf{No} & \textbf{患者名} & \textbf{緊急連絡先1（家族）} & \textbf{緊急連絡先2（家族）} & \textbf{緊急連絡先3（その他）} & \textbf{確認} \\
+\hline
+\endfirsthead
+\hline
+\textbf{No} & \textbf{患者名} & \textbf{緊急連絡先1（家族）} & \textbf{緊急連絡先2（家族）} & \textbf{緊急連絡先3（その他）} & \textbf{確認} \\
+\hline
+\endhead
+1 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+2 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+3 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+4 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+5 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+6 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+7 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+8 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+9 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+  &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+  &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+10 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+11 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+12 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+13 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+14 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+15 & \underlinespace{2.3cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & 続柄：\underlinespace{1.5cm} & \checkbox 済 \\
+   &                        & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} & 名前：\underlinespace{2.3cm} &  \\
+   &                        & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & 電話：\underlinespace{2.3cm} & \\[0.3cm]
+\hline
+\end{longtable}
+
+% 確認・更新管理
+\begin{center}
+\textbf{\large 確認・更新管理}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急連絡先の定期確認：\checkbox 年2回実施 \quad \checkbox 年4回実施 \quad \checkbox その他（\underlinespace{3cm}）
+
+\vspace{3mm}
+
+\noindent
+\checkbox 連絡方法の事前確認：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{2mm}
+
+\noindent
+（\checkbox 固定電話 \quad \checkbox 携帯電話 \quad \checkbox メール \quad \checkbox その他：\underlinespace{4cm}）
+
+\vspace{3mm}
+
+\noindent
+\checkbox 災害時連絡体制の説明：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{2mm}
+
+\noindent
+説明内容：\checkbox 施設の被災状況連絡 \quad \checkbox 透析実施可否の連絡 \quad \checkbox その他：\underlinespace{5cm}
+
+\vspace{8mm}
+
+% 患者・家族への事前指導確認
+\begin{center}
+\textbf{\large 患者・家族への事前指導確認}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 自己管理の指導：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{2mm}
+
+\noindent
+（\checkbox 体重管理 \quad \checkbox 食事管理 \quad \checkbox 服薬管理 \quad \checkbox 避難所での食事注意）
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急時の行動指導：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{2mm}
+
+\noindent
+（\checkbox 透析中の行動 \quad \checkbox 避難方法 \quad \checkbox 安否報告方法 \quad \checkbox 避難場所）
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急離脱方法の指導：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{3mm}
+
+\noindent
+\checkbox 食品栄養成分表の配布：\checkbox 実施済 \quad \checkbox 要実施
+
+\vspace{8mm}
+
+% 定期更新と確認
+\begin{center}
+\textbf{\large 定期更新と確認}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{前回更新日：} \underlinespace{4cm} \quad \textbf{更新確認者：} \underlinespace{4cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{次回更新予定日：} \underlinespace{4cm} \quad \textbf{更新予定者：} \underlinespace{4cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{要更新患者（該当者のNo記入）：} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{備考：}
+
+\vspace{2mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{2mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{責任者確認：} \underlinespace{4cm} \quad \textbf{確認印：} \underlinespace{3cm}
 
 \end{document}
