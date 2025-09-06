@@ -1,18 +1,292 @@
-% 患者安全・スタッフ安否チェックシート
+% 患者安全・スタッフ安否チェックシート（発災直後対応）
 % LaTeX template for disaster dialysis manual forms
 
-\documentclass[a4paper,11pt]{jarticle}
-\usepackage[margin=20mm]{geometry}
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=30mm, bottom=30mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
 
-\title{患者安全・スタッフ安否チェックシート}
-\date{}
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 221 患者安全・スタッフ安否チェックシート（発災直後対応） 2025.09.06版}
+\def\@evenhead{\hfill\small 221 患者安全・スタッフ安否チェックシート（発災直後対応） 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
 
 \begin{document}
-\maketitle
 
-% Content to be developed
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{患者安全・スタッフ安否チェックシート（発災直後対応）}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{施設名：} \underlinespace{8cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{発災日時：}\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{確認者：} \underlinespace{4cm} \quad \textbf{確認開始時刻：} \underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{8mm}
+
+% 患者安全確認
+\begin{center}
+\textbf{\large 患者安全確認}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 施設内患者の安全最優先確保：\checkbox 実施完了 \quad \checkbox 実施中 \quad \checkbox 要支援
+
+\vspace{3mm}
+
+\noindent
+\checkbox 負傷者確認：\checkbox なし \quad \checkbox あり（\underlinespace{1cm}名）
+
+\vspace{2mm}
+
+\noindent
+負傷者詳細：\underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 応急処置：\checkbox 不要 \quad \checkbox 実施済 \quad \checkbox 実施中
+
+\vspace{2mm}
+
+\noindent
+処置内容：\underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 心理的ケア：\checkbox 実施済 \quad \checkbox 実施中 \quad \checkbox 要継続
+
+\vspace{2mm}
+
+\noindent
+対応状況：\underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析治療中の対応：\checkbox 継続判断 \quad \checkbox 中止判断 \quad \checkbox 治療中なし
+
+\vspace{2mm}
+
+\noindent
+継続・中止の理由：\underlinespace{10cm}
+
+\vspace{8mm}
+
+% スタッフ安否確認
+\begin{center}
+\textbf{\large スタッフ安否確認}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急連絡システムの活用：\checkbox 一斉メール \quad \checkbox SNSグループ \quad \checkbox 電話連絡網
+
+\vspace{3mm}
+
+\noindent
+\textbf{スタッフ安否確認状況：}
+
+\vspace{3mm}
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+\textbf{スタッフ名} & \textbf{安否確認} & \textbf{負傷状況} & \textbf{参集可否} & \textbf{備考} \\
+\hline
+\endfirsthead
+\hline
+\textbf{スタッフ名} & \textbf{安否確認} & \textbf{負傷状況} & \textbf{参集可否} & \textbf{備考} \\
+\hline
+\endhead
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\end{longtable}
+
+\vspace{3mm}
+
+\noindent
+\textbf{スタッフ安否確認集計：}
+
+\vspace{2mm}
+
+\noindent
+総スタッフ数：\underlinespace{2cm}名 \quad 確認済み：\underlinespace{2cm}名 \quad 未確認：\underlinespace{2cm}名
+
+\vspace{2mm}
+
+\noindent
+負傷者：\underlinespace{2cm}名 \quad 参集可能：\underlinespace{2cm}名 \quad 参集不可：\underlinespace{2cm}名
+
+\vspace{8mm}
+
+% ネットワーク本部への報告
+\begin{center}
+\textbf{\large ネットワーク本部への報告}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 報告実施時刻：\underlinespace{1cm}時\underlinespace{1cm}分 \quad 報告手段：\checkbox 電話 \quad \checkbox メール \quad \checkbox その他
+
+\vspace{3mm}
+
+\noindent
+\checkbox 患者安否報告：\checkbox 完了 \quad \checkbox 一部完了 \quad \checkbox 未完了
+
+\vspace{2mm}
+
+\noindent
+施設内患者数：\underlinespace{2cm}名 \quad 負傷患者数：\underlinespace{2cm}名
+
+\vspace{3mm}
+
+\noindent
+\checkbox スタッフ安否報告：\checkbox 完了 \quad \checkbox 一部完了 \quad \checkbox 未完了
+
+\vspace{2mm}
+
+\noindent
+参集可能スタッフ数：\underlinespace{2cm}名 \quad スタッフ負傷者数：\underlinespace{2cm}名
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析実施状況報告：\checkbox 継続可能 \quad \checkbox 一部制限 \quad \checkbox 実施困難
+
+\vspace{3mm}
+
+\noindent
+\checkbox 支援要請：\checkbox なし \quad \checkbox 人員支援 \quad \checkbox 物資支援 \quad \checkbox 患者搬送
+
+\vspace{2mm}
+
+\noindent
+要請内容：\underlinespace{10cm}
+
+\vspace{8mm}
+
+% 患者・家族への情報提供
+\begin{center}
+\textbf{\large 患者・家族への情報提供}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析実施状況の連絡：\checkbox 実施済 \quad \checkbox 実施中 \quad \checkbox 未実施
+
+\vspace{3mm}
+
+\noindent
+\checkbox 代替手段の案内：\checkbox 実施済 \quad \checkbox 実施中 \quad \checkbox 未実施
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急連絡先への連絡：\checkbox 完了 \quad \checkbox 一部完了 \quad \checkbox 未完了
+
+\vspace{2mm}
+
+\noindent
+連絡方法：\checkbox 電話 \quad \checkbox メール \quad \checkbox その他：\underlinespace{4cm}
+
+\vspace{8mm}
+
+% 記録と次回行動
+\begin{center}
+\textbf{\large 記録と次回行動}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{確認完了時刻：} \underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{重要事項・課題：}
+
+\vspace{2mm}
+
+\noindent
+1. \underlinespace{12cm}
+
+\vspace{2mm}
+
+\noindent
+2. \underlinespace{12cm}
+
+\vspace{2mm}
+
+\noindent
+3. \underlinespace{12cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{次回確認予定時刻：} \underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{確認責任者：} \underlinespace{4cm} \quad \textbf{確認印：} \underlinespace{3cm}
 
 \end{document}
