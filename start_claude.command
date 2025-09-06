@@ -17,5 +17,5 @@ echo "GitHubリポジトリをバックグラウンドで開いています..."
 open -g https://github.com/ttoyama/fukuitouseki.com
 
 echo "Claude Codeを起動します..."
-claude
+claude --dangerously-skip-permissions
 exec bash
