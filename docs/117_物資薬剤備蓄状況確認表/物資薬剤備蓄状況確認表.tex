@@ -1,0 +1,295 @@
+% 物資薬剤備蓄状況確認表
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=25mm, bottom=25mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 117 物資薬剤備蓄状況確認表 2025.09.06版}
+\def\@evenhead{\hfill\small 117 物資薬剤備蓄状況確認表 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式07}}\\
+\vspace{3mm}
+{\Large\textbf{物資薬剤備蓄状況確認表}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【確認日時】}\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【確認者】} \underlinespace{10cm}
+
+\vspace{8mm}
+
+% 透析用物資
+\begin{center}
+\textbf{\large 透析用物資}
+\end{center}
+
+\vspace{3mm}
+
+\begin{longtable}{|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{品目} & \textbf{現在庫数} & \textbf{通常消費/日} & \textbf{使用可能日数} & \textbf{備考} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{品目} & \textbf{現在庫数} & \textbf{通常消費/日} & \textbf{使用可能日数} & \textbf{備考} \\
+\hline
+\endhead
+
+透析液（HD用） &  &  &  &  \\
+\hline
+透析液（HDF用） &  &  &  &  \\
+\hline
+ダイアライザー &  &  &  &  \\
+\hline
+回路セット &  &  &  &  \\
+\hline
+穿刺針 &  &  &  &  \\
+\hline
+点滴セット &  &  &  &  \\
+\hline
+シリンジ &  &  &  &  \\
+\hline
+消毒液 &  &  &  &  \\
+\hline
+ガーゼ・綿球 &  &  &  &  \\
+\hline
+テープ類 &  &  &  &  \\
+\hline
+\end{longtable}
+
+\vspace{5mm}
+
+% 薬剤
+\begin{center}
+\textbf{\large 薬剤}
+\end{center}
+
+\vspace{3mm}
+
+\begin{longtable}{|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\textbf{薬剤名} & \textbf{現在庫数} & \textbf{通常消費/日} & \textbf{使用可能日数} & \textbf{備考} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{薬剤名} & \textbf{現在庫数} & \textbf{通常消費/日} & \textbf{使用可能日数} & \textbf{備考} \\
+\hline
+\endhead
+
+ヘパリン &  &  &  &  \\
+\hline
+エポエチン &  &  &  &  \\
+\hline
+炭酸水素ナトリウム &  &  &  &  \\
+\hline
+塩化カルシウム &  &  &  &  \\
+\hline
+生理食塩水 &  &  &  &  \\
+\hline
+ブドウ糖液 &  &  &  &  \\
+\hline
+昇圧剤 &  &  &  &  \\
+\hline
+降圧剤 &  &  &  &  \\
+\hline
+緊急薬品セット &  &  &  &  \\
+\hline
+\end{longtable}
+
+\vspace{5mm}
+
+% 緊急時物資
+\begin{center}
+\textbf{\large 緊急時物資}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 非常用電源燃料：\quad \checkbox 満タン \quad / \quad \checkbox 3/4 \quad / \quad \checkbox 半分 \quad / \quad \checkbox 1/4 \quad / \quad \checkbox 残りわずか
+
+\vspace{2mm}
+
+\noindent
+\checkbox 飲料水：\quad \checkbox 十分（\underlinespace{2cm}L） \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 非常食：\quad \checkbox 十分（\underlinespace{2cm}日分） \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 毛布・寝具：\quad \checkbox 十分（\underlinespace{2cm}枚） \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 懐中電灯・電池：\quad \checkbox 十分 \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox ラジオ・通信機器：\quad \checkbox 正常 \quad / \quad \checkbox 不具合 \quad / \quad \checkbox なし
+
+\vspace{8mm}
+
+% PD関連物資
+\begin{center}
+\textbf{\large PD関連物資（該当施設のみ）}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox PD透析液：\quad \checkbox 十分（\underlinespace{2cm}袋） \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox PD回路・バッグ：\quad \checkbox 十分（\underlinespace{2cm}セット） \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox PD消毒液：\quad \checkbox 十分 \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{8mm}
+
+% 保管状況
+\begin{center}
+\textbf{\large 保管状況}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 薬品冷蔵庫：\quad \checkbox 正常稼働 \quad / \quad \checkbox 故障 \quad / \quad \checkbox 停電
+
+\vspace{2mm}
+
+\noindent
+\checkbox 倉庫・保管庫：\quad \checkbox 正常 \quad / \quad \checkbox 一部損傷 \quad / \quad \checkbox 重大損傷
+
+\vspace{2mm}
+
+\noindent
+\checkbox 物資の損傷：\quad \checkbox なし \quad / \quad \checkbox 軽微 \quad / \quad \checkbox 重大
+
+\vspace{2mm}
+
+\noindent
+\checkbox 温度管理：\quad \checkbox 適正 \quad / \quad \checkbox 要注意 \quad / \quad \checkbox 不適
+
+\vspace{8mm}
+
+% 緊急調達必要物資
+\begin{center}
+\textbf{\large 緊急調達必要物資}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 最優先：\underlinespace{10cm}
+
+\vspace{2mm}
+
+\noindent
+\checkbox 24時間以内：\underlinespace{10cm}
+
+\vspace{2mm}
+
+\noindent
+\checkbox 3日以内：\underlinespace{10cm}
+
+\vspace{8mm}
+
+% 消費ペース計算
+\begin{center}
+\textbf{\large 消費ペース計算}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 通常透析継続の場合：\underlinespace{2cm}日間継続可能
+
+\vspace{2mm}
+
+\noindent
+\checkbox 短時間透析実施の場合：\underlinespace{2cm}日間継続可能
+
+\vspace{2mm}
+
+\noindent
+\checkbox 最小限透析実施の場合：\underlinespace{2cm}日間継続可能
+
+\vspace{8mm}
+
+% 特記事項・詳細
+\begin{center}
+\textbf{\large 特記事項・詳細}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}

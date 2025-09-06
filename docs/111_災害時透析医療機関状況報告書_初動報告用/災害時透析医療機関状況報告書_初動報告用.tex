@@ -1,0 +1,132 @@
+% 災害時透析医療機関状況報告書（初動報告用）
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=30mm, bottom=30mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 111 災害時透析医療機関状況報告書（初動報告用） 2025.09.06版}
+\def\@evenhead{\hfill\small 111 災害時透析医療機関状況報告書（初動報告用） 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式01}}\\
+\vspace{3mm}
+{\Large\textbf{災害時透析医療機関状況報告書（初動報告用）}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【報告時刻】発災後30分}
+
+\vspace{5mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【報告者】} \underlinespace{4cm} \quad \textbf{【連絡先】} \underlinespace{5cm}
+
+\vspace{8mm}
+
+% 人的被害状況
+\begin{center}
+\textbf{\large 人的被害状況}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 職員：\quad \checkbox 負傷者なし \quad / \quad 軽傷（\underlinespace{1cm}）名 \quad / \quad 重傷（\underlinespace{1cm}）名 \quad / \quad 安否不明（\underlinespace{1cm}）名
+
+\vspace{3mm}
+
+\noindent
+\checkbox 患者：\quad \checkbox 負傷者なし \quad / \quad 軽傷（\underlinespace{1cm}）名 \quad / \quad 重傷（\underlinespace{1cm}）名 \quad / \quad 安否不明（\underlinespace{1cm}）名
+
+\vspace{8mm}
+
+% 建物・設備安全状況
+\begin{center}
+\textbf{\large 建物・設備安全状況}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 建物：\quad \checkbox 安全 \quad / \quad \checkbox 要注意 \quad / \quad \checkbox 危険
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部損傷 \quad / \quad \checkbox 重大損傷 \quad / \quad \checkbox 使用不可
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急支援要請：\quad \checkbox なし \quad / \quad \checkbox あり
+
+\vspace{3mm}
+
+\noindent
+（内容：\underlinespace{10cm}）
+
+\vspace{2mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{8mm}
+
+% 備考・追加情報
+\begin{center}
+\textbf{\large 備考・追加情報}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}

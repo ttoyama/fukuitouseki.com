@@ -1,0 +1,262 @@
+% 患者カテゴリー別優先度評価表
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=20mm, bottom=20mm, left=15mm, right=15mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 118 患者カテゴリー別優先度評価表 2025.09.06版}
+\def\@evenhead{\hfill\small 118 患者カテゴリー別優先度評価表 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式08}}\\
+\vspace{3mm}
+{\Large\textbf{患者カテゴリー別優先度評価表}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【評価日時】}\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【評価者】} \underlinespace{10cm}
+
+\vspace{8mm}
+
+% トリアージ基準
+\begin{center}
+\textbf{\large トリアージ基準}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{赤（最優先）：}生命に直結する症状・24時間以内の透析が必要
+
+\vspace{2mm}
+
+\noindent
+\textbf{黄（準緊急）：}48-72時間以内の透析が必要
+
+\vspace{2mm}
+
+\noindent
+\textbf{緑（一般）：}3-4日以内の透析で対応可能
+
+\vspace{2mm}
+
+\noindent
+\textbf{青（経過観察）：}透析延期が可能・PD患者等
+
+\vspace{8mm}
+
+% 患者優先度評価表
+\begin{center}
+\textbf{\large 患者優先度評価}
+\end{center}
+
+\vspace{3mm}
+
+\begin{longtable}{|p{1.3cm}|p{1.8cm}|p{1.5cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.5cm}|p{1.3cm}|p{1.5cm}|}
+\hline
+\textbf{患者ID} & \textbf{氏名} & \textbf{最終透析} & \textbf{緊急症状} & \textbf{残存腎機能} & \textbf{併存疾患} & \textbf{トリアージ} & \textbf{優先順位} & \textbf{備考} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{患者ID} & \textbf{氏名} & \textbf{最終透析} & \textbf{緊急症状} & \textbf{残存腎機能} & \textbf{併存疾患} & \textbf{トリアージ} & \textbf{優先順位} & \textbf{備考} \\
+\hline
+\endhead
+
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+\end{longtable}
+
+\vspace{5mm}
+
+% 詳細評価基準
+\begin{center}
+\textbf{\large 詳細評価基準}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{緊急性の高い症状（赤）}
+
+\noindent
+\checkbox 高カリウム血症（K > 6.0mEq/L）\quad \checkbox 肺水腫・呼吸困難\quad \checkbox 意識レベルの変化
+
+\noindent
+\checkbox 重篤な酸塩基平衡異常\quad \checkbox 心不全の増悪\quad \checkbox 最終透析から96時間以上経過
+
+\vspace{3mm}
+
+\noindent
+\textbf{準緊急（黄）}
+
+\noindent
+\checkbox 軽度の呼吸困難\quad \checkbox 浮腫の増強\quad \checkbox 血圧の不安定
+
+\noindent
+\checkbox 最終透析から72-96時間経過\quad \checkbox 残存腎機能なし
+
+\vspace{3mm}
+
+\noindent
+\textbf{一般（緑）}
+
+\noindent
+\checkbox 最終透析から48-72時間経過\quad \checkbox 軽度の残存腎機能あり
+
+\noindent
+\checkbox 安定した全身状態\quad \checkbox 軽度の併存疾患
+
+\vspace{3mm}
+
+\noindent
+\textbf{経過観察（青）}
+
+\noindent
+\checkbox PD患者（在宅継続可能）\quad \checkbox 残存腎機能良好
+
+\noindent
+\checkbox 保存的治療導入直後\quad \checkbox 透析導入検討中
+
+\vspace{8mm}
+
+% 集計結果
+\begin{center}
+\textbf{\large 集計結果}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{赤（最優先）：}\underlinespace{2cm}名\quad \textbf{黄（準緊急）：}\underlinespace{2cm}名
+
+\vspace{2mm}
+
+\noindent
+\textbf{緑（一般）：}\underlinespace{2cm}名\quad \textbf{青（経過観察）：}\underlinespace{2cm}名
+
+\vspace{2mm}
+
+\noindent
+\textbf{合計：}\underlinespace{2cm}名
+
+\vspace{8mm}
+
+% 治療計画
+\begin{center}
+\textbf{\large 治療計画}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\textbf{24時間以内治療要：}\underlinespace{2cm}名\quad \textbf{48時間以内治療要：}\underlinespace{2cm}名
+
+\vspace{2mm}
+
+\noindent
+\textbf{72時間以内治療要：}\underlinespace{2cm}名\quad \textbf{他施設搬送検討：}\underlinespace{2cm}名
+
+\vspace{8mm}
+
+% 特記事項・医師判断
+\begin{center}
+\textbf{\large 特記事項・医師判断}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}

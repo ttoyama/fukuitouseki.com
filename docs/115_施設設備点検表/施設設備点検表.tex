@@ -1,0 +1,265 @@
+% 施設設備点検表
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=25mm, bottom=25mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 115 施設設備点検表 2025.09.06版}
+\def\@evenhead{\hfill\small 115 施設設備点検表 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式05}}\\
+\vspace{3mm}
+{\Large\textbf{施設設備点検表}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【点検日時】}\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【点検者】} \underlinespace{10cm}
+
+\vspace{8mm}
+
+% 建物点検
+\begin{center}
+\textbf{\large 建物点検}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 建物外観：\quad \checkbox 正常 \quad / \quad \checkbox 軽微損傷 \quad / \quad \checkbox 重大損傷
+
+\vspace{2mm}
+
+\noindent
+\checkbox 建物内部：\quad \checkbox 正常 \quad / \quad \checkbox 軽微損傷 \quad / \quad \checkbox 重大損傷
+
+\vspace{2mm}
+
+\noindent
+\checkbox 出入口・避難路：\quad \checkbox 正常 \quad / \quad \checkbox 一部使用不可 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 階段・エレベーター：\quad \checkbox 正常 \quad / \quad \checkbox 一部使用不可 \quad / \quad \checkbox 使用不可
+
+\vspace{8mm}
+
+% ライフライン点検
+\begin{center}
+\textbf{\large ライフライン点検}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 電力供給：\quad \checkbox 正常 \quad / \quad \checkbox 一部停電 \quad / \quad \checkbox 全停電
+
+\vspace{2mm}
+
+\noindent
+\checkbox 自家発電：\quad \checkbox 正常稼働 \quad / \quad \checkbox 異常あり \quad / \quad \checkbox 使用不可 \quad / \quad \checkbox 設備なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 燃料残量：\quad \checkbox 満タン \quad / \quad \checkbox 3/4 \quad / \quad \checkbox 半分 \quad / \quad \checkbox 1/4 \quad / \quad \checkbox 残りわずか
+
+\vspace{2mm}
+
+\noindent
+\checkbox 上水道：\quad \checkbox 正常 \quad / \quad \checkbox 水圧低下 \quad / \quad \checkbox 断水
+
+\vspace{2mm}
+
+\noindent
+\checkbox 貯水設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部損傷 \quad / \quad \checkbox 使用不可 \quad / \quad \checkbox 設備なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox ガス供給：\quad \checkbox 正常 \quad / \quad \checkbox 一部停止 \quad / \quad \checkbox 全停止
+
+\vspace{2mm}
+
+\noindent
+\checkbox 通信回線：\quad \checkbox 正常 \quad / \quad \checkbox 一部不通 \quad / \quad \checkbox 全不通
+
+\vspace{8mm}
+
+% 医療ガス・空調設備
+\begin{center}
+\textbf{\large 医療ガス・空調設備}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 酸素供給：\quad \checkbox 正常 \quad / \quad \checkbox 異常あり \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 医療用エア：\quad \checkbox 正常 \quad / \quad \checkbox 異常あり \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 吸引設備：\quad \checkbox 正常 \quad / \quad \checkbox 異常あり \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 空調設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 換気設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{8mm}
+
+% 保管・安全設備
+\begin{center}
+\textbf{\large 保管・安全設備}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 医薬品保管庫：\quad \checkbox 正常 \quad / \quad \checkbox 一部損傷 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 医療材料保管庫：\quad \checkbox 正常 \quad / \quad \checkbox 一部損傷 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 冷蔵・冷凍設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 防火・消火設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 防犯設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{8mm}
+
+% 給排水・廃棄物処理
+\begin{center}
+\textbf{\large 給排水・廃棄物処理}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 給水設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部故障 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 排水設備：\quad \checkbox 正常 \quad / \quad \checkbox 一部詰まり \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 浄化槽：\quad \checkbox 正常 \quad / \quad \checkbox 異常あり \quad / \quad \checkbox 使用不可 \quad / \quad \checkbox 設備なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 廃棄物処理：\quad \checkbox 正常 \quad / \quad \checkbox 一部支障 \quad / \quad \checkbox 処理不可
+
+\vspace{8mm}
+
+% 総合評価
+\begin{center}
+\textbf{\large 総合評価}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析治療継続：\quad \checkbox 可能 \quad / \quad \checkbox 一部制限あり \quad / \quad \checkbox 不可能
+
+\vspace{2mm}
+
+\noindent
+\checkbox 緊急修繕要否：\quad \checkbox 不要 \quad / \quad \checkbox 軽微修繕要 \quad / \quad \checkbox 大規模修繕要
+
+\vspace{2mm}
+
+\noindent
+\checkbox 安全性：\quad \checkbox 安全 \quad / \quad \checkbox 要注意 \quad / \quad \checkbox 危険
+
+\vspace{8mm}
+
+% 損傷詳細・特記事項
+\begin{center}
+\textbf{\large 損傷詳細・特記事項}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}

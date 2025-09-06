@@ -1,0 +1,292 @@
+% 透析関連機器確認表
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=25mm, bottom=25mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 116 透析関連機器確認表 2025.09.06版}
+\def\@evenhead{\hfill\small 116 透析関連機器確認表 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式06}}\\
+\vspace{3mm}
+{\Large\textbf{透析関連機器確認表}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【確認日時】}\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+\vspace{3mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【確認者】} \underlinespace{10cm}
+
+\vspace{8mm}
+
+% 透析装置
+\begin{center}
+\textbf{\large 透析装置}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 設置台数：\underlinespace{2cm}台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 正常稼働：\underlinespace{2cm}台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 軽微異常：\underlinespace{2cm}台（内容：\underlinespace{6cm}）
+
+\vspace{2mm}
+
+\noindent
+\checkbox 重大異常：\underlinespace{2cm}台（内容：\underlinespace{6cm}）
+
+\vspace{2mm}
+
+\noindent
+\checkbox 使用不可：\underlinespace{2cm}台（理由：\underlinespace{6cm}）
+
+\vspace{8mm}
+
+% 水処理装置
+\begin{center}
+\textbf{\large 水処理装置}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox RO装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 前処理装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 貯水タンク：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 配管システム：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 水質検査：\quad \checkbox 実施済み \quad / \quad \checkbox 未実施 \quad / \quad \checkbox 実施不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 水質結果：\quad \checkbox 基準内 \quad / \quad \checkbox 要注意 \quad / \quad \checkbox 基準外
+
+\vspace{8mm}
+
+% 透析液供給システム
+\begin{center}
+\textbf{\large 透析液供給システム}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析液作成装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 透析液配管：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 透析液原液タンク：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 透析液品質：\quad \checkbox 基準内 \quad / \quad \checkbox 要注意 \quad / \quad \checkbox 基準外
+
+\vspace{8mm}
+
+% 監視・安全システム
+\begin{center}
+\textbf{\large 監視・安全システム}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 中央監視装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 警報システム：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 非常停止装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 安全弁・圧力調整：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{8mm}
+
+% 周辺機器
+\begin{center}
+\textbf{\large 周辺機器}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 体重計：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 血圧計：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 心電図モニター：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 除細動器：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 酸素吸入器：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{2mm}
+
+\noindent
+\checkbox 吸引器：\quad 正常（\underlinespace{1.5cm}）台 \quad / \quad 異常（\underlinespace{1.5cm}）台
+
+\vspace{8mm}
+
+% 緊急時機器
+\begin{center}
+\textbf{\large 緊急時機器}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 緊急用手動装置：\quad \checkbox 正常 \quad / \quad \checkbox 異常 \quad / \quad \checkbox 設備なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox バックアップ電源：\quad \checkbox 正常 \quad / \quad \checkbox 異常 \quad / \quad \checkbox 設備なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 緊急用透析液：\quad \checkbox 十分 \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{2mm}
+
+\noindent
+\checkbox 緊急用回路セット：\quad \checkbox 十分 \quad / \quad \checkbox 不足 \quad / \quad \checkbox なし
+
+\vspace{8mm}
+
+% 総合評価
+\begin{center}
+\textbf{\large 総合評価}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析治療可能台数：\quad 通常（\underlinespace{2cm}）台 \quad / \quad 制限（\underlinespace{2cm}）台 \quad / \quad 不可
+
+\vspace{2mm}
+
+\noindent
+\checkbox 治療時間制限：\quad \checkbox なし \quad / \quad 短縮要（\underlinespace{2cm}時間） \quad / \quad \checkbox 大幅制限
+
+\vspace{2mm}
+
+\noindent
+\checkbox 緊急修理要否：\quad \checkbox 不要 \quad / \quad \checkbox 軽微修理 \quad / \quad \checkbox 専門業者要請
+
+\vspace{8mm}
+
+% 詳細記録・特記事項
+\begin{center}
+\textbf{\large 詳細記録・特記事項}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}

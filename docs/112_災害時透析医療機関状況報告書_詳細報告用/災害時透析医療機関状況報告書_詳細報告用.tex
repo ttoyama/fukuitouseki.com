@@ -1,0 +1,199 @@
+% 災害時透析医療機関状況報告書（詳細報告用）
+% LaTeX template for disaster dialysis manual forms
+
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[top=30mm, bottom=30mm, left=20mm, right=20mm, footskip=18mm, headsep=12mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+
+% シンプルなページ番号設定
+\pagestyle{plain}
+\makeatletter
+\def\@oddhead{\hfill\small 112 災害時透析医療機関状況報告書（詳細報告用） 2025.09.06版}
+\def\@evenhead{\hfill\small 112 災害時透析医療機関状況報告書（詳細報告用） 2025.09.06版}
+\def\@oddfoot{\hfil\thepage\hfil}
+\def\@evenfoot{\hfil\thepage\hfil}
+\makeatother
+
+\begin{document}
+
+% 手動でタイトルを作成
+\begin{center}
+{\Large\textbf{様式02}}\\
+\vspace{3mm}
+{\Large\textbf{災害時透析医療機関状況報告書（詳細報告用）}}
+\end{center}
+\vspace{5mm}
+
+\noindent
+\textbf{【報告時刻】発災後}（\underlinespace{2cm}）時間
+
+\vspace{5mm}
+
+\noindent
+\textbf{【施設名】} \underlinespace{10cm}
+
+\vspace{3mm}
+
+\noindent
+\textbf{【報告者】} \underlinespace{4cm} \quad \textbf{【連絡先】} \underlinespace{5cm}
+
+\vspace{8mm}
+
+% ライフライン状況
+\begin{center}
+\textbf{\large ライフライン状況}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 電力：\quad \checkbox 正常 \quad / \quad \checkbox 一部停電 \quad / \quad \checkbox 全停電
+
+\vspace{2mm}
+
+\noindent
+（自家発電：\checkbox 有・\checkbox 無、稼働時間：\underlinespace{2cm}）
+
+\vspace{3mm}
+
+\noindent
+\checkbox 上水道：\quad \checkbox 正常 \quad / \quad \checkbox 水圧低下 \quad / \quad \checkbox 断水
+
+\vspace{2mm}
+
+\noindent
+（貯水：\underlinespace{2cm}m$^3$）
+
+\vspace{3mm}
+
+\noindent
+\checkbox ガス：\quad \checkbox 正常 \quad / \quad \checkbox 一部停止 \quad / \quad \checkbox 全停止
+
+\vspace{3mm}
+
+\noindent
+\checkbox 通信：\quad \checkbox 正常 \quad / \quad \checkbox 一部不通 \quad / \quad \checkbox 全不通
+
+\vspace{8mm}
+
+% 透析関連設備
+\begin{center}
+\textbf{\large 透析関連設備}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析装置：正常（\underlinespace{1.5cm}）台 \quad / \quad 軽微異常（\underlinespace{1.5cm}）台 \quad / \quad 使用不可（\underlinespace{1.5cm}）台
+
+\vspace{3mm}
+
+\noindent
+\checkbox 水処理装置：\quad \checkbox 正常 \quad / \quad \checkbox 軽微異常 \quad / \quad \checkbox 使用不可
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析液供給：\quad \checkbox 正常 \quad / \quad \checkbox 一部支障 \quad / \quad \checkbox 供給不可
+
+\vspace{8mm}
+
+% 運営状況
+\begin{center}
+\textbf{\large 運営状況}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析継続：\quad \checkbox 可能 \quad / \quad \checkbox 一部制限 \quad / \quad \checkbox 不可能
+
+\vspace{3mm}
+
+\noindent
+\checkbox 継続可能患者数：（\underlinespace{2cm}）名/日
+
+\vspace{3mm}
+
+\noindent
+\checkbox 受け入れ可能患者数：緊急（\underlinespace{1.5cm}）名、当日（\underlinespace{1.5cm}）名、翌日（\underlinespace{1.5cm}）名
+
+\vspace{3mm}
+
+\noindent
+\checkbox 必要支援：人員（医師\underlinespace{1cm}名、看護師\underlinespace{1cm}名、技師\underlinespace{1cm}名）
+
+\vspace{2mm}
+
+\hspace*{3.5cm}物資（\underlinespace{8cm}）
+
+\vspace{2mm}
+
+\hspace*{3.5cm}患者搬送（\underlinespace{2cm}）名
+
+\vspace{8mm}
+
+% 復旧見込み
+\begin{center}
+\textbf{\large 復旧見込み}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\checkbox 電力復旧見込み：（\underlinespace{2cm}）時間後 \quad / \quad （\underlinespace{2cm}）日後 \quad / \quad \checkbox 不明
+
+\vspace{3mm}
+
+\noindent
+\checkbox 水道復旧見込み：（\underlinespace{2cm}）時間後 \quad / \quad （\underlinespace{2cm}）日後 \quad / \quad \checkbox 不明
+
+\vspace{3mm}
+
+\noindent
+\checkbox 透析再開見込み：（\underlinespace{2cm}）時間後 \quad / \quad （\underlinespace{2cm}）日後 \quad / \quad \checkbox 不明
+
+\vspace{8mm}
+
+% 備考・追加情報
+\begin{center}
+\textbf{\large 備考・追加情報}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\vspace{3mm}
+
+\noindent
+\underlinespace{13cm}
+
+\end{document}
