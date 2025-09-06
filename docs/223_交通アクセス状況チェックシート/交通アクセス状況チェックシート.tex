@@ -10,6 +10,7 @@
 \usepackage{amssymb}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage{qrcode}
 
 \newcommand{\checkbox}{$\square$\ }
 \newcommand{\checkedbox}{$\blacksquare$\ }
@@ -344,5 +345,42 @@
 
 \noindent
 \textbf{確認責任者：} \underlinespace{4cm} \quad \textbf{確認印：} \underlinespace{3cm}
+
+\vspace{10mm}
+
+% 防災情報QRコード
+\begin{center}
+\textbf{\large 関連防災情報サイト}
+\end{center}
+
+\vspace{3mm}
+
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\textbf{政府広報防災特集}\\
+\vspace{2mm}
+\qrcode[height=2.5cm]{https://www.gov-online.go.jp/tokusyu/bousai/}\\
+\vspace{1mm}
+{\small 国の基本防災対策}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\textbf{福井県危機対策ポータル}\\
+\vspace{2mm}
+\qrcode[height=2.5cm]{https://www.pref.fukui.lg.jp/doc/kikitaisaku/portalsite.html}\\
+\vspace{1mm}
+{\small 県の防災情報}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\textbf{福井県防災ネット}\\
+\vspace{2mm}
+\qrcode[height=2.5cm]{https://www.bousai.pref.fukui.lg.jp/dis_portal/index.html}\\
+\vspace{1mm}
+{\small リアルタイム防災情報}
+\end{minipage}
 
 \end{document}
