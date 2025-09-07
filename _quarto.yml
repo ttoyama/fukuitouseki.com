@@ -2,6 +2,15 @@ project:
   type: website
   output-dir: _site
   
+# レンダリング除外ファイル
+render:
+  - "*.qmd"
+  - "!*.tex"  # .texファイルを除外
+  - "!*.log"  # .logファイルを除外
+  - "!*.aux"  # .auxファイルを除外
+  - "!*.dvi"  # .dviファイルを除外
+  - "!*.pdf"  # 既存の.pdfファイルを除外
+  
 # GitHub Pages用の設定
 execute:
   freeze: auto
