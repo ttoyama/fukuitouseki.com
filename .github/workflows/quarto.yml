@@ -68,14 +68,7 @@ jobs:
             mkdir -p booklet-pdf/quarto-generated
             cp pdf-output/*.pdf booklet-pdf/quarto-generated/ || true
             git add booklet-pdf/quarto-generated/
-            git commit -m "$(cat <<'EOF'
-Quarto PDF生成: $(date +%Y%m%d_%H%M)
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-EOF
-)" || echo "変更なし"
+            git commit -m "Quarto PDF生成: $(date +%Y%m%d_%H%M)" || echo "変更なし"
             git push || echo "プッシュ失敗"
           fi
 
