@@ -1,0 +1,239 @@
+---
+title: "様式08"
+subtitle: "118 様式08"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.06版"
+header-right: "118 様式08 2025.09.06版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**様式08**}\\
+
+{\Large**患者カテゴリー別優先度評価表**}
+
+
+
+**【評価日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**【施設名】** \underlinespace{10cm}
+
+
+
+**【評価者】** \underlinespace{10cm}
+
+
+
+% トリアージ基準
+
+**\large トリアージ基準**
+
+
+
+
+**赤（最優先）：**生命に直結する症状・24時間以内の透析が必要
+
+
+
+**黄（準緊急）：**48-72時間以内の透析が必要
+
+
+
+**緑（一般）：**3-4日以内の透析で対応可能
+
+
+
+**青（経過観察）：**透析延期が可能・PD患者等
+
+
+
+% 患者優先度評価表
+
+**\large 患者優先度評価**
+
+
+
+
+\begin{longtable}{|p{1.3cm}|p{1.8cm}|p{1.5cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.5cm}|p{1.3cm}|p{1.5cm}|}
+\hline
+**患者ID** & **氏名** & **最終透析** & **緊急症状** & **残存腎機能** & **併存疾患** & **トリアージ** & **優先順位** & **備考** \\
+\hline
+\endfirsthead
+
+\hline
+**患者ID** & **氏名** & **最終透析** & **緊急症状** & **残存腎機能** & **併存疾患** & **トリアージ** & **優先順位** & **備考** \\
+\hline
+\endhead
+
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+ &  & / / & 有/無 & 有/無 & 軽/中/重 & 赤/黄/緑/青 &  &  \\
+\hline
+\end{longtable}
+
+
+
+% 詳細評価基準
+
+**\large 詳細評価基準**
+
+
+
+
+**緊急性の高い症状（赤）**
+
+\checkbox 高カリウム血症（K > 6.0mEq/L）     \checkbox 肺水腫・呼吸困難     \checkbox 意識レベルの変化
+
+\checkbox 重篤な酸塩基平衡異常     \checkbox 心不全の増悪     \checkbox 最終透析から96時間以上経過
+
+
+
+**準緊急（黄）**
+
+\checkbox 軽度の呼吸困難     \checkbox 浮腫の増強     \checkbox 血圧の不安定
+
+\checkbox 最終透析から72-96時間経過     \checkbox 残存腎機能なし
+
+
+
+**一般（緑）**
+
+\checkbox 最終透析から48-72時間経過     \checkbox 軽度の残存腎機能あり
+
+\checkbox 安定した全身状態     \checkbox 軽度の併存疾患
+
+
+
+**経過観察（青）**
+
+\checkbox PD患者（在宅継続可能）     \checkbox 残存腎機能良好
+
+\checkbox 保存的治療導入直後     \checkbox 透析導入検討中
+
+
+
+% 集計結果
+
+**\large 集計結果**
+
+
+
+
+**赤（最優先）：**\underlinespace{2cm}名     **黄（準緊急）：**\underlinespace{2cm}名
+
+
+
+**緑（一般）：**\underlinespace{2cm}名     **青（経過観察）：**\underlinespace{2cm}名
+
+
+
+**合計：**\underlinespace{2cm}名
+
+
+
+% 治療計画
+
+**\large 治療計画**
+
+
+
+
+**24時間以内治療要：**\underlinespace{2cm}名     **48時間以内治療要：**\underlinespace{2cm}名
+
+
+
+**72時間以内治療要：**\underlinespace{2cm}名     **他施設搬送検討：**\underlinespace{2cm}名
+
+
+
+% 特記事項・医師判断
+
+**\large 特記事項・医師判断**
+
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}

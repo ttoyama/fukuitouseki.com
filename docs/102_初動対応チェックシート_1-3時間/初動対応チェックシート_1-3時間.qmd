@@ -1,0 +1,267 @@
+---
+title: "初動対応チェックシート（発災後1～3時間）"
+subtitle: "102 初動対応チェックシート（発災後1～3時間）"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.04版"
+header-right: "102 初動対応チェックシート（発災後1～3時間） 2025.09.04版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**初動対応チェックシート（発災後1～3時間）**}
+
+
+
+**施設名：** \underlinespace{8cm}
+
+
+
+**記録者：** \underlinespace{4cm}
+
+
+
+**記録日時：** \underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+## 1. 内部体制確立
+
+\checkbox **施設内災害対策本部を立ち上げる**
+
+     立ち上げ完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分      本部長：\underlinespace{4cm}
+
+
+
+\checkbox **状況共有・指示系統を確立する**
+
+     体制確立時刻：\underlinespace{1cm}時\underlinespace{1cm}分      参加スタッフ数：\underlinespace{2cm}人
+
+
+
+\checkbox **通信手段を確保する**
+
+     \checkbox 固定電話      \checkbox 携帯電話      \checkbox 衛星電話      \checkbox 防災無線
+
+     利用可能通信手段：\underlinespace{10cm}
+
+
+
+## 2. 詳細被災状況報告（発災後1時間）
+
+### 2-1. 福井県透析施設ネットワーク本部への報告
+
+\checkbox **透析設備の損傷・稼働状況を報告する**
+
+     報告完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分      報告者：\underlinespace{4cm}
+
+     稼働可能台数：\underlinespace{2cm}台／総\underlinespace{2cm}台
+
+     損傷詳細：\underlinespace{10cm}
+
+
+
+\checkbox **ライフラインの使用可否を報告する**
+
+     **電気：** \circlecheck 使用可能 \circlecheck 一部制限 \circlecheck 使用不可
+
+     **水道：** \circlecheck 使用可能 \circlecheck 一部制限 \circlecheck 使用不可
+
+     **ガス：** \circlecheck 使用可能 \circlecheck 一部制限 \circlecheck 使用不可
+
+     **通信：** \circlecheck 使用可能 \circlecheck 一部制限 \circlecheck 使用不可
+
+
+
+\checkbox **施設へのアクセス道路状況を報告する**
+
+     主要アクセス路：\circlecheck 通行可能 \circlecheck 通行困難 \circlecheck 通行不可
+
+     詳細状況：\underlinespace{10cm}
+
+
+
+\checkbox **医薬品・医療材料の被害状況を報告する**
+
+     \circlecheck 問題なし      \circlecheck 一部破損      \circlecheck 大幅破損
+
+     破損詳細：\underlinespace{10cm}
+
+
+
+
+\newpage
+
+
+## 3. 運営判断・支援要請準備
+
+\checkbox **透析継続の可否を判断する**
+
+     \circlecheck 継続可能      \circlecheck 一部制限あり      \circlecheck 継続不可
+
+     判断根拠：\underlinespace{10cm}
+
+
+
+\checkbox **支援が必要な患者数を算出し緊急度を分類する**
+
+     高緊急度（赤）：\underlinespace{2cm}人      中緊急度（黄）：\underlinespace{2cm}人      低緊急度（緑）：\underlinespace{2cm}人
+
+
+
+\checkbox **必要支援内容を整理する**
+
+     \checkbox 人員支援      \checkbox 物資支援      \checkbox 患者搬送
+
+     詳細要請内容：\underlinespace{10cm}
+
+
+
+\checkbox **受け入れ可能患者数を算定する**
+
+     緊急受入：\underlinespace{2cm}人      当日受入：\underlinespace{2cm}人      翌日受入：\underlinespace{2cm}人
+
+
+
+## 4. 運営可否・支援要請報告（発災後3時間）
+
+### 4-1. 福井県透析施設ネットワーク本部への報告
+
+\checkbox **透析継続の可否と理由を報告する**
+
+     報告完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分      報告者：\underlinespace{4cm}
+
+     継続判断：\circlecheck 継続可能 \circlecheck 一部制限 \circlecheck 継続不可
+
+     理由：\underlinespace{10cm}
+
+
+
+\checkbox **支援が必要な患者数と緊急度分類を報告する**
+
+     支援必要患者総数：\underlinespace{2cm}人
+
+     内訳：高緊急度\underlinespace{2cm}人、中緊急度\underlinespace{2cm}人、低緊急度\underlinespace{2cm}人
+
+
+
+\checkbox **必要な支援内容を報告する**
+
+     \checkbox 人員派遣要請      \checkbox 物資支援要請      \checkbox 患者搬送要請
+
+     詳細要請内容：\underlinespace{10cm}
+
+
+
+\checkbox **受け入れ可能患者数を報告する**
+
+     受入可能総数：\underlinespace{2cm}人
+
+     内訳：緊急\underlinespace{2cm}人、当日\underlinespace{2cm}人、翌日\underlinespace{2cm}人
+
+
+
+
+\newpage
+
+
+## 5. 初動対応記録
+
+\checkbox **初動対応記録を作成・更新する**
+
+### 5-1. 災害発生からの状況記録
+
+**発災時刻：** \underlinespace{1cm}時\underlinespace{1cm}分      **災害種別：** \underlinespace{6cm}
+
+
+
+**主な被害状況：**
+
+\underlinespace{15cm}
+
+\underlinespace{15cm}
+
+
+
+### 5-2. 実施した対応・判断内容記録
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **対応内容：** \underlinespace{10cm}
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **対応内容：** \underlinespace{10cm}
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **対応内容：** \underlinespace{10cm}
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **対応内容：** \underlinespace{10cm}
+
+
+
+### 5-3. スタッフ行動記録
+
+**スタッフ名：** \underlinespace{4cm}      **主な対応：** \underlinespace{8cm}
+
+**スタッフ名：** \underlinespace{4cm}      **主な対応：** \underlinespace{8cm}
+
+**スタッフ名：** \underlinespace{4cm}      **主な対応：** \underlinespace{8cm}
+
+
+
+### 5-4. 患者状況変化記録
+
+**患者名：** \underlinespace{3cm}      **状況変化：** \underlinespace{9cm}
+
+**患者名：** \underlinespace{3cm}      **状況変化：** \underlinespace{9cm}
+
+**患者名：** \underlinespace{3cm}      **状況変化：** \underlinespace{9cm}
+
+
+
+### 5-5. 外部連絡記録
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **連絡先：** \underlinespace{5cm}      **内容：** \underlinespace{6cm}
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **連絡先：** \underlinespace{5cm}      **内容：** \underlinespace{6cm}
+
+**時刻：\underlinespace{1cm**時\underlinespace{1cm}分}      **連絡先：** \underlinespace{5cm}      **内容：** \underlinespace{6cm}
+
+
+
+**総合確認：** \\
+\checkbox 内部体制確立完了 \\
+\checkbox 詳細被災状況報告（1時間）完了 \\
+\checkbox 運営判断・支援要請準備完了 \\
+\checkbox 運営可否・支援要請報告（3時間）完了 \\
+\checkbox 初動対応記録作成・更新完了
+
+
+
+最終確認者：\underlinespace{4cm} \\
+
+確認日時：\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分

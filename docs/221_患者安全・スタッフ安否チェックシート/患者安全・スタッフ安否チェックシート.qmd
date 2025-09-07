@@ -1,0 +1,262 @@
+---
+title: "患者安全・スタッフ安否チェックシート（発災直後対応）"
+subtitle: "221 患者安全・スタッフ安否チェックシート（発災直後対応）"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.06版"
+header-right: "221 患者安全・スタッフ安否チェックシート（発災直後対応） 2025.09.06版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**患者安全・スタッフ安否チェックシート（発災直後対応）**}
+
+
+
+**施設名：** \underlinespace{8cm}
+
+
+
+**発災日時：**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**確認者：** \underlinespace{4cm}      **確認開始時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+% 患者安全確認
+
+**\large 患者安全確認**
+
+
+
+
+\checkbox 施設内患者の安全最優先確保：\checkbox 実施完了      \checkbox 実施中      \checkbox 要支援
+
+
+
+\checkbox 負傷者確認：\checkbox なし      \checkbox あり（\underlinespace{1cm}名）
+
+
+
+負傷者詳細：\underlinespace{10cm}
+
+
+
+\checkbox 応急処置：\checkbox 不要      \checkbox 実施済      \checkbox 実施中
+
+
+
+処置内容：\underlinespace{10cm}
+
+
+
+\checkbox 心理的ケア：\checkbox 実施済      \checkbox 実施中      \checkbox 要継続
+
+
+
+対応状況：\underlinespace{10cm}
+
+
+
+\checkbox 透析治療中の対応：\checkbox 継続判断      \checkbox 中止判断      \checkbox 治療中なし
+
+
+
+継続・中止の理由：\underlinespace{10cm}
+
+
+
+% スタッフ安否確認
+
+**\large スタッフ安否確認**
+
+
+
+
+\checkbox 緊急連絡システムの活用：\checkbox 一斉メール      \checkbox SNSグループ      \checkbox 電話連絡網
+
+
+
+**スタッフ安否確認状況：**
+
+
+
+\begin{longtable}{|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+**スタッフ名** & **安否確認** & **負傷状況** & **参集可否** & **備考** \\
+\hline
+\endfirsthead
+\hline
+**スタッフ名** & **安否確認** & **負傷状況** & **参集可否** & **備考** \\
+\hline
+\endhead
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\underlinespace{2.8cm} & \checkbox 確認済 & \checkbox なし & \checkbox 可能 & \\
+                       & \checkbox 未確認 & \checkbox あり  & \checkbox 不可  & \\[0.3cm]
+\hline
+\end{longtable}
+
+
+
+**スタッフ安否確認集計：**
+
+
+
+総スタッフ数：\underlinespace{2cm}名      確認済み：\underlinespace{2cm}名      未確認：\underlinespace{2cm}名
+
+
+
+負傷者：\underlinespace{2cm}名      参集可能：\underlinespace{2cm}名      参集不可：\underlinespace{2cm}名
+
+
+
+% ネットワーク本部への報告
+
+**\large ネットワーク本部への報告**
+
+
+
+
+\checkbox 報告実施時刻：\underlinespace{1cm}時\underlinespace{1cm}分      報告手段：\checkbox 電話      \checkbox メール      \checkbox その他
+
+
+
+\checkbox 患者安否報告：\checkbox 完了      \checkbox 一部完了      \checkbox 未完了
+
+
+
+施設内患者数：\underlinespace{2cm}名      負傷患者数：\underlinespace{2cm}名
+
+
+
+\checkbox スタッフ安否報告：\checkbox 完了      \checkbox 一部完了      \checkbox 未完了
+
+
+
+参集可能スタッフ数：\underlinespace{2cm}名      スタッフ負傷者数：\underlinespace{2cm}名
+
+
+
+\checkbox 透析実施状況報告：\checkbox 継続可能      \checkbox 一部制限      \checkbox 実施困難
+
+
+
+\checkbox 支援要請：\checkbox なし      \checkbox 人員支援      \checkbox 物資支援      \checkbox 患者搬送
+
+
+
+要請内容：\underlinespace{10cm}
+
+
+
+% 患者・家族への情報提供
+
+**\large 患者・家族への情報提供**
+
+
+
+
+\checkbox 透析実施状況の連絡：\checkbox 実施済      \checkbox 実施中      \checkbox 未実施
+
+
+
+\checkbox 代替手段の案内：\checkbox 実施済      \checkbox 実施中      \checkbox 未実施
+
+
+
+\checkbox 緊急連絡先への連絡：\checkbox 完了      \checkbox 一部完了      \checkbox 未完了
+
+
+
+連絡方法：\checkbox 電話      \checkbox メール      \checkbox その他：\underlinespace{4cm}
+
+
+
+% 記録と次回行動
+
+**\large 記録と次回行動**
+
+
+
+
+**確認完了時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**重要事項・課題：**
+
+
+
+1. \underlinespace{12cm}
+
+
+
+2. \underlinespace{12cm}
+
+
+
+3. \underlinespace{12cm}
+
+
+
+**次回確認予定時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**確認責任者：** \underlinespace{4cm}      **確認印：** \underlinespace{3cm}

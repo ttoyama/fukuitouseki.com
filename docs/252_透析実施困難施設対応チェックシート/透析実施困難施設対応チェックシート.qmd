@@ -1,0 +1,261 @@
+---
+title: "透析実施困難施設対応チェックシート"
+subtitle: "252 透析実施困難施設対応チェックシート"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.03版"
+header-right: "252 透析実施困難施設対応チェックシート 2025.09.03版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**透析実施困難施設対応チェックシート**}
+
+
+
+**施設名：** \underlinespace{8cm}
+
+
+
+**記録者：** \underlinespace{4cm}
+
+
+
+**記録日時：** \underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+## 1. 患者安否確認と病態把握
+
+### 1-1. 透析患者安否確認
+
+1. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+2. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+3. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+4. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+5. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+6. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+7. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+8. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+9. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+
+
+10. **患者名：** \underlinespace{3cm}      **最終透析日：** \underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日（\underlinespace{1cm}）
+
+     **安否確認：** \checkbox 確認済      **緊急度：** \checkbox 高 \checkbox 中 \checkbox 低
+
+### 1-2. 緊急度評価基準
+\checkbox **高緊急度：** 最終透析から96時間以上経過、高カリウム血症、肺水腫、呼吸困難、意識レベル変化
+
+\checkbox **中緊急度：** 最終透析から72時間以上経過、軽度の体液過剰
+
+\checkbox **低緊急度：** 最終透析から48時間未満、症状軽微
+
+
+\newpage
+
+
+## 2. 搬送先施設の選定
+
+### 2-1. ネットワーク情報確認
+
+**福井県透析施設ネットワークからの情報収集：** \checkbox 済
+
+     **情報源・連絡先：** \underlinespace{10cm}
+
+
+
+### 2-2. 受入可能施設リスト
+
+**※ ネットワークからの情報を元に記載**
+
+
+
+**1. 施設名：** \underlinespace{6cm}      **連絡先：** \underlinespace{4cm}
+
+     **受入可能数：** \underlinespace{2cm}人      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **備考：** \underlinespace{10cm}
+
+
+
+**2. 施設名：** \underlinespace{6cm}      **連絡先：** \underlinespace{4cm}
+
+     **受入可能数：** \underlinespace{2cm}人      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **備考：** \underlinespace{10cm}
+
+
+
+**3. 施設名：** \underlinespace{6cm}      **連絡先：** \underlinespace{4cm}
+
+     **受入可能数：** \underlinespace{2cm}人      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **備考：** \underlinespace{10cm}
+
+
+
+**4. 施設名：** \underlinespace{6cm}      **連絡先：** \underlinespace{4cm}
+
+     **受入可能数：** \underlinespace{2cm}人      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **備考：** \underlinespace{10cm}
+
+
+
+**5. 施設名：** \underlinespace{6cm}      **連絡先：** \underlinespace{4cm}
+
+     **受入可能数：** \underlinespace{2cm}人      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **備考：** \underlinespace{10cm}
+
+## 3. 搬送手段の確保
+
+### 3-1. 搬送手段選択
+
+\checkbox **自家用車** 利用可能 
+
+     連絡先・調整結果： \underlinespace{10cm}
+
+
+
+\checkbox **救急車** 手配済
+
+     連絡先・調整結果： \underlinespace{10cm}
+
+
+
+\checkbox **消防車両** 手配済
+
+     連絡先・調整結果： \underlinespace{10cm}
+
+
+
+\checkbox **DMAT車両** 手配済
+
+     連絡先・調整結果： \underlinespace{10cm}
+
+
+
+\checkbox **その他** （\underlinespace{4cm}） 手配済
+
+     連絡先・調整結果： \underlinespace{10cm}
+
+
+
+
+
+\newpage
+
+
+## 4. 情報伝達
+
+### 4-1. 搬送先への患者情報伝達
+
+**1. 患者名：** \underlinespace{4cm}      **搬送先施設：** \underlinespace{4cm}
+
+     **伝達完了：** \checkbox 済      **伝達日時：** \underlinespace{1cm}月\underlinespace{1cm}日 \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **伝達内容：** \checkbox 透析条件 \checkbox シャント情報 \checkbox 既往歴 \checkbox 内服薬 \checkbox 緊急連絡先
+
+
+
+**2. 患者名：** \underlinespace{4cm}      **搬送先施設：** \underlinespace{4cm}
+
+     **伝達完了：** \checkbox 済      **伝達日時：** \underlinespace{1cm}月\underlinespace{1cm}日 \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **伝達内容：** \checkbox 透析条件 \checkbox シャント情報 \checkbox 既往歴 \checkbox 内服薬 \checkbox 緊急連絡先
+
+
+
+**3. 患者名：** \underlinespace{4cm}      **搬送先施設：** \underlinespace{4cm}
+
+     **伝達完了：** \checkbox 済      **伝達日時：** \underlinespace{1cm}月\underlinespace{1cm}日 \underlinespace{1cm}時\underlinespace{1cm}分
+
+     **伝達内容：** \checkbox 透析条件 \checkbox シャント情報 \checkbox 既往歴 \checkbox 内服薬 \checkbox 緊急連絡先
+
+
+
+
+**総合確認：** \\
+\checkbox 全患者の安否確認完了 \\
+\checkbox 搬送先施設の確保完了 \\
+\checkbox 搬送手段の確保完了 \\
+\checkbox 患者情報の伝達完了
+
+
+
+最終確認者：\underlinespace{4cm} \\
+
+確認日時：\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分

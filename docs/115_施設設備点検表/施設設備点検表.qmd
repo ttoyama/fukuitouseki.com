@@ -1,0 +1,235 @@
+---
+title: "様式05"
+subtitle: "115 様式05"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.06版"
+header-right: "115 様式05 2025.09.06版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**様式05**}\\
+
+{\Large**施設設備点検表**}
+
+
+
+**【点検日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**【施設名】** \underlinespace{10cm}
+
+
+
+**【点検者】** \underlinespace{10cm}
+
+
+
+% 建物点検
+
+**\large 建物点検**
+
+
+
+
+\checkbox 建物外観：     \checkbox 正常      /      \checkbox 軽微損傷      /      \checkbox 重大損傷
+
+
+
+\checkbox 建物内部：     \checkbox 正常      /      \checkbox 軽微損傷      /      \checkbox 重大損傷
+
+
+
+\checkbox 出入口・避難路：     \checkbox 正常      /      \checkbox 一部使用不可      /      \checkbox 使用不可
+
+
+
+\checkbox 階段・エレベーター：     \checkbox 正常      /      \checkbox 一部使用不可      /      \checkbox 使用不可
+
+
+
+% ライフライン点検
+
+**\large ライフライン点検**
+
+
+
+
+\checkbox 電力供給：     \checkbox 正常      /      \checkbox 一部停電      /      \checkbox 全停電
+
+
+
+\checkbox 自家発電：     \checkbox 正常稼働      /      \checkbox 異常あり      /      \checkbox 使用不可      /      \checkbox 設備なし
+
+
+
+\checkbox 燃料残量：     \checkbox 満タン      /      \checkbox 3/4      /      \checkbox 半分      /      \checkbox 1/4      /      \checkbox 残りわずか
+
+
+
+\checkbox 上水道：     \checkbox 正常      /      \checkbox 水圧低下      /      \checkbox 断水
+
+
+
+\checkbox 貯水設備：     \checkbox 正常      /      \checkbox 一部損傷      /      \checkbox 使用不可      /      \checkbox 設備なし
+
+
+
+\checkbox ガス供給：     \checkbox 正常      /      \checkbox 一部停止      /      \checkbox 全停止
+
+
+
+\checkbox 通信回線：     \checkbox 正常      /      \checkbox 一部不通      /      \checkbox 全不通
+
+
+
+% 医療ガス・空調設備
+
+**\large 医療ガス・空調設備**
+
+
+
+
+\checkbox 酸素供給：     \checkbox 正常      /      \checkbox 異常あり      /      \checkbox 使用不可
+
+
+
+\checkbox 医療用エア：     \checkbox 正常      /      \checkbox 異常あり      /      \checkbox 使用不可
+
+
+
+\checkbox 吸引設備：     \checkbox 正常      /      \checkbox 異常あり      /      \checkbox 使用不可
+
+
+
+\checkbox 空調設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+\checkbox 換気設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+% 保管・安全設備
+
+**\large 保管・安全設備**
+
+
+
+
+\checkbox 医薬品保管庫：     \checkbox 正常      /      \checkbox 一部損傷      /      \checkbox 使用不可
+
+
+
+\checkbox 医療材料保管庫：     \checkbox 正常      /      \checkbox 一部損傷      /      \checkbox 使用不可
+
+
+
+\checkbox 冷蔵・冷凍設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+\checkbox 防火・消火設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+\checkbox 防犯設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+% 給排水・廃棄物処理
+
+**\large 給排水・廃棄物処理**
+
+
+
+
+\checkbox 給水設備：     \checkbox 正常      /      \checkbox 一部故障      /      \checkbox 使用不可
+
+
+
+\checkbox 排水設備：     \checkbox 正常      /      \checkbox 一部詰まり      /      \checkbox 使用不可
+
+
+
+\checkbox 浄化槽：     \checkbox 正常      /      \checkbox 異常あり      /      \checkbox 使用不可      /      \checkbox 設備なし
+
+
+
+\checkbox 廃棄物処理：     \checkbox 正常      /      \checkbox 一部支障      /      \checkbox 処理不可
+
+
+
+% 総合評価
+
+**\large 総合評価**
+
+
+
+
+\checkbox 透析治療継続：     \checkbox 可能      /      \checkbox 一部制限あり      /      \checkbox 不可能
+
+
+
+\checkbox 緊急修繕要否：     \checkbox 不要      /      \checkbox 軽微修繕要      /      \checkbox 大規模修繕要
+
+
+
+\checkbox 安全性：     \checkbox 安全      /      \checkbox 要注意      /      \checkbox 危険
+
+
+
+% 損傷詳細・特記事項
+
+**\large 損傷詳細・特記事項**
+
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}

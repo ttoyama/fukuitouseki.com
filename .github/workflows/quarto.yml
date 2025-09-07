@@ -1,0 +1,87 @@
+name: Render and Deploy Quarto Site
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_quarto.yml'
+      - '**/*.qmd'
+      - '.github/workflows/quarto.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install LaTeX packages for Japanese PDF
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-latex-recommended \
+            texlive-fonts-recommended texlive-lang-cjk fonts-noto-cjk fonts-noto
+
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: _site
+
+      - name: Generate PDFs for each checklist
+        run: |
+          mkdir -p pdf-output
+          
+          # 103チェックシートのPDF生成テスト
+          if [ -f "docs/103_初動対応チェックシート_3-24時間/index.qmd" ]; then
+            echo "Rendering 103 checklist PDF..."
+            quarto render "docs/103_初動対応チェックシート_3-24時間/index.qmd" --to pdf
+            if [ -f "docs/103_初動対応チェックシート_3-24時間/index.pdf" ]; then
+              cp "docs/103_初動対応チェックシート_3-24時間/index.pdf" "pdf-output/103_初動対応チェックシート_3-24時間.pdf"
+              echo "103チェックシートPDF生成完了"
+            fi
+          fi
+
+      - name: Commit generated PDFs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [ -d "pdf-output" ] && [ -n "$(ls -A pdf-output)" ]; then
+            mkdir -p booklet-pdf/quarto-generated
+            cp pdf-output/*.pdf booklet-pdf/quarto-generated/ || true
+            git add booklet-pdf/quarto-generated/
+            git commit -m "Quarto PDF生成: $(date +%Y%m%d_%H%M)
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+Co-Authored-By: Claude <noreply@anthropic.com>" || echo "変更なし"
+            git push || echo "プッシュ失敗"
+          fi
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

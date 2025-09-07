@@ -1,0 +1,185 @@
+---
+title: "様式03"
+subtitle: "113 様式03"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.06版"
+header-right: "113 様式03 2025.09.06版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**様式03**}\\
+
+{\Large**スタッフ安否確認表**}
+
+
+
+**【発災日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**【確認日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**【施設名】** \underlinespace{10cm}
+
+
+
+**【確認者】** \underlinespace{10cm}
+
+
+
+% 確認方法
+
+**\large 確認方法**
+
+
+
+
+\checkbox 電話連絡      \checkbox メール・LINE      \checkbox 直接確認      \checkbox その他（\underlinespace{4cm}）
+
+
+
+% スタッフ安否確認状況表
+
+**\large スタッフ安否確認状況**
+
+
+
+
+\begin{longtable}{|p{2.5cm}|p{2cm}|p{2.5cm}|p{2cm}|p{1.5cm}|p{2.5cm}|}
+\hline
+**氏名** & **職種** & **安否状況** & **参集可否** & **確認時刻** & **備考** \\
+\hline
+\endfirsthead
+
+\hline
+**氏名** & **職種** & **安否状況** & **参集可否** & **確認時刻** & **備考** \\
+\hline
+\endhead
+
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+ &  & 無事/軽傷/重傷/不明 & 可/不可/未定 &  &  \\
+\hline
+\end{longtable}
+
+
+
+% 集計
+
+**\large 集計**
+
+
+
+
+**総スタッフ数：**\underlinespace{2cm}名
+
+
+
+**確認済み：**\underlinespace{2cm}名（うち無事：\underlinespace{1.5cm}名、軽傷：\underlinespace{1.5cm}名、重傷：\underlinespace{1.5cm}名）
+
+
+
+**未確認：**\underlinespace{2cm}名
+
+
+
+**参集可能：**\underlinespace{2cm}名
+
+
+
+**参集不可：**\underlinespace{2cm}名
+
+
+
+% 特記事項
+
+**\large 特記事項**
+
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}

@@ -1,0 +1,258 @@
+---
+title: "様式06"
+subtitle: "116 様式06"
+date: "2025-09-08"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    css: custom.css
+  pdf:
+    documentclass: jarticle
+    geometry: 
+      - top=30mm
+      - bottom=30mm  
+      - left=20mm
+      - right=20mm
+      - footskip=18mm
+      - headsep=12mm
+    include-in-header:
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+lang: ja
+version: "2025.09.06版"
+header-right: "116 様式06 2025.09.06版"
+---
+
+% 手動でタイトルを作成
+
+{\Large**様式06**}\\
+
+{\Large**透析関連機器確認表**}
+
+
+
+**【確認日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+
+
+
+**【施設名】** \underlinespace{10cm}
+
+
+
+**【確認者】** \underlinespace{10cm}
+
+
+
+% 透析装置
+
+**\large 透析装置**
+
+
+
+
+\checkbox 設置台数：\underlinespace{2cm}台
+
+
+
+\checkbox 正常稼働：\underlinespace{2cm}台
+
+
+
+\checkbox 軽微異常：\underlinespace{2cm}台（内容：\underlinespace{6cm}）
+
+
+
+\checkbox 重大異常：\underlinespace{2cm}台（内容：\underlinespace{6cm}）
+
+
+
+\checkbox 使用不可：\underlinespace{2cm}台（理由：\underlinespace{6cm}）
+
+
+
+% 水処理装置
+
+**\large 水処理装置**
+
+
+
+
+\checkbox RO装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 前処理装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 貯水タンク：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 配管システム：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 水質検査：     \checkbox 実施済み      /      \checkbox 未実施      /      \checkbox 実施不可
+
+
+
+\checkbox 水質結果：     \checkbox 基準内      /      \checkbox 要注意      /      \checkbox 基準外
+
+
+
+% 透析液供給システム
+
+**\large 透析液供給システム**
+
+
+
+
+\checkbox 透析液作成装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 透析液配管：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 透析液原液タンク：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 透析液品質：     \checkbox 基準内      /      \checkbox 要注意      /      \checkbox 基準外
+
+
+
+% 監視・安全システム
+
+**\large 監視・安全システム**
+
+
+
+
+\checkbox 中央監視装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 警報システム：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 非常停止装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+\checkbox 安全弁・圧力調整：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+
+
+
+% 周辺機器
+
+**\large 周辺機器**
+
+
+
+
+\checkbox 体重計：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+\checkbox 血圧計：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+\checkbox 心電図モニター：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+\checkbox 除細動器：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+\checkbox 酸素吸入器：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+\checkbox 吸引器：     正常（\underlinespace{1.5cm}）台      /      異常（\underlinespace{1.5cm}）台
+
+
+
+% 緊急時機器
+
+**\large 緊急時機器**
+
+
+
+
+\checkbox 緊急用手動装置：     \checkbox 正常      /      \checkbox 異常      /      \checkbox 設備なし
+
+
+
+\checkbox バックアップ電源：     \checkbox 正常      /      \checkbox 異常      /      \checkbox 設備なし
+
+
+
+\checkbox 緊急用透析液：     \checkbox 十分      /      \checkbox 不足      /      \checkbox なし
+
+
+
+\checkbox 緊急用回路セット：     \checkbox 十分      /      \checkbox 不足      /      \checkbox なし
+
+
+
+% 総合評価
+
+**\large 総合評価**
+
+
+
+
+\checkbox 透析治療可能台数：     通常（\underlinespace{2cm}）台      /      制限（\underlinespace{2cm}）台      /      不可
+
+
+
+\checkbox 治療時間制限：     \checkbox なし      /      短縮要（\underlinespace{2cm}時間）      /      \checkbox 大幅制限
+
+
+
+\checkbox 緊急修理要否：     \checkbox 不要      /      \checkbox 軽微修理      /      \checkbox 専門業者要請
+
+
+
+% 詳細記録・特記事項
+
+**\large 詳細記録・特記事項**
+
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
+
+
+
+\underlinespace{13cm}
