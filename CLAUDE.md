@@ -197,8 +197,6 @@ for file in [ファイルリスト]; do
   sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
 done
 
-# 結合されたファイルからPDF生成
-pandoc combined.md --pdf-engine=xelatex --toc --number-sections -o output.pdf
 ```
 
 ### PDF生成のファイル要件
