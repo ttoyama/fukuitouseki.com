@@ -1,0 +1,15 @@
+*.md
+*.tex
+*.log
+*.aux
+*.dvi
+*.pdf
+.bookorder*
+combined.md
+simple_header.md
+header.md
+CLAUDE.md
+README.md
+booklet-pdf/
+references/
+pdfs/

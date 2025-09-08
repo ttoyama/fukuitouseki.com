@@ -76,7 +76,7 @@ jobs:
           
           # Try a different approach - use cat to combine files first
           echo "---" > combined.md
-          echo "title: 災害時透析医療オペレーション手引き（${DATETIME}版）" >> combined.md
+          echo "title: 福井県透析防災マニュアル（${DATETIME}版）" >> combined.md
           echo "author: 福井透析ネットワーク本部" >> combined.md
           echo "lang: ja" >> combined.md
           echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
@@ -88,7 +88,7 @@ jobs:
           echo "  \\usepackage{fancyhdr}" >> combined.md
           echo "  \\pagestyle{fancy}" >> combined.md
           echo "  \\fancyhf{}" >> combined.md
-          echo "  \\fancyhead[R]{\\small 災害時透析医療オペレーション手引き ${DATE_VERSION}版}" >> combined.md
+          echo "  \\fancyhead[R]{\\small 福井県透析防災マニュアル ${DATE_VERSION}版}" >> combined.md
           echo "  \\fancyfoot[C]{\\thepage}" >> combined.md
           echo "  \\renewcommand{\\headrulewidth}{0.5pt}" >> combined.md
           echo "  \\newcommand{\\underlinespace}[1]{\\underline{\\hspace{#1}}}" >> combined.md
@@ -136,7 +136,7 @@ jobs:
           cp "pdfs/${PDF_NAME}" "booklet-pdf/${PDF_NAME}"
           git add "booklet-pdf/${PDF_NAME}"
           if ! git diff --staged --quiet; then
-            git commit -m "PDF生成完了: 災害時透析医療オペレーション手引き (${PDF_NAME})"
+            git commit -m "PDF生成完了: 福井県透析防災マニュアル (${PDF_NAME})"
             git push
           fi
 

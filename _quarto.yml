@@ -1,22 +1,8 @@
 project:
   type: website
   output-dir: _site
-  
-# レンダリング除外ファイル
-render:
-  - "*.qmd"
-  - "!*.md"   # .mdファイルを明示的に除外
-  - "!CLAUDE.txt"  # CLAUDE.txtファイルを明示的に除外
-  - "!README.md"  # README.mdファイルを除外
-  - "!*.tex"  # .texファイルを除外
-  - "!*.log"  # .logファイルを除外
-  - "!*.aux"  # .auxファイルを除外
-  - "!*.dvi"  # .dviファイルを除外
-  - "!*.pdf"  # 既存の.pdfファイルを除外
-  
-# GitHub Pages用の設定
-execute:
-  freeze: auto
+  render: 
+    - "*.qmd"
 
 # プロジェクト全体設定  
 lang: ja-JP
@@ -32,51 +18,40 @@ website:
     left:
       - href: index.qmd
         text: "ホーム"
-      - href: docs/index.qmd
-        text: "マニュアル目次"
+      - text: "マニュアル本体"
+        menu:
+          - href: docs/000_マニュアル本体/01-各施設の役割と対応.qmd
+            text: "各施設の役割と対応"
+          - href: docs/000_マニュアル本体/02-福井県透析施設ネットワークの役割と対応.qmd
+            text: "ネットワークの役割と対応"
+      - text: "チェックシート"
+        menu:
+          - href: docs/index.qmd
+            text: "様式・チェックシート一覧"
+          - text: "初動対応（0-24時間）"
+          - href: docs/1410_初動対応チェックシート_0-30分/index.qmd
+            text: "0-30分チェックシート"
+          - href: docs/1420_初動対応チェックシート_1-3時間/index.qmd
+            text: "1-3時間チェックシート" 
+          - href: docs/1430_初動対応チェックシート_3-24時間/index.qmd
+            text: "3-24時間チェックシート"
 
 format:
   html:
     theme: 
       - cosmo
+    css: styles.css
     toc: true
     toc-depth: 3
-    number-sections: false
+    toc-location: left
+    number-sections: true
+    smooth-scroll: true
     lang: ja
-    
-  pdf:
-    documentclass: jarticle
-    # 既存LaTeXと同じ余白設定
-    geometry: 
-      - top=30mm
-      - bottom=30mm
-      - left=20mm
-      - right=20mm
-      - footskip=18mm  
-      - headsep=12mm
-    fontsize: 12pt
-    lang: ja
-    # 日本語フォント設定
-    mainfont: "Hiragino Sans"
-    CJKmainfont: "Hiragino Sans"
-    # PDF用の追加設定
-    pdf-engine: xelatex
-    toc: false
-    number-sections: false
-    # 既存LaTeXの行間とパッケージを再現
-    include-in-header: 
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
-          % シンプルなページ番号設定
-          \pagestyle{plain}
+    mainfont: "Noto Sans CJK JP, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif"
+    code-copy: true
+    anchor-sections: true
+    link-external-newwindow: true
 
+# PDF設定を無効化してHTMLのみレンダリング  
+execute:
+  freeze: auto

@@ -1,0 +1,74 @@
+project:
+  type: website
+  output-dir: _site
+  
+# レンダリング対象ファイル（qmdのみ）
+render:
+  - "**/*.qmd"
+  
+# GitHub Pages用の設定
+execute:
+  freeze: auto
+
+# プロジェクト全体設定  
+lang: ja-JP
+timezone: "Asia/Tokyo"
+
+website:
+  title: "福井県透析患者災害時対策マニュアル"
+  description: "福井県内の透析患者とその家族、医療従事者のための災害時対応マニュアル"
+  site-url: "https://fukuitouseki.com"
+  
+  navbar:
+    title: "福井県透析防災マニュアル"
+    left:
+      - href: index.qmd
+        text: "ホーム"
+      - href: docs/index.qmd
+        text: "マニュアル目次"
+
+format:
+  html:
+    theme: 
+      - cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    lang: ja
+    
+  pdf:
+    documentclass: jarticle
+    # 既存LaTeXと同じ余白設定
+    geometry: 
+      - top=30mm
+      - bottom=30mm
+      - left=20mm
+      - right=20mm
+      - footskip=18mm  
+      - headsep=12mm
+    fontsize: 12pt
+    lang: ja
+    # 日本語フォント設定
+    mainfont: "Hiragino Sans"
+    CJKmainfont: "Hiragino Sans"
+    # PDF用の追加設定
+    pdf-engine: xelatex
+    toc: false
+    number-sections: false
+    # 既存LaTeXの行間とパッケージを再現
+    include-in-header: 
+      - text: |
+          \usepackage{setspace}
+          \setstretch{1.3}
+          \usepackage{array}
+          \usepackage{longtable}
+          \usepackage{amssymb}
+          \usepackage{multirow}
+          \usepackage{booktabs}
+          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{\checkedbox}{$\blacksquare$\ }
+          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+          \newcommand{\circlecheck}{$\bigcirc$\ }
+          % シンプルなページ番号設定
+          \pagestyle{plain}
+

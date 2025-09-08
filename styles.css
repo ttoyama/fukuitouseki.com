@@ -1,0 +1,131 @@
+/* 日本語フォントの最適化 */
+body {
+  font-family: "Noto Sans CJK JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+/* ナビゲーションバーのスタイル改善 */
+.navbar-brand {
+  font-weight: bold;
+  color: #2c5530 !important;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 見出しのスタイル改善 */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c5530;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h1 {
+  border-bottom: 3px solid #2c5530;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  border-left: 4px solid #6fa86f;
+  padding-left: 1rem;
+  margin-left: -1rem;
+}
+
+/* リンクの色改善 */
+a {
+  color: #2c5530;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a3d1f;
+  text-decoration: underline;
+}
+
+/* チェックリストやボタンの見た目改善 */
+.btn-primary {
+  background-color: #2c5530;
+  border-color: #2c5530;
+}
+
+.btn-primary:hover {
+  background-color: #1a3d1f;
+  border-color: #1a3d1f;
+}
+
+/* 表の見た目改善 */
+table {
+  margin: 1.5rem 0;
+}
+
+table th {
+  background-color: #f8f9fa;
+  color: #2c5530;
+  font-weight: 600;
+}
+
+table td, table th {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+
+/* アイコンと絵文字の調整 */
+.navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+/* 目次の改善 */
+#TOC {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 強調表示の改善 */
+strong, b {
+  color: #1a3d1f;
+  font-weight: 600;
+}
+
+/* ページの最大幅とマージン調整 */
+.container-fluid {
+  max-width: 1200px;
+}
+
+/* カードのようなスタイルをセクションに適用 */
+.content > h2:first-of-type {
+  margin-top: 1rem;
+}
+
+/* リストアイテムの間隔調整 */
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* コードブロックの改善 */
+code {
+  background-color: #f8f9fa;
+  color: #d63384;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+/* 警告ボックスなどの改善 */
+.callout {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.callout-note {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1976d2;
+}
+
+.callout-warning {
+  background-color: #fff3e0;
+  border-left: 4px solid #f57c00;
+}
