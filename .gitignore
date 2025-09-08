@@ -15,3 +15,16 @@ _site/
 vendor/
 
 /.quarto/
+
+# Temporary files and build outputs
+temp_files/
+bin/
+share/
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.dvi
+*.fls
+*.fdb_latexmk
+*.synctex.gz
