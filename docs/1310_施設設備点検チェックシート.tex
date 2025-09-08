@@ -1,0 +1,342 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  japanese,
+]{jarticle}
+\usepackage{xcolor}
+\usepackage[top=30mm,bottom=30mm,left=20mm,right=20mm,footskip=18mm,headsep=12mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic,provide=*]{babel}
+\else
+\usepackage[bidi=default,provide=*]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{setspace}
+\setstretch{1.3}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+\newcommand{\checkbox}{$\square$\ }
+\newcommand{\checkedbox}{$\blacksquare$\ }
+\newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+\newcommand{\circlecheck}{$\bigcirc$\ }
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{目次}
+\else
+  \newcommand\contentsname{目次}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{図一覧}
+\else
+  \newcommand\listfigurename{図一覧}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{表一覧}
+\else
+  \newcommand\listtablename{表一覧}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{図}
+\else
+  \newcommand\figurename{図}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{表}
+\else
+  \newcommand\tablename{表}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{コード}
+\newcommand*\listoflistings{\listof{codelisting}{コード一覧}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={施設設備点検チェックシート（平時の準備）},
+  pdflang={ja},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{施設設備点検チェックシート（平時の準備）}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{211 施設設備点検チェックシート（平時の準備）}
+\author{}
+\date{2025-09-08}
+\begin{document}
+\maketitle
+
+
+\% 手動でタイトルを作成
+
+\section{施設設備点検チェックシート（平時の準備）}\label{ux65bdux8a2dux8a2dux5099ux70b9ux691cux30c1ux30a7ux30c3ux30afux30b7ux30fcux30c8ux5e73ux6642ux306eux6e96ux5099}
+
+\textbf{施設名：} \underlinespace{8cm}
+
+\textbf{点検実施者：} \underlinespace{4cm} \textbf{点検日：}
+\underlinespace{3cm}
+
+\textbf{点検責任者：} \underlinespace{4cm} \textbf{確認日：}
+\underlinespace{3cm}
+
+\% 基本的な設備点検
+
+\textbf{\large 基本設備の定期点検}
+
+\checkbox 建物の構造的安全性：\checkbox 問題なし \checkbox 要注意箇所有
+\checkbox 要修繕
+
+要注意・修繕箇所：\underlinespace{10cm}
+
+\checkbox 防災機能の点検：\checkbox 正常 \checkbox 一部不良
+\checkbox 要修理
+
+（\checkbox 火災警報 \checkbox スプリンクラー \checkbox エレベーター
+\checkbox その他）
+
+\checkbox 避難経路の確保：\checkbox 確保済 \checkbox 一部阻害
+\checkbox 要改善
+
+問題箇所：\underlinespace{10cm}
+
+\% ライフライン点検
+
+\textbf{\large ライフラインの点検と確保}
+
+\checkbox 電力設備：\checkbox 正常 \checkbox 要点検 \checkbox 要修繕
+
+\checkbox 自家発電装置：\checkbox 有・正常 \checkbox 有・要点検
+\checkbox 無
+
+稼働可能時間：\underlinespace{3cm} 燃料備蓄量：\underlinespace{3cm}
+
+\checkbox 上水道設備：\checkbox 正常 \checkbox 要点検 \checkbox 要修繕
+
+\checkbox 貯水設備：\checkbox 有（\underlinespace{2cm}m\(^3\)）
+\checkbox 無
+
+\checkbox ガス設備：\checkbox 正常 \checkbox 要点検 \checkbox 要修繕
+\checkbox 無
+
+\checkbox 通信設備：\checkbox 正常 \checkbox 要点検 \checkbox 要修繕
+
+（\checkbox 固定電話 \checkbox 携帯電話 \checkbox インターネット
+\checkbox その他）
+
+\% 透析関連設備点検
+
+\textbf{\large 透析関連設備の点検}
+
+\checkbox 透析液作成装置：\checkbox 固定済・正常 \checkbox 要固定
+\checkbox 要点検
+
+アンカーボルト固定：\checkbox 実施済 \checkbox 未実施
+
+\checkbox 透析用監視装置（コンソール）：\checkbox 正常 \checkbox 要点検
+
+耐震設定：\checkbox 耐震構造（キャスターフリー）
+\checkbox 免振構造（キャスターロック）
+
+\checkbox 透析ベッド：\checkbox 正常 \checkbox 要点検
+
+コンソール連結：\checkbox 実施済（バックルベルト等） \checkbox 未実施
+
+\checkbox 透析用給水配管：\checkbox 正常 \checkbox 要点検
+\checkbox 要改善
+
+フレキシブル管対応：\checkbox 実施済 \checkbox 一部実施 \checkbox 未実施
+
+\checkbox 水処理装置：\checkbox 正常 \checkbox 要点検 \checkbox 要修繕
+
+\% 緊急対応物品
+
+\textbf{\large 緊急対応物品の整備}
+
+\begin{longtable*}{|p{4cm}|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+**物品名** & **配置場所** & **動作確認** & **備考** \\
+\hline
+停電用懐中電灯 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+携帯テレビ・ラジオ & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+患者誘導用ハンドマイク & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+救急処置物品 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+救急カート & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+AED & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+血圧計 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
+\hline
+\end{longtable*}
+
+\% 業者連絡先確認
+
+\textbf{\large 関係業者連絡先の確認}
+
+\checkbox 電力会社との連絡体制：\checkbox 確認済 \checkbox 要確認
+
+\checkbox 水道事務所との連絡体制：\checkbox 確認済 \checkbox 要確認
+
+\checkbox ガス会社との連絡体制：\checkbox 確認済 \checkbox 要確認
+
+\checkbox 取引先業者との調整：\checkbox 確認済 \checkbox 要確認
+
+\checkbox ビル管理会社との調整：\checkbox 確認済 \checkbox 要確認
+\checkbox 該当なし
+
+\% 改善事項・次回点検予定
+
+\textbf{\large 改善事項・次回点検予定}
+
+\textbf{要改善事項：}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \underlinespace{12cm}
+\item
+  \underlinespace{12cm}
+\item
+  \underlinespace{12cm}
+\end{enumerate}
+
+\textbf{次回点検予定日：} \underlinespace{4cm} \textbf{実施予定者：}
+\underlinespace{4cm}
+
+\textbf{点検責任者確認：} \underlinespace{4cm} \textbf{確認印：}
+\underlinespace{3cm}
+
+
+
+
+\end{document}
