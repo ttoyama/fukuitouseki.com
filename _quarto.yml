@@ -6,6 +6,8 @@ project:
 render:
   - "*.qmd"
   - "!*.md"   # .mdファイルを明示的に除外
+  - "!CLAUDE.md"  # CLAUDE.mdファイルを明示的に除外
+  - "!README.md"  # README.mdファイルを除外
   - "!*.tex"  # .texファイルを除外
   - "!*.log"  # .logファイルを除外
   - "!*.aux"  # .auxファイルを除外
