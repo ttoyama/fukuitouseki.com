@@ -1,5 +1,10 @@
 ---
 title: "透析患者向け食品栄養成分表"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+lang: ja
 ---
 
 # 透析患者向け食品栄養成分表

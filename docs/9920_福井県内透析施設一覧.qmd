@@ -1,5 +1,10 @@
 ---
 title: "福井県内透析施設一覧"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+lang: ja
 ---
 
 # 福井県内透析施設一覧
