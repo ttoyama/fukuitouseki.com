@@ -106,8 +106,11 @@ jobs:
             echo "" >> combined.md
             echo "\\newpage" >> combined.md
             echo "" >> combined.md
-            # Skip YAML frontmatter and add content
-            sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
+            # Skip YAML frontmatter and add content, then clean LaTeX artifacts
+            sed '1,/^---$/d; /^---$/,/^---$/d' "$file" | \
+            sed 's/^% .*$//' | \
+            sed 's/ewpage$/\\newpage/' | \
+            sed '/^[[:space:]]*$/N; /^[[:space:]]*\n[[:space:]]*$/d' >> combined.md
           done < .bookorder.with_cover
           
           # Build PDF from combined file
