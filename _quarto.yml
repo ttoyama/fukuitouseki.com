@@ -29,11 +29,11 @@ website:
           - href: docs/index.qmd
             text: "様式・チェックシート一覧"
           - text: "初動対応（0-24時間）"
-          - href: docs/1410_初動対応チェックシート_0-30分/index.qmd
+          - href: docs/1410_初動対応チェックシート_0-30分.qmd
             text: "0-30分チェックシート"
-          - href: docs/1420_初動対応チェックシート_1-3時間/index.qmd
+          - href: docs/1420_初動対応チェックシート_1-3時間.qmd
             text: "1-3時間チェックシート" 
-          - href: docs/1430_初動対応チェックシート_3-24時間/index.qmd
+          - href: docs/1430_初動対応チェックシート_3-24時間.qmd
             text: "3-24時間チェックシート"
 
 format:
