@@ -1,6 +1,8 @@
 ---
 title: "様式02"
 subtitle: "112 様式02"
+filename: "1441_災害時透析医療機関状況報告書_詳細報告用.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

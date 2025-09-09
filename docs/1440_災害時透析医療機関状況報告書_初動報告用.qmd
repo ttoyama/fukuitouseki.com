@@ -1,6 +1,8 @@
 ---
 title: "様式01"
 subtitle: "111 様式01"
+filename: "1440_災害時透析医療機関状況報告書_初動報告用.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -26,7 +28,7 @@ format:
           \usepackage{amssymb}
           \usepackage{multirow}
           \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
+          \newcommand{☐}{$\square$\ }
           \newcommand{\checkedbox}{$\blacksquare$\ }
           \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
           \newcommand{\circlecheck}{$\bigcirc$\ }
@@ -35,7 +37,6 @@ version: "2025.09.06版"
 header-right: "111 様式01 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 様式01: 災害時透析医療機関状況報告書（初動報告用）
 
@@ -45,77 +46,71 @@ header-right: "111 様式01 2025.09.06版"
 
 
 
-**【施設名】** \underlinespace{10cm}
+**【施設名】** _____________________________
 
 
 
-**【報告者】** \underlinespace{4cm}      **【連絡先】** \underlinespace{5cm}
+**【報告者】** _______________      **【連絡先】** ________________
 
 
 
-% 人的被害状況
-
-**\large 人的被害状況**
-
-
-
-
-\checkbox 職員：     \checkbox 負傷者なし      /      軽傷（\underlinespace{1cm}）名      /      重傷（\underlinespace{1cm}）名      /      安否不明（\underlinespace{1cm}）名
-
-
-
-\checkbox 患者：     \checkbox 負傷者なし      /      軽傷（\underlinespace{1cm}）名      /      重傷（\underlinespace{1cm}）名      /      安否不明（\underlinespace{1cm}）名
-
-
-
-% 建物・設備安全状況
-
-**\large 建物・設備安全状況**
+## 人的被害状況
 
 
 
 
-\checkbox 建物：     \checkbox 安全      /      \checkbox 要注意      /      \checkbox 危険
+☐ 職員：     ☐ 負傷者なし      /      軽傷（____）名      /      重傷（____）名      /      安否不明（____）名
 
 
 
-\checkbox 透析設備：     \checkbox 正常      /      \checkbox 一部損傷      /      \checkbox 重大損傷      /      \checkbox 使用不可
+☐ 患者：     ☐ 負傷者なし      /      軽傷（____）名      /      重傷（____）名      /      安否不明（____）名
 
 
 
-\checkbox 緊急支援要請：     \checkbox なし      /      \checkbox あり
-
-
-
-（内容：\underlinespace{10cm}）
-
-
-
-\underlinespace{13cm}
-
-
-
-% 備考・追加情報
-
-**\large 備考・追加情報**
+## 建物・設備安全状況
 
 
 
 
-\underlinespace{13cm}
+☐ 建物：     ☐ 安全      /      ☐ 要注意      /      ☐ 危険
 
 
 
-\underlinespace{13cm}
+☐ 透析設備：     ☐ 正常      /      ☐ 一部損傷      /      ☐ 重大損傷      /      ☐ 使用不可
 
 
 
-\underlinespace{13cm}
+☐ 緊急支援要請：     ☐ なし      /      ☐ あり
 
 
 
-\underlinespace{13cm}
+（内容：_____________________________）
 
 
 
-\underlinespace{13cm}
+______________________________________
+
+
+
+## 備考・追加情報
+
+
+
+
+______________________________________
+
+
+
+______________________________________
+
+
+
+______________________________________
+
+
+
+______________________________________
+
+
+
+______________________________________

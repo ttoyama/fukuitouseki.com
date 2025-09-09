@@ -1,6 +1,8 @@
 ---
 title: "備蓄物資点検チェックシート（平時の準備）"
 subtitle: "212 備蓄物資点検チェックシート（平時の準備）"
+filename: "1320_備蓄物資点検チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -35,200 +37,153 @@ version: "2025.09.06版"
 header-right: "212 備蓄物資点検チェックシート（平時の準備） 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 備蓄物資点検チェックシート（平時の準備）
 
 
 
-**施設名：** \underlinespace{8cm}
+**施設名：** ___________________________
 
 
 
-**点検実施者：** \underlinespace{4cm}      **点検日：** \underlinespace{3cm}
+**点検実施者：** _______________      **点検日：** ____________
 
 
 
-**点検責任者：** \underlinespace{4cm}      **確認日：** \underlinespace{3cm}
+**点検責任者：** _______________      **確認日：** ____________
 
 
 
-% 透析関連器材の備蓄
 
-**\large 透析関連器材の備蓄状況**
+## 透析関連器材の備蓄状況
 
 
 
 
-\begin{longtable}{|p{3.5cm}|p{2cm}|p{2cm}|p{1.8cm}|p{2cm}|}
-\hline
-**物品名** & **通常在庫** & **備蓄数量** & **使用期限** & **状態** \\
-\hline
-\endfirsthead
-\hline
-**物品名** & **通常在庫** & **備蓄数量** & **使用期限** & **状態** \\
-\hline
-\endhead
-ダイアライザー & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-回路セット & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-透析液（A液） & \underlinespace{1.3cm}L & \underlinespace{1.3cm}L & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-透析液（B液） & \underlinespace{1.3cm}L & \underlinespace{1.3cm}L & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-生理食塩水 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-穿刺針 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-透析用カテーテル & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-\end{longtable}
+| **物品名** | **通常在庫** | **備蓄数量** | **使用期限** | **状態** |
+|------------|--------------|--------------|--------------|----------|
+| ダイアライザー | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 回路セット | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 透析液（A液） | _______L | _______L | _______ | ☐ 良好 ☐ 要交換 |
+| 透析液（B液） | _______L | _______L | _______ | ☐ 良好 ☐ 要交換 |
+| 生理食塩水 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 穿刺針 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 透析用カテーテル | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
 
-% 医薬品の備蓄
 
-**\large 透析関連医薬品の備蓄状況**
+## 透析関連医薬品の備蓄状況
 
 
 
 
-\begin{longtable}{|p{3.5cm}|p{2cm}|p{2cm}|p{1.8cm}|p{2cm}|}
-\hline
-**医薬品名** & **通常在庫** & **備蓄数量** & **使用期限** & **状態** \\
-\hline
-\endfirsthead
-\hline
-**医薬品名** & **通常在庫** & **備蓄数量** & **使用期限** & **状態** \\
-\hline
-\endhead
-ヘパリン & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-エポジン & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-降圧剤 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-昇圧剤 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-抗痙攣剤 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-緊急薬剤 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-その他 & \underlinespace{1.5cm} & \underlinespace{1.5cm} & \underlinespace{1.3cm} & \checkbox 良好 \checkbox 要交換 \\[0.5cm]
-\hline
-\end{longtable}
+| **医薬品名** | **通常在庫** | **備蓄数量** | **使用期限** | **状態** |
+|------------|--------------|--------------|--------------|----------|
+| ヘパリン | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| エポジン | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 降圧剤 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 昇圧剤 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 抗痙攣剤 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| 緊急薬剤 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
+| その他 | ________ | ________ | _______ | ☐ 良好 ☐ 要交換 |
 
-% ライフライン関連備蓄
 
-**\large ライフライン関連備蓄状況**
+## ライフライン関連備蓄状況
 
 
 
 
-\checkbox 電力関連：
+☐ 電力関連：
 
 
 
-\checkbox 自家発電用燃料：\underlinespace{3cm}L （\underlinespace{2cm}時間分）
+☐ 自家発電用燃料：____________L （_______時間分）
 
 
 
-\checkbox バッテリー：\checkbox 充電済      予備バッテリー：\underlinespace{2cm}個
+☐ バッテリー：☐ 充電済      予備バッテリー：_______個
 
 
 
-\checkbox 水関連：
+☐ 水関連：
 
 
 
-\checkbox 透析用水：貯水量\underlinespace{3cm}m$^3$ （\underlinespace{2cm}日分）
+☐ 透析用水：貯水量____________m³ （_______日分）
 
 
 
-\checkbox 飲料水：\underlinespace{3cm}L （\underlinespace{2cm}日分）
+☐ 飲料水：____________L （_______日分）
 
 
 
-\checkbox 食料関連：
+☐ 食料関連：
 
 
 
-\checkbox スタッフ用食料：\underlinespace{3cm}食分 （\underlinespace{2cm}日分）
+☐ スタッフ用食料：____________食分 （_______日分）
 
 
 
-\checkbox 患者用補食：\underlinespace{3cm}食分
+☐ 患者用補食：____________食分
 
 
 
-% 通信・情報機器の備蓄
 
-**\large 通信・情報機器の備蓄状況**
+## 通信・情報機器の備蓄状況
 
 
 
 
-\begin{longtable}{|p{4cm}|p{2cm}|p{2cm}|p{3.5cm}|}
-\hline
-**機器名** & **数量** & **動作確認** & **備考** \\
-\hline
-携帯電話・スマートフォン & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-衛星電話 & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-携帯ラジオ & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-携帯テレビ & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-懐中電灯 & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-ランタン & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-ハンドマイク & \underlinespace{1.5cm} & \checkbox 良好 & \\[0.5cm]
-\hline
-\end{longtable}
+| **機器名** | **数量** | **動作確認** | **備考** |
+|------------|----------|--------------|----------|
+| 携帯電話・スマートフォン | _______ | ☐ 良好 |  |
+| 衛星電話 | _______ | ☐ 良好 |  |
+| 携帯ラジオ | _______ | ☐ 良好 |  |
+| 携帯テレビ | _______ | ☐ 良好 |  |
+| 懐中電灯 | _______ | ☐ 良好 |  |
+| ランタン | _______ | ☐ 良好 |  |
+| ハンドマイク | _______ | ☐ 良好 |  |
 
-% 業者調達体制の確認
 
-**\large 業者調達体制の確認**
+## 業者調達体制の確認
 
 
 
 
-\checkbox 透析器材業者との災害時調達協定：\checkbox 締結済      \checkbox 要締結
+☐ 透析器材業者との災害時調達協定：☐ 締結済      ☐ 要締結
 
 
 
-連絡先確認：\checkbox 確認済      担当者：\underlinespace{6cm}
+連絡先確認：☐ 確認済      担当者：____________________
 
 
 
-\checkbox 医薬品業者との災害時調達協定：\checkbox 締結済      \checkbox 要締結
+☐ 医薬品業者との災害時調達協定：☐ 締結済      ☐ 要締結
 
 
 
-連絡先確認：\checkbox 確認済      担当者：\underlinespace{6cm}
+連絡先確認：☐ 確認済      担当者：____________________
 
 
 
-\checkbox 食料業者との災害時調達協定：\checkbox 締結済      \checkbox 要締結
+☐ 食料業者との災害時調達協定：☐ 締結済      ☐ 要締結
 
 
 
-連絡先確認：\checkbox 確認済      担当者：\underlinespace{6cm}
+連絡先確認：☐ 確認済      担当者：____________________
 
 
 
-\checkbox 燃料業者との災害時調達協定：\checkbox 締結済      \checkbox 要締結
+☐ 燃料業者との災害時調達協定：☐ 締結済      ☐ 要締結
 
 
 
-連絡先確認：\checkbox 確認済      担当者：\underlinespace{6cm}
+連絡先確認：☐ 確認済      担当者：____________________
 
 
 
-% 改善事項・次回点検予定
 
-**\large 改善事項・次回点検予定**
+## 改善事項・次回点検予定
 
 
 
@@ -237,20 +192,20 @@ header-right: "212 備蓄物資点検チェックシート（平時の準備） 
 
 
 
-1. \underlinespace{12cm}
+1. _________________________________________
 
 
 
-2. \underlinespace{12cm}
+2. _________________________________________
 
 
 
-3. \underlinespace{12cm}
+3. _________________________________________
 
 
 
-**次回点検予定日：** \underlinespace{4cm}      **実施予定者：** \underlinespace{4cm}
+**次回点検予定日：** _______________      **実施予定者：** _______________
 
 
 
-**点検責任者確認：** \underlinespace{4cm}      **確認印：** \underlinespace{3cm}
+**点検責任者確認：** _______________      **確認印：** ____________

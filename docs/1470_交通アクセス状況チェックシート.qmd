@@ -1,6 +1,8 @@
 ---
 title: "交通アクセス状況チェックシート（発災直後対応）"
 subtitle: "223 交通アクセス状況チェックシート（発災直後対応）"
+filename: "1470_交通アクセス状況チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -317,29 +319,13 @@ header-right: "223 交通アクセス状況チェックシート（発災直後�
 
 
 
-\begin{minipage}[t]{0.32\textwidth}
-\centering
-**政府広報防災特集**\\
+**関連防災情報サイト**
 
-\qrcode[height=2.5cm]{https://www.gov-online.go.jp/tokusyu/bousai/}\\
+- **政府広報防災特集**: https://www.gov-online.go.jp/tokusyu/bousai/  
+  （国の基本防災対策）
 
-{\small 国の基本防災対策}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-\centering
-**福井県危機対策ポータル**\\
+- **福井県危機対策ポータル**: https://www.pref.fukui.lg.jp/doc/kikitaisaku/portalsite.html  
+  （県の防災情報）
 
-\qrcode[height=2.5cm]{https://www.pref.fukui.lg.jp/doc/kikitaisaku/portalsite.html}\\
-
-{\small 県の防災情報}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.32\textwidth}
-\centering
-**福井県防災ネット**\\
-
-\qrcode[height=2.5cm]{https://www.bousai.pref.fukui.lg.jp/dis_portal/index.html}\\
-
-{\small リアルタイム防災情報}
-\end{minipage}
+- **福井県防災ネット**: https://www.bousai.pref.fukui.lg.jp/dis_portal/index.html  
+  （リアルタイム防災情報）

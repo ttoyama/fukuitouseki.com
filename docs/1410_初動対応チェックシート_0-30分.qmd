@@ -1,6 +1,8 @@
 ---
 title: "初動対応チェックシート（発災後0～30分）"
 subtitle: "101 初動対応チェックシート（発災後0～30分）"
+filename: "1410_初動対応チェックシート_0-30分.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -35,21 +37,20 @@ version: "2025.09.04版"
 header-right: "101 初動対応チェックシート（発災後0～30分） 2025.09.04版"
 ---
 
-% 手動でタイトルを作成
 
 # 初動対応チェックシート（発災後0～30分）
 
 
 
-**施設名：** \underlinespace{8cm}
+**施設名：** ___________________________
 
 
 
-**記録者：** \underlinespace{4cm}
+**記録者：** _______________
 
 
 
-**発災日時：** \underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分
+**発災日時：** _______年____月____日      ○ 午前      ○ 午後      ____時____分
 
 
 
@@ -57,160 +58,161 @@ header-right: "101 初動対応チェックシート（発災後0～30分） 202
 
 ### 1-1. 施設内患者安全確保
 
-\checkbox **施設内患者（透析中・待機中）の安全を確保する**
+☐ **施設内患者（透析中・待機中）の安全を確保する**
 
-     確認時刻：\underlinespace{1cm}時\underlinespace{1cm}分      対応者：\underlinespace{4cm}
-
-
-
-\checkbox **負傷者の有無を確認し、応急処置を実施する**
-
-     負傷者数：\underlinespace{2cm}人      処置内容：\underlinespace{6cm}
+     確認時刻：____時____分      対応者：_______________
 
 
 
-\checkbox **パニック患者のそばに駆け寄り、心理的ケアを行う**
+☐ **負傷者の有無を確認し、応急処置を実施する**
 
-     対象患者数：\underlinespace{2cm}人      対応者：\underlinespace{4cm}
+     負傷者数：_______人      処置内容：_____________________
 
 
 
-\checkbox **透析中患者の治療中止・継続を判断する**
+☐ **パニック患者のそばに駆け寄り、心理的ケアを行う**
 
-     透析中患者数：\underlinespace{2cm}人      継続：\underlinespace{2cm}人      中止：\underlinespace{2cm}人
+     対象患者数：_______人      対応者：_______________
+
+
+
+☐ **透析中患者の治療中止・継続を判断する**
+
+     透析中患者数：_______人      継続：_______人      中止：_______人
 
 
 
 ### 1-2. スタッフ安否確認
 
-\checkbox **緊急連絡網を使用して全スタッフの安否を確認する**
+☐ **緊急連絡網を使用して全スタッフの安否を確認する**
 
-     確認完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分
+     確認完了時刻：____時____分
 
 
 
-\checkbox **参集可能スタッフに速やかな施設参集を要請する**
+☐ **参集可能スタッフに速やかな施設参集を要請する**
 
-     要請完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分
+     要請完了時刻：____時____分
 
 
 
 ## 2. 施設設備点検
 
-\checkbox **建物本体の損傷を点検する**
+☐ **建物本体の損傷を点検する**
 
-     \circlecheck 安全      \circlecheck 要注意      \circlecheck 危険      点検者：\underlinespace{4cm}
-
-
-
-\checkbox **透析装置の稼働状況・警報発生の有無を確認する**
-
-     稼働可能台数：\underlinespace{2cm}台／総\underlinespace{2cm}台      警報発生：\checkbox あり \checkbox なし
+     ○ 安全      ○ 要注意      ○ 危険      点検者：_______________
 
 
 
-\checkbox **水処理装置の異常を確認する**
+☐ **透析装置の稼働状況・警報発生の有無を確認する**
 
-     \circlecheck 正常      \circlecheck 異常あり（詳細：\underlinespace{6cm}）
-
-
-
-\checkbox **自家発電設備の動作状況を点検する**
-
-     \circlecheck 正常      \circlecheck 異常あり      \circlecheck 未確認      燃料残量：\underlinespace{3cm}
+     稼働可能台数：_______台／総_______台      警報発生：☐ あり ☐ なし
 
 
 
-\checkbox **医療ガス設備を確認する**
+☐ **水処理装置の異常を確認する**
 
-     \circlecheck 正常      \circlecheck 異常あり（詳細：\underlinespace{6cm}）
-
-
-
-\checkbox **医薬品・医療材料の保管状況を確認する**
-
-     \circlecheck 問題なし      \circlecheck 破損あり（詳細：\underlinespace{6cm}）
+     ○ 正常      ○ 異常あり（詳細：_____________________）
 
 
 
-\checkbox **ライフライン状況を詳細に確認する**
+☐ **自家発電設備の動作状況を点検する**
 
-     **電力：** \circlecheck 正常 \circlecheck 停電      **水道：** \circlecheck 正常 \circlecheck 断水
-
-     **ガス：** \circlecheck 正常 \circlecheck 停止      **通信：** \circlecheck 正常 \circlecheck 不通
+     ○ 正常      ○ 異常あり      ○ 未確認      燃料残量：__________
 
 
 
+☐ **医療ガス設備を確認する**
 
-\newpage
+     ○ 正常      ○ 異常あり（詳細：_____________________）
+
+
+
+☐ **医薬品・医療材料の保管状況を確認する**
+
+     ○ 問題なし      ○ 破損あり（詳細：_____________________）
+
+
+
+☐ **ライフライン状況を詳細に確認する**
+
+     **電力：** ○ 正常 ○ 停電      **水道：** ○ 正常 ○ 断水
+
+     **ガス：** ○ 正常 ○ 停止      **通信：** ○ 正常 ○ 不通
+
+
+
+
+
+---
 
 
 ## 3. 初動報告（発災後30分以内）
 
 ### 3-1. 福井県透析施設ネットワーク本部への報告
 
-\checkbox **施設職員・患者の安否確認結果を報告する**
+☐ **施設職員・患者の安否確認結果を報告する**
 
-     報告完了時刻：\underlinespace{1cm}時\underlinespace{1cm}分      報告者：\underlinespace{4cm}
+     報告完了時刻：____時____分      報告者：_______________
 
-     患者安否：安全\underlinespace{2cm}人、負傷\underlinespace{2cm}人、不明\underlinespace{2cm}人
+     患者安否：安全_______人、負傷_______人、不明_______人
 
-     スタッフ安否：安全\underlinespace{2cm}人、負傷\underlinespace{2cm}人、不明\underlinespace{2cm}人
-
-
-
-\checkbox **建物の緊急危険度を判定して報告する**
-
-     \circlecheck 安全（継続使用可能）      \circlecheck 要注意（一部制限）      \circlecheck 危険（使用不可）
+     スタッフ安否：安全_______人、負傷_______人、不明_______人
 
 
 
-\checkbox **即座に必要な緊急支援の有無を報告する**
+☐ **建物の緊急危険度を判定して報告する**
 
-     \checkbox 緊急支援不要      \checkbox 緊急支援必要
+     ○ 安全（継続使用可能）      ○ 要注意（一部制限）      ○ 危険（使用不可）
 
-     必要支援内容：\underlinespace{10cm}
+
+
+☐ **即座に必要な緊急支援の有無を報告する**
+
+     ☐ 緊急支援不要      ☐ 緊急支援必要
+
+     必要支援内容：_____________________________
 
 
 
 ### 3-2. 詳細状況確認（30分～1時間の準備）
 
-\checkbox **施設周辺道路状況を確認する**
+☐ **施設周辺道路状況を確認する**
 
-     主要アクセス路：\circlecheck 通行可能 \circlecheck 通行困難 \circlecheck 通行不可
+     主要アクセス路：○ 通行可能 ○ 通行困難 ○ 通行不可
 
-     詳細：\underlinespace{10cm}
-
-
-
-\checkbox **公共交通機関の運行状況を確認する**
-
-     \circlecheck 正常運行      \circlecheck 運行停止      \circlecheck 情報収集中
+     詳細：_____________________________
 
 
 
-\checkbox **緊急車両通行ルート・指定優先道路の状況を把握する**
+☐ **公共交通機関の運行状況を確認する**
 
-     緊急車両通行：\circlecheck 可能 \circlecheck 困難 \circlecheck 不可
+     ○ 正常運行      ○ 運行停止      ○ 情報収集中
 
 
 
-\checkbox **透析液供給システムの損傷を確認する**
+☐ **緊急車両通行ルート・指定優先道路の状況を把握する**
 
-     \circlecheck 正常      \circlecheck 一部損傷      \circlecheck 大幅損傷
+     緊急車両通行：○ 可能 ○ 困難 ○ 不可
+
+
+
+☐ **透析液供給システムの損傷を確認する**
+
+     ○ 正常      ○ 一部損傷      ○ 大幅損傷
 
 
 
 ## 4. 緊急時連絡先
 
 ### 4-1. 報告先
-\checkbox 福井県透析施設ネットワーク本部
+☐ 福井県透析施設ネットワーク本部
 
-\checkbox 福井県災害対策本部
+☐ 福井県災害対策本部
 
-\checkbox 日本透析医会災害情報ネットワーク
+☐ 日本透析医会災害情報ネットワーク
 
-\checkbox 所在地市町村災害対策本部
+☐ 所在地市町村災害対策本部
 
 ### 4-2. 通信手段（優先順位）
 1. LINE・Teams
@@ -223,14 +225,18 @@ header-right: "101 初動対応チェックシート（発災後0～30分） 202
 
 
 
-**総合確認：** \\
-\checkbox 患者・スタッフの安全確保完了 \\
-\checkbox 施設設備点検完了 \\
-\checkbox 初動報告（30分以内）完了 \\
-\checkbox 次段階準備完了
+**総合確認：**
+
+☐ 患者・スタッフの安全確保完了
+
+☐ 施設設備点検完了
+
+☐ 初動報告（30分以内）完了
+
+☐ 次段階準備完了
 
 
 
-最終確認者：\underlinespace{4cm} \\
+最終確認者：_______________
 
-確認日時：\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日      \circlecheck 午前      \circlecheck 午後      \underlinespace{1cm}時\underlinespace{1cm}分
+確認日時：_______年____月____日      ○ 午前      ○ 午後      ____時____分

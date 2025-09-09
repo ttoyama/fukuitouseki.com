@@ -1,6 +1,8 @@
 ---
 title: "様式03"
 subtitle: "113 様式03"
+filename: "1450_スタッフ安否確認表.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

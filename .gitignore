@@ -28,3 +28,15 @@ share/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Backup files
+*.bak
+*.bak[0-9]*
+combined.md*
+
+# Bookorder temporary files
+.bookorder*
+
+# PDF files (generated PDFs go to booklet-pdf/)
+*.pdf
+!booklet-pdf/*.pdf

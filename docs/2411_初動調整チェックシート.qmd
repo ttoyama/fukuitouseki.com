@@ -1,6 +1,8 @@
 ---
 title: "初動調整チェックシート"
 subtitle: "321 初動調整チェックシート"
+filename: "2411_初動調整チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

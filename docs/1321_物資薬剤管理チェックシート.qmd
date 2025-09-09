@@ -1,6 +1,8 @@
 ---
 title: "物資薬剤管理チェックシート"
 subtitle: "253 物資薬剤管理チェックシート"
+filename: "1321_物資薬剤管理チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -35,6 +37,6 @@ version: "2025-09-08版"
 header-right: "253 物資薬剤管理チェックシート 2025-09-08版"
 ---
 
-\maketitle
+# 物資薬剤管理チェックシート
 
-% Content to be developed
+このチェックシートの内容は今後開発予定です。

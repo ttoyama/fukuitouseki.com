@@ -1,6 +1,8 @@
 ---
 title: "透析実施困難施設対応チェックシート"
 subtitle: "252 透析実施困難施設対応チェックシート"
+filename: "1431_透析実施困難施設対応チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

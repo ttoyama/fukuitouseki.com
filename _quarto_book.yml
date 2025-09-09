@@ -1,0 +1,89 @@
+project:
+  type: book
+  output-dir: pdfs
+
+book:
+  title: "福井県透析防災マニュアル"
+  author: "福井透析ネットワーク本部"
+  date: today
+  language: ja
+  
+  chapters:
+    - index.qmd
+    - part: "マニュアル本体"
+      chapters:
+        - docs/0100_各施設の役割と対応.qmd
+        - docs/0200_福井県透析施設ネットワークの役割と対応.qmd
+    
+    - part: "平時の準備チェックシート"
+      chapters:
+        - docs/1311_施設設備点検表.qmd
+        - docs/1320_備蓄物資点検チェックシート.qmd
+        - docs/1321_物資薬剤管理チェックシート.qmd
+        - docs/1322_物資薬剤備蓄状況確認表.qmd
+        - docs/1330_患者緊急連絡先チェックシート.qmd
+    
+    - part: "初動対応チェックシート"
+      chapters:
+        - docs/1410_初動対応チェックシート_0-30分.qmd
+        - docs/1420_初動対応チェックシート_1-3時間.qmd
+        - docs/1430_初動対応チェックシート_3-24時間.qmd
+        - docs/1431_透析実施困難施設対応チェックシート.qmd
+    
+    - part: "報告書・記録表"
+      chapters:
+        - docs/1440_災害時透析医療機関状況報告書_初動報告用.qmd
+        - docs/1441_災害時透析医療機関状況報告書_詳細報告用.qmd
+        - docs/1442_初動対応記録表.qmd
+    
+    - part: "安全確認・点検表"
+      chapters:
+        - docs/1450_スタッフ安否確認表.qmd
+        - docs/1451_患者安全確認表.qmd
+        - docs/1452_患者安全・スタッフ安否チェックシート.qmd
+        - docs/1453_患者カテゴリー別優先度評価表.qmd
+        - docs/1460_透析関連機器確認表.qmd
+        - docs/1461_施設設備点検チェックシート_発災直後.qmd
+        - docs/1470_交通アクセス状況チェックシート.qmd
+    
+    - part: "ネットワーク対応チェックシート"
+      chapters:
+        - docs/2310_支援準備状況チェックシート.qmd
+        - docs/2410_被災地情報集約チェックシート.qmd
+        - docs/2411_初動調整チェックシート.qmd
+        - docs/2420_緊急搬送調整チェックシート.qmd
+        - docs/2421_患者搬送調整チェックシート.qmd
+        - docs/2430_患者受入調整チェックシート.qmd
+        - docs/2440_二次避難計画チェックシート.qmd
+        - docs/2441_二次避難患者受入チェックシート.qmd
+    
+    - part: "参考資料"
+      chapters:
+        - docs/9910_公的防災情報リンク集.qmd
+        - docs/9920_福井県内透析施設一覧.qmd
+        - docs/9930_透析患者向け食品栄養成分表.qmd
+
+format:
+  html:
+    theme: cosmo
+    lang: ja
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrbook
+    lang: ja
+    fontsize: 11pt
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - left=20mm
+      - right=20mm
+    include-in-header:
+      text: |
+        \usepackage{xeCJK}
+        \setCJKmainfont{Hiragino Sans}
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[R]{\small 福井県透析防災マニュアル}
+        \fancyfoot[C]{\thepage}
+        \renewcommand{\headrulewidth}{0.5pt}

@@ -1,6 +1,8 @@
 ---
 title: "様式07"
 subtitle: "117 様式07"
+filename: "1322_物資薬剤備蓄状況確認表.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
@@ -35,27 +37,25 @@ version: "2025.09.06版"
 header-right: "117 様式07 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 様式07: 物資薬剤備蓄状況確認表
 
 
 
-**【確認日時】**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**【確認日時】**_______年____月____日____時____分
 
 
 
-**【施設名】** \underlinespace{10cm}
+**【施設名】** __________________________________
 
 
 
-**【確認者】** \underlinespace{10cm}
+**【確認者】** __________________________________
 
 
 
-% 透析用物資
 
-**\large 透析用物資**
+## 透析用物資
 
 
 
@@ -95,9 +95,8 @@ header-right: "117 様式07 2025.09.06版"
 
 
 
-% 薬剤
 
-**\large 薬剤**
+## 薬剤
 
 
 
@@ -135,138 +134,132 @@ header-right: "117 様式07 2025.09.06版"
 
 
 
-% 緊急時物資
 
-**\large 緊急時物資**
+## 緊急時物資
 
 
 
 
-\checkbox 非常用電源燃料：     \checkbox 満タン      /      \checkbox 3/4      /      \checkbox 半分      /      \checkbox 1/4      /      \checkbox 残りわずか
+☐ 非常用電源燃料：     ☐ 満タン      /      ☐ 3/4      /      ☐ 半分      /      ☐ 1/4      /      ☐ 残りわずか
 
 
 
-\checkbox 飲料水：     \checkbox 十分（\underlinespace{2cm}L）      /      \checkbox 不足      /      \checkbox なし
+☐ 飲料水：     ☐ 十分（_______L）      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox 非常食：     \checkbox 十分（\underlinespace{2cm}日分）      /      \checkbox 不足      /      \checkbox なし
+☐ 非常食：     ☐ 十分（_______日分）      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox 毛布・寝具：     \checkbox 十分（\underlinespace{2cm}枚）      /      \checkbox 不足      /      \checkbox なし
+☐ 毛布・寝具：     ☐ 十分（_______枚）      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox 懐中電灯・電池：     \checkbox 十分      /      \checkbox 不足      /      \checkbox なし
+☐ 懐中電灯・電池：     ☐ 十分      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox ラジオ・通信機器：     \checkbox 正常      /      \checkbox 不具合      /      \checkbox なし
+☐ ラジオ・通信機器：     ☐ 正常      /      ☐ 不具合      /      ☐ なし
 
 
 
-% PD関連物資
 
-**\large PD関連物資（該当施設のみ）**
+## PD関連物資（該当施設のみ）
 
 
 
 
-\checkbox PD透析液：     \checkbox 十分（\underlinespace{2cm}袋）      /      \checkbox 不足      /      \checkbox なし
+☐ PD透析液：     ☐ 十分（_______袋）      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox PD回路・バッグ：     \checkbox 十分（\underlinespace{2cm}セット）      /      \checkbox 不足      /      \checkbox なし
+☐ PD回路・バッグ：     ☐ 十分（_______セット）      /      ☐ 不足      /      ☐ なし
 
 
 
-\checkbox PD消毒液：     \checkbox 十分      /      \checkbox 不足      /      \checkbox なし
+☐ PD消毒液：     ☐ 十分      /      ☐ 不足      /      ☐ なし
 
 
 
-% 保管状況
 
-**\large 保管状況**
+## 保管状況
 
 
 
 
-\checkbox 薬品冷蔵庫：     \checkbox 正常稼働      /      \checkbox 故障      /      \checkbox 停電
+☐ 薬品冷蔵庫：     ☐ 正常稼働      /      ☐ 故障      /      ☐ 停電
 
 
 
-\checkbox 倉庫・保管庫：     \checkbox 正常      /      \checkbox 一部損傷      /      \checkbox 重大損傷
+☐ 倉庫・保管庫：     ☐ 正常      /      ☐ 一部損傷      /      ☐ 重大損傷
 
 
 
-\checkbox 物資の損傷：     \checkbox なし      /      \checkbox 軽微      /      \checkbox 重大
+☐ 物資の損傷：     ☐ なし      /      ☐ 軽微      /      ☐ 重大
 
 
 
-\checkbox 温度管理：     \checkbox 適正      /      \checkbox 要注意      /      \checkbox 不適
+☐ 温度管理：     ☐ 適正      /      ☐ 要注意      /      ☐ 不適
 
 
 
-% 緊急調達必要物資
 
-**\large 緊急調達必要物資**
+## 緊急調達必要物資
 
 
 
 
-\checkbox 最優先：\underlinespace{10cm}
+☐ 最優先：__________________________________
 
 
 
-\checkbox 24時間以内：\underlinespace{10cm}
+☐ 24時間以内：__________________________________
 
 
 
-\checkbox 3日以内：\underlinespace{10cm}
+☐ 3日以内：__________________________________
 
 
 
-% 消費ペース計算
 
-**\large 消費ペース計算**
+## 消費ペース計算
 
 
 
 
-\checkbox 通常透析継続の場合：\underlinespace{2cm}日間継続可能
+☐ 通常透析継続の場合：_______日間継続可能
 
 
 
-\checkbox 短時間透析実施の場合：\underlinespace{2cm}日間継続可能
+☐ 短時間透析実施の場合：_______日間継続可能
 
 
 
-\checkbox 最小限透析実施の場合：\underlinespace{2cm}日間継続可能
+☐ 最小限透析実施の場合：_______日間継続可能
 
 
 
-% 特記事項・詳細
 
-**\large 特記事項・詳細**
+## 特記事項・詳細
 
 
 
 
-\underlinespace{13cm}
+_____________________________________________
 
 
 
-\underlinespace{13cm}
+_____________________________________________
 
 
 
-\underlinespace{13cm}
+_____________________________________________
 
 
 
-\underlinespace{13cm}
+_____________________________________________
 
 
 
-\underlinespace{13cm}
+_____________________________________________

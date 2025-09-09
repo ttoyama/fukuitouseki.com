@@ -1,6 +1,8 @@
 ---
 title: "二次避難計画チェックシート"
 subtitle: "561 二次避難計画チェックシート"
+filename: "2440_二次避難計画チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

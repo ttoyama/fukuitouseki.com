@@ -1,252 +1,142 @@
 ---
-title: "施設設備点検チェックシート（平時の準備）"
-subtitle: "211 施設設備点検チェックシート（平時の準備）"
-date: "2025-09-08"
+title: "様式04"
+subtitle: "114 様式04"
+filename: "1310_施設設備点検チェックシート.qmd"
+date-modified: "2025-09-09"
+date: "2025-09-09"
 format: 
   html:
     toc: true
     toc-depth: 3
     number-sections: true
-    css: custom.css
-  pdf:
-    documentclass: jarticle
-    geometry: 
-      - top=30mm
-      - bottom=30mm  
-      - left=20mm
-      - right=20mm
-      - footskip=18mm
-      - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
-version: "2025.09.06版"
-header-right: "211 施設設備点検チェックシート（平時の準備） 2025.09.06版"
+version: "2025.09.09版"
+header-right: "114 様式04 2025.09.09版"
 ---
 
-% 手動でタイトルを作成
+# 様式04: 施設設備点検チェックシート
 
-# 施設設備点検チェックシート（平時の準備）
+**施設名：** ___________________________
 
+**点検実施者：** _______________ **点検日：** ____________
 
+**点検責任者：** _______________ **確認日：** ____________
 
-**施設名：** \underlinespace{8cm}
+## 基本設備の定期点検
 
+☐ 建物の構造的安全性：☐ 問題なし ☐ 要注意箇所有 ☐ 要修繕
 
+要注意・修繕箇所：__________________________________
 
-**点検実施者：** \underlinespace{4cm}      **点検日：** \underlinespace{3cm}
+☐ 防災機能の点検：☐ 正常 ☐ 一部不良 ☐ 要修理
 
+（☐ 火災警報 ☐ スプリンクラー ☐ エレベーター ☐ その他）
 
+☐ 避難経路の確保：☐ 確保済 ☐ 一部阻害 ☐ 要改善
 
-**点検責任者：** \underlinespace{4cm}      **確認日：** \underlinespace{3cm}
+問題箇所：__________________________________
 
+## ライフラインの点検と確保
 
+☐ 電力設備：☐ 正常 ☐ 要点検 ☐ 要修繕
 
-% 基本的な設備点検
+☐ 自家発電装置：☐ 有・正常 ☐ 有・要点検 ☐ 無
 
-**\large 基本設備の定期点検**
+稼働可能時間：____________ 燃料備蓄量：____________
 
+☐ 上水道設備：☐ 正常 ☐ 要点検 ☐ 要修繕
 
+☐ 貯水設備：☐ 有（_______m³） ☐ 無
 
+☐ ガス設備：☐ 正常 ☐ 要点検 ☐ 要修繕 ☐ 無
 
-\checkbox 建物の構造的安全性：\checkbox 問題なし      \checkbox 要注意箇所有      \checkbox 要修繕
+☐ 通信設備：☐ 正常 ☐ 要点検 ☐ 要修繕
 
+（☐ 固定電話 ☐ 携帯電話 ☐ インターネット ☐ その他）
 
+## 透析関連設備の点検
 
-要注意・修繕箇所：\underlinespace{10cm}
+☐ 透析液作成装置：☐ 固定済・正常 ☐ 要固定 ☐ 要点検
 
+アンカーボルト固定：☐ 実施済 ☐ 未実施
 
+☐ 透析用監視装置（コンソール）：☐ 正常 ☐ 要点検
 
-\checkbox 防災機能の点検：\checkbox 正常      \checkbox 一部不良      \checkbox 要修理
+耐震設定：☐ 耐震構造（キャスターフリー） ☐ 免振構造（キャスターロック）
 
+☐ 透析ベッド：☐ 正常 ☐ 要点検
 
+コンソール連結：☐ 実施済（バックルベルト等） ☐ 未実施
 
-（\checkbox 火災警報      \checkbox スプリンクラー      \checkbox エレベーター      \checkbox その他）
+☐ 透析用給水配管：☐ 正常 ☐ 要点検 ☐ 要改善
 
+フレキシブル管対応：☐ 実施済 ☐ 一部実施 ☐ 未実施
 
+☐ 水処理装置：☐ 正常 ☐ 要点検 ☐ 要修繕
 
-\checkbox 避難経路の確保：\checkbox 確保済      \checkbox 一部阻害      \checkbox 要改善
+## 緊急対応物品の整備
 
+| 物品名 | 配置場所 | 動作確認 | 備考 |
+|--------|----------|----------|------|
+| 停電用懐中電灯 | ☐ 配置済 | ☐ 良好 |      |
+| 携帯テレビ・ラジオ | ☐ 配置済 | ☐ 良好 |      |
+| 患者誘導用ハンドマイク | ☐ 配置済 | ☐ 良好 |      |
+| 救急処置物品 | ☐ 配置済 | ☐ 良好 |      |
+| 救急カート | ☐ 配置済 | ☐ 良好 |      |
+| AED | ☐ 配置済 | ☐ 良好 |      |
+| 血圧計 | ☐ 配置済 | ☐ 良好 |      |
+| パルスオキシメーター | ☐ 配置済 | ☐ 良好 |      |
+| 酸素ボンベ・マスク | ☐ 配置済 | ☐ 良好 |      |
+| 担架・車椅子 | ☐ 配置済 | ☐ 良好 |      |
 
+## 医療ガス設備点検
 
-問題箇所：\underlinespace{10cm}
+☐ 酸素配管：☐ 正常 ☐ 漏れ有 ☐ 要修繕
 
+☐ 酸素ボンベ：☐ 十分 ☐ 要補充 ☐ 要交換
 
+☐ 吸引配管：☐ 正常 ☐ 吸引不良 ☐ 要修繕
 
-% ライフライン点検
+☐ 医療用空気配管：☐ 正常 ☐ 異常有 ☐ 要修繕
 
-**\large ライフラインの点検と確保**
+## 患者・職員安全対策
 
+☐ 職員安否確認体制：☐ 整備済 ☐ 要改善
 
+☐ 患者安否確認体制：☐ 整備済 ☐ 要改善
 
+☐ 緊急時連絡網：☐ 整備済 ☐ 要更新
 
-\checkbox 電力設備：\checkbox 正常      \checkbox 要点検      \checkbox 要修繕
+☐ 避難誘導体制：☐ 整備済 ☐ 要改善
 
+☐ 応急手当・救護体制：☐ 整備済 ☐ 要改善
 
+## 施設周辺環境の確認
 
-\checkbox 自家発電装置：\checkbox 有・正常      \checkbox 有・要点検      \checkbox 無
+☐ 施設へのアクセス道路：☐ 問題なし ☐ 要確認
 
+☐ 近隣施設との連携：☐ 確立済 ☐ 要改善
 
+☐ 地域防災拠点との連携：☐ 確立済 ☐ 要改善
 
-稼働可能時間：\underlinespace{3cm}      燃料備蓄量：\underlinespace{3cm}
+## 定期点検記録
 
+| 実施日 | 点検項目 | 結果 | 対応状況 |
+|--------|----------|------|----------|
+|        |          |      |          |
+|        |          |      |          |
+|        |          |      |          |
+|        |          |      |          |
+|        |          |      |          |
 
+## 改善事項・特記事項
 
-\checkbox 上水道設備：\checkbox 正常      \checkbox 要点検      \checkbox 要修繕
+**改善が必要な事項：**
 
+_________________________________________
 
+_________________________________________
 
-\checkbox 貯水設備：\checkbox 有（\underlinespace{2cm}m$^3$）      \checkbox 無
+**次回点検予定日：** _______________
 
-
-
-\checkbox ガス設備：\checkbox 正常      \checkbox 要点検      \checkbox 要修繕      \checkbox 無
-
-
-
-\checkbox 通信設備：\checkbox 正常      \checkbox 要点検      \checkbox 要修繕
-
-
-
-（\checkbox 固定電話      \checkbox 携帯電話      \checkbox インターネット      \checkbox その他）
-
-
-
-% 透析関連設備点検
-
-**\large 透析関連設備の点検**
-
-
-
-
-\checkbox 透析液作成装置：\checkbox 固定済・正常      \checkbox 要固定      \checkbox 要点検
-
-
-
-アンカーボルト固定：\checkbox 実施済      \checkbox 未実施
-
-
-
-\checkbox 透析用監視装置（コンソール）：\checkbox 正常      \checkbox 要点検
-
-
-
-耐震設定：\checkbox 耐震構造（キャスターフリー）      \checkbox 免振構造（キャスターロック）
-
-
-
-\checkbox 透析ベッド：\checkbox 正常      \checkbox 要点検
-
-
-
-コンソール連結：\checkbox 実施済（バックルベルト等）      \checkbox 未実施
-
-
-
-\checkbox 透析用給水配管：\checkbox 正常      \checkbox 要点検      \checkbox 要改善
-
-
-
-フレキシブル管対応：\checkbox 実施済      \checkbox 一部実施      \checkbox 未実施
-
-
-
-\checkbox 水処理装置：\checkbox 正常      \checkbox 要点検      \checkbox 要修繕
-
-
-
-% 緊急対応物品
-
-**\large 緊急対応物品の整備**
-
-
-
-
-\begin{longtable}{|p{4cm}|p{2cm}|p{2cm}|p{3cm}|}
-\hline
-**物品名** & **配置場所** & **動作確認** & **備考** \\
-\hline
-停電用懐中電灯 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-携帯テレビ・ラジオ & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-患者誘導用ハンドマイク & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-救急処置物品 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-救急カート & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-AED & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-血圧計 & \checkbox 配置済 & \checkbox 良好 & \\[0.5cm]
-\hline
-\end{longtable}
-
-
-
-% 業者連絡先確認
-
-**\large 関係業者連絡先の確認**
-
-
-
-
-\checkbox 電力会社との連絡体制：\checkbox 確認済      \checkbox 要確認
-
-
-
-\checkbox 水道事務所との連絡体制：\checkbox 確認済      \checkbox 要確認
-
-
-
-\checkbox ガス会社との連絡体制：\checkbox 確認済      \checkbox 要確認
-
-
-
-\checkbox 取引先業者との調整：\checkbox 確認済      \checkbox 要確認
-
-
-
-\checkbox ビル管理会社との調整：\checkbox 確認済      \checkbox 要確認      \checkbox 該当なし
-
-
-
-% 改善事項・次回点検予定
-
-**\large 改善事項・次回点検予定**
-
-
-
-
-**要改善事項：**
-
-
-
-1. \underlinespace{12cm}
-
-
-
-2. \underlinespace{12cm}
-
-
-
-3. \underlinespace{12cm}
-
-
-
-**次回点検予定日：** \underlinespace{4cm}      **実施予定者：** \underlinespace{4cm}
-
-
-
-**点検責任者確認：** \underlinespace{4cm}      **確認印：** \underlinespace{3cm}
+**施設管理者確認：** _______________ **確認日：** ____________

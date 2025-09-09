@@ -1,6 +1,8 @@
 ---
 title: "様式08"
 subtitle: "118 様式08"
+filename: "1453_患者カテゴリー別優先度評価表.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:

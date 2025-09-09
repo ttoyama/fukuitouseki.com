@@ -52,6 +52,25 @@ format:
     anchor-sections: true
     link-external-newwindow: true
 
-# PDF設定を無効化してHTMLのみレンダリング  
+  pdf:
+    documentclass: scrartcl
+    lang: ja-JP
+    pdf-engine: xelatex
+    mainfont: "Hiragino Kaku Gothic ProN"
+    sansfont: "Hiragino Kaku Gothic ProN"
+    monofont: "Menlo"
+    include-in-header:
+      - text: |
+          \usepackage{xeCJK}
+          \setCJKmainfont{Hiragino Kaku Gothic ProN}
+    geometry:
+      - top=20mm
+      - left=20mm
+      - heightrounded
+    colorlinks: true
+    toc: true
+    toc-depth: 3
+    number-sections: true
+
 execute:
   freeze: auto

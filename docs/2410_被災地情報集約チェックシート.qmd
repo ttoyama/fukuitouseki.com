@@ -1,6 +1,8 @@
 ---
 title: "被災地情報集約チェックシート"
 subtitle: "311 被災地情報集約チェックシート"
+filename: "2410_被災地情報集約チェックシート.qmd"
+date-modified: "2025-09-09"
 date: "2025-09-08"
 format: 
   html:
