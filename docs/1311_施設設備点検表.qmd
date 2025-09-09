@@ -1,17 +1,31 @@
 ---
-title: "様式05"
+title: "様式05: 施設設備点検表"
 subtitle: "115 様式05"
 filename: "1311_施設設備点検表.qmd"
 date-modified: "2025-09-09"
-date: "2025-09-08"
+date: "2025年9月9日"
 format: 
   html:
     toc: true
     toc-depth: 3
     number-sections: true
+  pdf:
+    fontsize: 11pt
+    geometry: "a4paper,margin=2cm"
+    header-includes: |
+      \usepackage{fancyhdr}
+      \usepackage{xcolor}
+      \pagestyle{fancy}
+      \fancyhf{}
+      \fancyhead[L]{\textbf{\textcolor{blue}{\underline{福井県透析防災マニュアル (2025.09.09版)}}}}
+      \fancyhead[C]{\textbf{\textcolor{red}{1311\_施設設備点検表}}}
+      \fancyhead[R]{\textbf{\thepage}}
+      \fancyfoot[C]{\textit{福井透析ネットワーク本部 - 2025年9月}}
+      \renewcommand{\headrulewidth}{1.0pt}
+      \renewcommand{\footrulewidth}{0.5pt}
 lang: ja
-version: "2025.09.06版"
-header-right: "115 様式05 2025.09.06版"
+version: "2025.09.09版"
+header-right: "1311 施設設備点検表 2025.09.09版"
 ---
 
 

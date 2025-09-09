@@ -91,6 +91,12 @@ jobs:
           echo "  \\fancyhead[R]{\\small 福井県透析防災マニュアル ${DATE_VERSION}版}" >> combined.md
           echo "  \\fancyfoot[C]{\\thepage}" >> combined.md
           echo "  \\renewcommand{\\headrulewidth}{0.5pt}" >> combined.md
+          echo "  \\fancypagestyle{plain}{%" >> combined.md
+          echo "    \\fancyhf{}" >> combined.md
+          echo "    \\fancyhead[R]{\\small 福井県透析防災マニュアル ${DATE_VERSION}版}" >> combined.md
+          echo "    \\fancyfoot[C]{\\thepage}" >> combined.md
+          echo "    \\renewcommand{\\headrulewidth}{0.5pt}" >> combined.md
+          echo "  }" >> combined.md
           echo "  \\newcommand{\\underlinespace}[1]{\\underline{\\hspace{#1}}}" >> combined.md
           echo "  \\newcommand{\\checkbox}{$\\square$\\ }" >> combined.md
           echo "  \\newcommand{\\checkedbox}{$\\blacksquare$\\ }" >> combined.md
@@ -112,15 +118,18 @@ jobs:
               echo "" >> combined.md
               echo "\\newpage" >> combined.md
               echo "" >> combined.md
-              echo "<!-- ファイル: $file -->" >> combined.md
+              # ファイル名からdocs/と.qmdを除去してヘッダを作成
+              filename_base=$(basename "$file" .qmd)
+              DATE_ONLY=$(date '+%Y%m%d')
+              echo "${filename_base} （${DATE_ONLY}版）" >> combined.md
               echo "" >> combined.md
             fi
             
-            # Skip YAML frontmatter and add content, preserve newpage commands correctly
+            # Skip YAML frontmatter and add content, fix newpage commands correctly
             sed '1,/^---$/d; /^---$/,/^---$/d' "$file" | \
             sed 's/^% .*$//' | \
-            sed 's/^ewpage$/\\newpage/' | \
-            sed 's/\\ewpage/\\newpage/g' | \
+            sed 's/ewpage/\\newpage/g' | \
+            sed 's/\\\\newpage/\\newpage/g' | \
             sed '/^[[:space:]]*$/N; /^[[:space:]]*\n[[:space:]]*$/d' >> combined.md
           done < .bookorder.with_cover
           
@@ -131,7 +140,7 @@ jobs:
             --toc-depth=2 \
             --number-sections \
             -V linestretch=1.2 \
-            -V pagestyle=plain \
+            -V pagestyle=fancy \
             -o "pdfs/${PDF_NAME}"
           
           # PDF名を環境変数として保存

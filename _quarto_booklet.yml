@@ -1,0 +1,41 @@
+---
+title: '福井県透析防災マニュアル'
+author: '福井透析ネットワーク本部'
+date: '2025.09.09'
+lang: ja
+CJKmainfont: 'Hiragino Kaku Gothic ProN'
+documentclass: scrartcl
+geometry: 'a4paper,top=30mm,left=20mm,heightrounded'
+fontsize: 13pt
+mainfont: 'Hiragino Kaku Gothic ProN'
+sansfont: 'Hiragino Kaku Gothic ProN'
+monofont: 'Menlo'
+toc: true
+toc-depth: 3
+number-sections: true
+pagestyle: headings
+header-includes: |
+  \usepackage{xeCJK}
+  \setCJKmainfont{Hiragino Kaku Gothic ProN}
+  \usepackage{fancyhdr}
+  \setlength{\headheight}{15pt}
+  \setlength{\headsep}{25pt}
+  \usepackage{fancyhdr}
+  \usepackage{tikz}
+  \usepackage{xcolor}
+  \pagestyle{fancy}
+  \fancyhf{}
+  \fancyhead[L]{}
+  \fancyhead[R]{\fontsize{10pt}{12pt}\selectfont\textbf{福井県透析防災マニュアル(2025.09.09\,版)}}
+  \fancyfoot[C]{\textbf{\thepage}}
+  \renewcommand{\headrulewidth}{1.0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  \newcommand{\updateheader}[1]{
+    \fancyhead[L]{\fontsize{10pt}{12pt}\selectfont\textbf{#1}}
+    \fancyhead[R]{\fontsize{10pt}{12pt}\selectfont\textbf{福井県透析防災マニュアル(2025.09.09\,版)}}
+  }
+  \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
+  \newcommand{\checkbox}{$\square$\ }
+  \newcommand{\checkedbox}{$\blacksquare$\ }
+  \newcommand{\circlecheck}{$\bigcirc$\ }
+---

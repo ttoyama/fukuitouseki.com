@@ -177,17 +177,102 @@ quarto render docs/1410_初動対応チェックシート_0-30分.qmd --to pdf
 find docs/ -name "*.qmd" -exec quarto render {} --to pdf \;
 ```
 
-#### 3. 統合PDF生成（手動）
+#### 3. 統合PDF生成（手動・ローカル）
 ```bash
 # 全QMDファイルを1つの統合PDFに変換
 # GitHub Actionsと同じ処理をローカルで実行
+
+# **重要**: 生成されたPDFは必ずbooklet-pdf/フォルダに配置する
+# 命名規則: fukuitouseki_booklet_YYYYMMDD_HHMM.pdf
+
+# 1. 新しいPDFを生成
+pandoc combined.md --pdf-engine=xelatex --toc --toc-depth=2 --number-sections \
+  -V linestretch=1.2 -V pagestyle=plain \
+  -o "booklet-pdf/fukuitouseki_booklet_$(date '+%Y%m%d_%H%M').pdf"
+
+# 2. 旧版を自動的にアーカイブ化（新しいPDF以外をすべて移動）
+# 最新のPDFファイル以外をarchivedフォルダに移動
+find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
+sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/
+
+echo "PDF生成完了。旧版は booklet-pdf/archived/ に移動済み"
 ```
 
-#### 4. よくある指示例
+#### 3-2. ワンライナー版（PDF生成+アーカイブ化）
+```bash
+# PDF生成と旧版アーカイブを一括実行
+pandoc combined.md --pdf-engine=xelatex --toc --toc-depth=2 --number-sections \
+  -V linestretch=1.2 -V pagestyle=plain \
+  -o "booklet-pdf/fukuitouseki_booklet_$(date '+%Y%m%d_%H%M').pdf" && \
+find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
+sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/ && \
+echo "PDF生成・アーカイブ化完了"
+```
+
+#### 4. PDF配置の絶対ルール
+
+**配置場所**: 生成されたすべてのPDFファイルは **既存の** `booklet-pdf/` フォルダに配置する
+**命名規則**: `fukuitouseki_booklet_YYYYMMDD_HHMM.pdf` 形式で命名する
+**絶対禁止事項**: 
+- `booklet-pdf/` フォルダを新規作成してはならない（既存フォルダを使用）
+- `mkdir -p booklet-pdf` などのフォルダ作成コマンドは実行禁止
+- プロジェクトルートに直接PDFファイルを配置してはならない
+- 日本語ファイル名での保存は避ける
+- booklet-pdf/以外の場所への配置は禁止
+
+```bash
+# 正しい例
+booklet-pdf/fukuitouseki_booklet_20250909_1900.pdf
+
+# 間違った例（絶対に避ける）
+福井県透析防災マニュアル.pdf  # プロジェクトルート配置・日本語名
+docs/マニュアル.pdf            # 間違ったフォルダ配置
+```
+
+#### 5. よくある指示例
 - 「docs内の全QMDファイルをPDF化して」→ GitHub Actions実行
 - 「統合PDFを作成して」→ GitHub Actions実行  
 - 「個別のPDFファイルを作成して」→ find + quarto render実行
 - 「特定のファイルだけPDF化」→ quarto render [ファイル名] --to pdf
+- 「PDFつくって」→ combined.mdを基にローカルPDF生成実行
+
+#### 6. ローカルPDF生成手順（combined.mdベース）
+
+「PDFつくって」指示を受けた場合の標準手順：
+
+```bash
+# 1. combined.mdから直接PDF生成
+export TZ='Asia/Tokyo'
+DATETIME=$(date '+%Y%m%d_%H%M')
+PDF_NAME="fukuitouseki_booklet_${DATETIME}.pdf"
+
+# 2. macOS環境用フォントでPandoc実行
+pandoc combined.md \
+  --pdf-engine=xelatex \
+  --toc \
+  --toc-depth=2 \
+  --number-sections \
+  -V linestretch=1.2 \
+  -o "${PDF_NAME}"
+
+# 3. booklet-pdfフォルダに配置・重複回避
+VERSION=""
+COUNTER=1
+while [ -f "booklet-pdf/${PDF_NAME%.*}${VERSION}.pdf" ]; do
+  VERSION="-${COUNTER}"
+  COUNTER=$((COUNTER + 1))
+done
+FINAL_PDF_NAME="${PDF_NAME%.*}${VERSION}.pdf"
+mv "${PDF_NAME}" "booklet-pdf/${FINAL_PDF_NAME}"
+
+# 4. 古いPDFのアーカイブ化
+find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
+sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/
+
+echo "PDF生成完了: booklet-pdf/${FINAL_PDF_NAME}"
+```
+
+**重要**: combined.mdは既存のため、新規生成は不要。直接PandocでPDF化する。
 
 注：QuartoはPython、R、Juliaなどの環境をサポートしますが、このプロジェクトは主にMarkdownベースのドキュメント生成に使用されています。
 
