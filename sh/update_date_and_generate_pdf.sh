@@ -2,18 +2,13 @@
 
 echo "🚀 完全自動PDF生成を開始します..."
 
-# 1. 既存のcombined.mdを使用（動的統合は一時的に無効化）
-echo "📄 Step 1: 既存のcombined.mdを使用中..."
-if [ ! -f "combined.md" ]; then
-    if [ -f "archived/combined_old_static_version.md" ]; then
-        cp "archived/combined_old_static_version.md" "combined.md"
-        echo "✅ バックアップから復元しました"
-    else
-        echo "❌ エラー: combined.mdが見つかりません"
-        exit 1
-    fi
-else
-    echo "✅ 既存のcombined.mdを使用します"
+# 1. QMD統合（毎回最新のQMDファイルから動的に生成）
+echo "📄 Step 1: 最新QMDファイルから動的統合中..."
+./sh/generate-combined.sh
+
+if [ $? -ne 0 ]; then
+    echo "❌ エラー: QMD統合に失敗しました"
+    exit 1
 fi
 
 # 2. PDF生成
@@ -43,9 +38,14 @@ sort -r | tail -n +2 | while read file; do
     ARCHIVED_COUNT=$((ARCHIVED_COUNT + 1))
 done
 
-# 4. 中間ファイルの削除
-echo "🗑️  Step 4: 中間生成ファイルを削除中..."
-rm -f combined.md
+# 4. 中間ファイルの削除（PDFが正常に生成された場合のみ）
+if [ -f "booklet-pdf/${PDF_NAME}" ]; then
+    echo "🗑️  Step 4: 中間生成ファイルを削除中..."
+    rm -f combined.md
+    echo "🧹 combined.md削除完了"
+else
+    echo "⚠️  Warning: PDFファイルが見つからないため、combined.mdを保持します（デバッグ用）"
+fi
 
 echo ""
 echo "✅ 完了！"
@@ -54,4 +54,4 @@ if [ -f "booklet-pdf/${PDF_NAME}" ]; then
     echo "📊 PDFサイズ: $(ls -lh "booklet-pdf/${PDF_NAME}" | awk '{print $5}')"
 fi
 echo "🗂️  古いPDFファイルをarchived/に移動済み"
-echo "🧹 中間ファイル（combined.md）を削除済み"
+echo "🧹 処理完了：中間ファイルの状態を確認済み"

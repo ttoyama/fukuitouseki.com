@@ -6,7 +6,7 @@ lang: ja
 CJKmainfont: 'Hiragino Kaku Gothic ProN'
 documentclass: scrartcl
 geometry: 'a4paper,top=30mm,left=20mm,heightrounded'
-fontsize: 13pt
+fontsize: 12pt
 mainfont: 'Hiragino Kaku Gothic ProN'
 sansfont: 'Hiragino Kaku Gothic ProN'
 monofont: 'Menlo'

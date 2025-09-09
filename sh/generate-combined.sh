@@ -5,6 +5,12 @@
 
 echo "🔄 QMDファイルから動的にcombined.mdを生成中..."
 
+# 既存のcombined.mdがあれば削除して新規生成を保証
+if [ -f "combined.md" ]; then
+    echo "🗑️  既存のcombined.mdを削除してクリーン生成を開始..."
+    rm -f combined.md
+fi
+
 # 1. ヘッダー設定を_quarto_booklet.ymlから読み込み
 if [ -f "_quarto_booklet.yml" ]; then
     cat "_quarto_booklet.yml" > combined.md
@@ -26,29 +32,32 @@ find docs/ -name "*.qmd" -type f | sort | while read file; do
     echo "" >> combined.md
     echo "<!-- ファイル: $file -->" >> combined.md
     
-    # ファイル名からヘッダー更新コマンドを生成
+    # ファイル名からヘッダー更新コマンドを生成（コメントのみ保持）
     BASENAME=$(basename "$file" .qmd)
-    echo "\\updateheader{$BASENAME}" >> combined.md
+    # echo "\\updateheader{$BASENAME}" >> combined.md
     echo "" >> combined.md
     
     # YAMLフロントマターを除去してコンテンツを追加
-    # HTMLタグも除去してPandoc+LaTeX互換性を向上
+    # 問題を起こすHTMLタグを除去してMarkdown互換性を向上
     awk '/^---$/{if(++count==2) skip=0; else skip=1; next} !skip' "$file" | \
-    sed 's/<table>/\n| | | |\n|---|---|---|\n/g' | \
-    sed 's/<\/table>//g' | \
-    sed 's/<tr>//g' | \
-    sed 's/<\/tr>//g' | \
-    sed 's/<td[^>]*>//g' | \
-    sed 's/<\/td>/ | /g' | \
+    sed 's/<table[^>]*>/\n\n/g' | \
+    sed 's/<\/table>/\n\n/g' | \
+    sed 's/<tr[^>]*>/\n/g' | \
+    sed 's/<\/tr>/\n/g' | \
+    sed 's/<td[^>]*>/| /g' | \
+    sed 's/<\/td>/ /g' | \
     sed 's/<strong>/\*\*/g' | \
     sed 's/<\/strong>/\*\*/g' | \
-    sed 's/<br>/  \n/g' | \
-    sed 's/<img[^>]*>//g' | \
-    sed 's/<small>/\*(/g' | \
-    sed 's/<\/small>/)\*/g' | \
+    sed 's/<br[^>]*>/  /g' | \
+    sed 's/<img[^>]*alt="[^"]*"[^>]*>/\[画像\]/g' | \
+    sed 's/<img[^>]*>/\[画像\]/g' | \
+    sed 's/<small>/\*/g' | \
+    sed 's/<\/small>/\*/g' | \
+    sed 's/<\/\?div[^>]*>//g' | \
+    sed 's/<\/\?span[^>]*>//g' | \
+    sed 's/<\/\?p[^>]*>//g' | \
     sed 's/<[^>]*>//g' | \
-    sed 's/\[\*\*\([^]]*\)\*\*\]/[\1]/g' | \
-    sed 's/\*\*\([^*]*\)\*\*$/\*\*\1\*\* /g' >> combined.md
+    cat >> combined.md
     
     # 次のファイルとの境界に改ページを挿入
     echo "" >> combined.md

@@ -177,36 +177,16 @@ quarto render docs/1410_初動対応チェックシート_0-30分.qmd --to pdf
 find docs/ -name "*.qmd" -exec quarto render {} --to pdf \;
 ```
 
-#### 3. 統合PDF生成（手動・ローカル）
+#### 3. 統合PDF生成（make_pdf.sh使用）
 ```bash
-# 全QMDファイルを1つの統合PDFに変換
-# GitHub Actionsと同じ処理をローカルで実行
+# make_pdf.shスクリプトで統合PDF生成
+./make_pdf.sh
 
-# **重要**: 生成されたPDFは必ずbooklet-pdf/フォルダに配置する
-# 命名規則: fukuitouseki_booklet_YYYYMMDD_HHMM.pdf
-
-# 1. 新しいPDFを生成
-pandoc combined.md --pdf-engine=xelatex --toc --toc-depth=2 --number-sections \
-  -V linestretch=1.2 -V pagestyle=plain \
-  -o "booklet-pdf/fukuitouseki_booklet_$(date '+%Y%m%d_%H%M').pdf"
-
-# 2. 旧版を自動的にアーカイブ化（新しいPDF以外をすべて移動）
-# 最新のPDFファイル以外をarchivedフォルダに移動
-find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
-sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/
-
-echo "PDF生成完了。旧版は booklet-pdf/archived/ に移動済み"
-```
-
-#### 3-2. ワンライナー版（PDF生成+アーカイブ化）
-```bash
-# PDF生成と旧版アーカイブを一括実行
-pandoc combined.md --pdf-engine=xelatex --toc --toc-depth=2 --number-sections \
-  -V linestretch=1.2 -V pagestyle=plain \
-  -o "booklet-pdf/fukuitouseki_booklet_$(date '+%Y%m%d_%H%M').pdf" && \
-find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
-sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/ && \
-echo "PDF生成・アーカイブ化完了"
+# 処理内容:
+# - 全QMDファイルからcombined.mdを動的生成
+# - _quarto_booklet.yml設定でPDF生成
+# - 旧版を自動的にarchived/に移動
+# - 中間ファイル自動削除
 ```
 
 #### 4. PDF配置の絶対ルール
@@ -234,45 +214,23 @@ docs/マニュアル.pdf            # 間違ったフォルダ配置
 - 「統合PDFを作成して」→ GitHub Actions実行  
 - 「個別のPDFファイルを作成して」→ find + quarto render実行
 - 「特定のファイルだけPDF化」→ quarto render [ファイル名] --to pdf
-- 「PDFつくって」→ combined.mdを基にローカルPDF生成実行
+- 「PDFつくって」→ `./make_pdf.sh` 実行
 
-#### 6. ローカルPDF生成手順（combined.mdベース）
+#### 6. ローカルPDF生成手順（make_pdf.sh使用）
 
 「PDFつくって」指示を受けた場合の標準手順：
 
 ```bash
-# 1. combined.mdから直接PDF生成
-export TZ='Asia/Tokyo'
-DATETIME=$(date '+%Y%m%d_%H%M')
-PDF_NAME="fukuitouseki_booklet_${DATETIME}.pdf"
-
-# 2. macOS環境用フォントでPandoc実行
-pandoc combined.md \
-  --pdf-engine=xelatex \
-  --toc \
-  --toc-depth=2 \
-  --number-sections \
-  -V linestretch=1.2 \
-  -o "${PDF_NAME}"
-
-# 3. booklet-pdfフォルダに配置・重複回避
-VERSION=""
-COUNTER=1
-while [ -f "booklet-pdf/${PDF_NAME%.*}${VERSION}.pdf" ]; do
-  VERSION="-${COUNTER}"
-  COUNTER=$((COUNTER + 1))
-done
-FINAL_PDF_NAME="${PDF_NAME%.*}${VERSION}.pdf"
-mv "${PDF_NAME}" "booklet-pdf/${FINAL_PDF_NAME}"
-
-# 4. 古いPDFのアーカイブ化
-find booklet-pdf/ -maxdepth 1 -name "fukuitouseki_booklet_*.pdf" -type f | \
-sort -r | tail -n +2 | xargs -I {} mv {} booklet-pdf/archived/
-
-echo "PDF生成完了: booklet-pdf/${FINAL_PDF_NAME}"
+# make_pdf.shスクリプトを実行
+./make_pdf.sh
 ```
 
-**重要**: combined.mdは既存のため、新規生成は不要。直接PandocでPDF化する。
+**make_pdf.shの処理内容：**
+- 全QMDファイルから動的にcombined.mdを生成
+- _quarto_booklet.ymlから設定を読み込み
+- PandocでPDF生成（XeLaTeX + 日本語フォント対応）
+- 古いPDFを自動的にarchivedフォルダに移動
+- 中間ファイルの自動削除
 
 注：QuartoはPython、R、Juliaなどの環境をサポートしますが、このプロジェクトは主にMarkdownベースのドキュメント生成に使用されています。
 
@@ -332,26 +290,16 @@ echo "PDF生成完了: booklet-pdf/${FINAL_PDF_NAME}"
    - **問題**: 複数ファイルでの`xargs -0 pandoc`コマンド解析問題
    - **解決策**: 明示的なファイルリストまたはファイル結合アプローチで直接pandocコマンドを使用
 
-### 動作するPDF生成アプローチ
+### PDF生成アプローチ
 
-現在の成功している方法は、Pandoc処理前にファイルを結合します：
+**推奨方法**: `make_pdf.sh` スクリプトを使用し、以下の処理を自動化：
 
-```bash
-# 統一YAMLヘッダーの作成
-echo "---" > combined.md
-echo "title: 福井県透析防災マニュアル" >> combined.md
-echo "author: 福井透析ネットワーク本部" >> combined.md
-echo "lang: ja" >> combined.md
-echo "CJKmainfont: 'Noto Sans CJK JP'" >> combined.md
-# ... 追加メタデータ
-
-# ファイルの結合、個別YAMLフロントマターを削除
-for file in [ファイルリスト]; do
-  echo "\\newpage" >> combined.md
-  sed '1,/^---$/d; /^---$/,/^---$/d' "$file" >> combined.md
-done
-
-```
+1. **QMDファイルの動的統合**: docs/フォルダ内の全QMDファイルをスキャン
+2. **設定読み込み**: _quarto_booklet.ymlからPDF設定を取得
+3. **combined.md生成**: 統一YAMLヘッダー + 個別ファイルの結合
+4. **PDF生成**: PandocでXeLaTeXエンジン使用
+5. **アーカイブ化**: 旧版をarchived/に移動
+6. **クリーンアップ**: 中間ファイル削除
 
 ### PDF生成のファイル要件
 
@@ -619,15 +567,11 @@ git push
 
 ### PDF生成時のファイル結合ルール
 
-**重要**: 複数のQMDファイルからPDF生成する際は、各ファイル間で必ず改ページを挿入します：
+**重要**: make_pdf.sh内で、複数のQMDファイル間に改ページを自動挿入：
 
-```bash
-# 各ファイル間で確実に改ページを挿入
-echo "\\newpage" >> combined.md
-echo "" >> combined.md
-echo "<!-- ファイル: $file -->" >> combined.md
-echo "" >> combined.md
-```
+- 各チェックシート・様式が独立したページから開始
+- 印刷時の見やすさを確保
+- ファイル境界が明確に識別可能
 
 この改ページルールにより：
 - 各チェックシート・様式が独立したページから開始
