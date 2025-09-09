@@ -32,9 +32,10 @@ find docs/ -name "*.qmd" -type f | sort | while read file; do
     echo "" >> combined.md
     echo "<!-- ファイル: $file -->" >> combined.md
     
-    # ファイル名からヘッダー更新コマンドを生成（コメントのみ保持）
+    # ファイル名からヘッダー更新コマンドを生成（アンダースコアをスペースに変換）
     BASENAME=$(basename "$file" .qmd)
-    # echo "\\updateheader{$BASENAME}" >> combined.md
+    HEADER_NAME=$(echo "$BASENAME" | sed 's/_/ /g')
+    echo "\\updateheader{$HEADER_NAME}" >> combined.md
     echo "" >> combined.md
     
     # YAMLフロントマターを除去してコンテンツを追加
