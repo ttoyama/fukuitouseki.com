@@ -19,163 +19,149 @@ format:
       - right=20mm
       - footskip=18mm
       - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
 version: "2025.09.06版"
 header-right: "112 様式02 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 様式02: 災害時透析医療機関状況報告書（詳細報告用）
 
 
 
-**【報告時刻】発災後**（\underlinespace{2cm}）時間
+**【報告時刻】発災後**（________）時間
 
 
 
-**【施設名】** \underlinespace{10cm}
+**【施設名】** ______________________________________
 
 
 
-**【報告者】** \underlinespace{4cm}      **【連絡先】** \underlinespace{5cm}
+**【報告者】** ________________      **【連絡先】** ____________________
 
 
 
 % ライフライン状況
 
-**\large ライフライン状況**
+**ライフライン状況**
 
 
 
 
-\checkbox 電力：     \checkbox 正常      /      \checkbox 一部停電      /      \checkbox 全停電
+☐ 電力：     ☐ 正常      /      ☐ 一部停電      /      ☐ 全停電
 
 
 
-（自家発電：\checkbox 有・\checkbox 無、稼働時間：\underlinespace{2cm}）
+（自家発電：☐ 有・☐ 無、稼働時間：________）
 
 
 
-\checkbox 上水道：     \checkbox 正常      /      \checkbox 水圧低下      /      \checkbox 断水
+☐ 上水道：     ☐ 正常      /      ☐ 水圧低下      /      ☐ 断水
 
 
 
-（貯水：\underlinespace{2cm}m$^3$）
+（貯水：________m$^3$）
 
 
 
-\checkbox ガス：     \checkbox 正常      /      \checkbox 一部停止      /      \checkbox 全停止
+☐ ガス：     ☐ 正常      /      ☐ 一部停止      /      ☐ 全停止
 
 
 
-\checkbox 通信：     \checkbox 正常      /      \checkbox 一部不通      /      \checkbox 全不通
+☐ 通信：     ☐ 正常      /      ☐ 一部不通      /      ☐ 全不通
 
 
 
 % 透析関連設備
 
-**\large 透析関連設備**
+**透析関連設備**
 
 
 
 
-\checkbox 透析装置：正常（\underlinespace{1.5cm}）台      /      軽微異常（\underlinespace{1.5cm}）台      /      使用不可（\underlinespace{1.5cm}）台
+☐ 透析装置：正常（______）台      /      軽微異常（______）台      /      使用不可（______）台
 
 
 
-\checkbox 水処理装置：     \checkbox 正常      /      \checkbox 軽微異常      /      \checkbox 使用不可
+☐ 水処理装置：     ☐ 正常      /      ☐ 軽微異常      /      ☐ 使用不可
 
 
 
-\checkbox 透析液供給：     \checkbox 正常      /      \checkbox 一部支障      /      \checkbox 供給不可
+☐ 透析液供給：     ☐ 正常      /      ☐ 一部支障      /      ☐ 供給不可
 
 
 
 % 運営状況
 
-**\large 運営状況**
+**運営状況**
 
 
 
 
-\checkbox 透析継続：     \checkbox 可能      /      \checkbox 一部制限      /      \checkbox 不可能
+☐ 透析継続：     ☐ 可能      /      ☐ 一部制限      /      ☐ 不可能
 
 
 
-\checkbox 継続可能患者数：（\underlinespace{2cm}）名/日
+☐ 継続可能患者数：（________）名/日
 
 
 
-\checkbox 受け入れ可能患者数：緊急（\underlinespace{1.5cm}）名、当日（\underlinespace{1.5cm}）名、翌日（\underlinespace{1.5cm}）名
+☐ 受け入れ可能患者数：緊急（______）名、当日（______）名、翌日（______）名
 
 
 
-\checkbox 必要支援：人員（医師\underlinespace{1cm}名、看護師\underlinespace{1cm}名、技師\underlinespace{1cm}名）
+☐ 必要支援：人員（医師____名、看護師____名、技師____名）
 
 
 
-\hspace*{3.5cm}物資（\underlinespace{8cm}）
+        物資（________________________________）
 
 
 
-\hspace*{3.5cm}患者搬送（\underlinespace{2cm}）名
+        患者搬送（________）名
 
 
 
 % 復旧見込み
 
-**\large 復旧見込み**
+**復旧見込み**
 
 
 
 
-\checkbox 電力復旧見込み：（\underlinespace{2cm}）時間後      /      （\underlinespace{2cm}）日後      /      \checkbox 不明
+☐ 電力復旧見込み：（________）時間後      /      （________）日後      /      ☐ 不明
 
 
 
-\checkbox 水道復旧見込み：（\underlinespace{2cm}）時間後      /      （\underlinespace{2cm}）日後      /      \checkbox 不明
+☐ 水道復旧見込み：（________）時間後      /      （________）日後      /      ☐ 不明
 
 
 
-\checkbox 透析再開見込み：（\underlinespace{2cm}）時間後      /      （\underlinespace{2cm}）日後      /      \checkbox 不明
+☐ 透析再開見込み：（________）時間後      /      （________）日後      /      ☐ 不明
 
 
 
 % 備考・追加情報
 
-**\large 備考・追加情報**
+**備考・追加情報**
 
 
 
 
-\underlinespace{13cm}
+__________________________________________________
 
 
 
-\underlinespace{13cm}
+__________________________________________________
 
 
 
-\underlinespace{13cm}
+__________________________________________________
 
 
 
-\underlinespace{13cm}
+__________________________________________________
 
 
 
-\underlinespace{13cm}
+__________________________________________________

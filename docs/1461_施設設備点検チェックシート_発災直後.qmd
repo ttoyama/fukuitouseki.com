@@ -19,156 +19,124 @@ format:
       - right=20mm
       - footskip=18mm
       - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
 version: "2025.09.06版"
 header-right: "222 施設設備点検チェックシート（発災直後対応） 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 施設設備点検チェックシート（発災直後対応）
 
 
 
-**施設名：** \underlinespace{8cm}
+**施設名：** ________________________________
 
 
 
-**発災日時：**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**発災日時：**________年____月____日____時____分
 
 
 
-**点検実施者：** \underlinespace{4cm}      **点検開始時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+**点検実施者：** ________________      **点検開始時刻：** ____時____分
 
 
 
 % 建物・構造物の緊急点検
 
-**\large 建物・構造物の緊急安全点検**
+**建物・構造物の緊急安全点検**
 
 
 
 
-\checkbox 建物外観の損傷確認：\checkbox 損傷なし      \checkbox 軽微な損傷      \checkbox 重大な損傷
+☐ 建物外観の損傷確認：☐ 損傷なし      ☐ 軽微な損傷      ☐ 重大な損傷
 
 
 
-損傷箇所の詳細：\underlinespace{10cm}
+損傷箇所の詳細：______________________________________
 
 
 
-\checkbox 建物内部の損傷確認：\checkbox 損傷なし      \checkbox 軽微な損傷      \checkbox 重大な損傷
+☐ 建物内部の損傷確認：☐ 損傷なし      ☐ 軽微な損傷      ☐ 重大な損傷
 
 
 
-（\checkbox 壁面      \checkbox 天井      \checkbox 床面      \checkbox 柱・梁      \checkbox その他）
+（☐ 壁面      ☐ 天井      ☐ 床面      ☐ 柱・梁      ☐ その他）
 
 
 
-\checkbox 透析室の安全性：\checkbox 使用可能      \checkbox 一部制限      \checkbox 使用不可
+☐ 透析室の安全性：☐ 使用可能      ☐ 一部制限      ☐ 使用不可
 
 
 
-制限・不可理由：\underlinespace{10cm}
+制限・不可理由：______________________________________
 
 
 
-\checkbox 避難経路の確保：\checkbox 確保済      \checkbox 一部阻害      \checkbox 阻害・不通
+☐ 避難経路の確保：☐ 確保済      ☐ 一部阻害      ☐ 阻害・不通
 
 
 
-阻害箇所：\underlinespace{10cm}
+阻害箇所：______________________________________
 
 
 
 % ライフラインの緊急確認
 
-**\large ライフラインの緊急確認**
+**ライフラインの緊急確認**
 
 
 
 
-\checkbox 電力供給状況：\checkbox 正常      \checkbox 一部停電      \checkbox 全停電
+☐ 電力供給状況：☐ 正常      ☐ 一部停電      ☐ 全停電
 
 
 
-\checkbox 自家発電装置：\checkbox 正常稼働      \checkbox 要点検      \checkbox 故障      \checkbox 無
+☐ 自家発電装置：☐ 正常稼働      ☐ 要点検      ☐ 故障      ☐ 無
 
 
 
-稼働予定時間：\underlinespace{3cm}      燃料残量：\underlinespace{3cm}
+稼働予定時間：____________      燃料残量：____________
 
 
 
-\checkbox 上水道供給状況：\checkbox 正常      \checkbox 水圧低下      \checkbox 断水
+☐ 上水道供給状況：☐ 正常      ☐ 水圧低下      ☐ 断水
 
 
 
-\checkbox 透析用水確保：\checkbox 確保済      \checkbox 要調整      \checkbox 確保困難
+☐ 透析用水確保：☐ 確保済      ☐ 要調整      ☐ 確保困難
 
 
 
-貯水状況：\underlinespace{3cm}m$^3$ （推定\underlinespace{2cm}時間分）
+貯水状況：____________m$^3$ （推定________時間分）
 
 
 
-\checkbox ガス供給状況：\checkbox 正常      \checkbox 供給停止      \checkbox 該当なし
+☐ ガス供給状況：☐ 正常      ☐ 供給停止      ☐ 該当なし
 
 
 
-\checkbox 通信手段確認：\checkbox 正常      \checkbox 一部不通      \checkbox 通信不可
+☐ 通信手段確認：☐ 正常      ☐ 一部不通      ☐ 通信不可
 
 
 
-（\checkbox 固定電話      \checkbox 携帯電話      \checkbox インターネット      \checkbox その他）
+（☐ 固定電話      ☐ 携帯電話      ☐ インターネット      ☐ その他）
 
 
 
 % 透析関連設備の緊急点検
 
-**\large 透析関連設備の緊急点検**
+**透析関連設備の緊急点検**
 
 
 
 
-\begin{longtable}{|p{4cm}|p{2.5cm}|p{2.5cm}|p{3cm}|}
-\hline
-**設備名** & **損傷・異常** & **機能状況** & **対応要否** \\
-\hline
-\endfirsthead
-\hline
-**設備名** & **損傷・異常** & **機能状況** & **対応要否** \\
-\hline
-\endhead
-透析液作成装置 & \checkbox 異常なし & \checkbox 正常 & \checkbox 不要 \\
-               & \checkbox 異常あり & \checkbox 要確認 & \checkbox 要対応 \\[0.3cm]
-\hline
-透析用監視装置 & \checkbox 異常なし & \checkbox 正常 & \checkbox 不要 \\
-（コンソール） & \checkbox 異常あり & \checkbox 要確認 & \checkbox 要対応 \\[0.3cm]
-\hline
-透析ベッド & \checkbox 異常なし & \checkbox 正常 & \checkbox 不要 \\
-           & \checkbox 異常あり & \checkbox 要確認 & \checkbox 要対応 \\[0.3cm]
-\hline
-水処理装置 & \checkbox 異常なし & \checkbox 正常 & \checkbox 不要 \\
-           & \checkbox 異常あり & \checkbox 要確認 & \checkbox 要対応 \\[0.3cm]
-\hline
-透析用配管 & \checkbox 異常なし & \checkbox 正常 & \checkbox 不要 \\
-           & \checkbox 異常あり & \checkbox 要確認 & \checkbox 要対応 \\[0.3cm]
-\hline
-\end{longtable}
+| **設備名** | **損傷・異常** | **機能状況** | **対応要否** |
+|-----------|-------------|------------|-------------|
+| 透析液作成装置 | ☐ 異常なし<br>☐ 異常あり | ☐ 正常<br>☐ 要確認 | ☐ 不要<br>☐ 要対応 |
+| 透析用監視装置<br>（コンソール） | ☐ 異常なし<br>☐ 異常あり | ☐ 正常<br>☐ 要確認 | ☐ 不要<br>☐ 要対応 |
+| 透析ベッド | ☐ 異常なし<br>☐ 異常あり | ☐ 正常<br>☐ 要確認 | ☐ 不要<br>☐ 要対応 |
+| 水処理装置 | ☐ 異常なし<br>☐ 異常あり | ☐ 正常<br>☐ 要確認 | ☐ 不要<br>☐ 要対応 |
+| 透析用配管 | ☐ 異常なし<br>☐ 異常あり | ☐ 正常<br>☐ 要確認 | ☐ 不要<br>☐ 要対応 |
 
 
 
@@ -176,65 +144,65 @@ header-right: "222 施設設備点検チェックシート（発災直後対応�
 
 
 
-1. \underlinespace{12cm}
+1. ____________________________________________
 
 
 
-2. \underlinespace{12cm}
+2. ____________________________________________
 
 
 
-3. \underlinespace{12cm}
+3. ____________________________________________
 
 
 
 % 緊急時対応物品の確認
 
-**\large 緊急時対応物品の確認**
+**緊急時対応物品の確認**
 
 
 
 
-\checkbox 停電時対応：\checkbox 懐中電灯確保      \checkbox バッテリー確保      \checkbox ランタン確保
+☐ 停電時対応：☐ 懐中電灯確保      ☐ バッテリー確保      ☐ ランタン確保
 
 
 
-\checkbox 通信機器：\checkbox 携帯電話使用可      \checkbox ハンドマイク使用可      \checkbox ラジオ使用可
+☐ 通信機器：☐ 携帯電話使用可      ☐ ハンドマイク使用可      ☐ ラジオ使用可
 
 
 
-\checkbox 救急処置物品：\checkbox 確保済      \checkbox 一部確保      \checkbox 要調達
+☐ 救急処置物品：☐ 確保済      ☐ 一部確保      ☐ 要調達
 
 
 
-不足物品：\underlinespace{10cm}
+不足物品：______________________________________
 
 
 
-\checkbox AED・救急カート：\checkbox 正常      \checkbox 要点検      \checkbox 使用不可
+☐ AED・救急カート：☐ 正常      ☐ 要点検      ☐ 使用不可
 
 
 
 % 透析継続可否の総合判断
 
-**\large 透析継続可否の総合判断**
+**透析継続可否の総合判断**
 
 
 
 
-\checkbox 透析実施可否：\checkbox 継続可能      \checkbox 条件付可能      \checkbox 実施困難
+☐ 透析実施可否：☐ 継続可能      ☐ 条件付可能      ☐ 実施困難
 
 
 
-\checkbox 患者受入可能数：通常の\underlinespace{2cm}％（\underlinespace{3cm}名程度）
+☐ 患者受入可能数：通常の________％（____________名程度）
 
 
 
-\checkbox 制限・困難理由：
+☐ 制限・困難理由：
 
 
 
-（\checkbox 建物損傷      \checkbox 電力不足      \checkbox 水不足      \checkbox 設備故障      \checkbox スタッフ不足）
+（☐ 建物損傷      ☐ 電力不足      ☐ 水不足      ☐ 設備故障      ☐ スタッフ不足）
 
 
 
@@ -242,43 +210,43 @@ header-right: "222 施設設備点検チェックシート（発災直後対応�
 
 
 
-1. \underlinespace{12cm}
+1. ____________________________________________
 
 
 
-2. \underlinespace{12cm}
+2. ____________________________________________
 
 
 
 % 報告・連絡事項
 
-**\large 報告・連絡事項**
+**報告・連絡事項**
 
 
 
 
-\checkbox ネットワーク本部への第一報：\checkbox 実施済      \checkbox 実施中      \checkbox 要実施
+☐ ネットワーク本部への第一報：☐ 実施済      ☐ 実施中      ☐ 要実施
 
 
 
-報告時刻：\underlinespace{2cm}時\underlinespace{2cm}分      報告者：\underlinespace{4cm}
+報告時刻：________時________分      報告者：________________
 
 
 
-\checkbox 関係機関への連絡：\checkbox 実施済      \checkbox 実施中      \checkbox 要実施
+☐ 関係機関への連絡：☐ 実施済      ☐ 実施中      ☐ 要実施
 
 
 
-（\checkbox 消防署      \checkbox 警察      \checkbox 病院      \checkbox 電力会社      \checkbox 水道局）
+（☐ 消防署      ☐ 警察      ☐ 病院      ☐ 電力会社      ☐ 水道局）
 
 
 
-\checkbox 次回点検予定：\underlinespace{2cm}時間後（\underlinespace{2cm}時\underlinespace{2cm}分予定）
+☐ 次回点検予定：________時間後（________時________分予定）
 
 
 
-**点検完了時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+**点検完了時刻：** ____時____分
 
 
 
-**点検責任者：** \underlinespace{4cm}      **確認印：** \underlinespace{3cm}
+**点検責任者：** ________________      **確認印：** ____________

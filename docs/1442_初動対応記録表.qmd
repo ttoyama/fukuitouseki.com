@@ -19,331 +19,237 @@ format:
       - right=20mm
       - footskip=18mm
       - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
 version: "2025.09.06版"
 header-right: "119 様式09 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 様式09: 初動対応記録表
 
 
 
-**【発災日時】**\underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**【発災日時】** ______年____月____日____時____分
 
 
 
-**【記録開始】**\underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**【記録開始】** ______年____月____日____時____分
 
 
 
-**【施設名】** \underlinespace{8cm}
+**【施設名】** ________________________________
 
 
 
-**【記録者】** \underlinespace{8cm}
+**【記録者】** ________________________________
 
 
 
 % 災害概要
 
-**\large 災害概要**
+**災害概要**
 
 
 
 
-\checkbox 災害種別：\checkbox 地震 / \checkbox 津波 / \checkbox 台風 / \checkbox 洪水 / \checkbox 火災 / \checkbox その他（\underlinespace{3cm}）
+☐ 災害種別：☐ 地震 / ☐ 津波 / ☐ 台風 / ☐ 洪水 / ☐ 火災 / ☐ その他（____________）
 
 
 
-\checkbox 震度・規模：\underlinespace{10cm}
+☐ 震度・規模：______________________________________
 
 
 
-\checkbox 被害範囲：\underlinespace{10cm}
+☐ 被害範囲：______________________________________
 
 
 
-\checkbox 気象情報：\underlinespace{10cm}
+☐ 気象情報：______________________________________
 
 
 
 % 時系列記録
 
-**\large 時系列記録**
+**時系列記録**
 
 
 
 
-\begin{longtable}{|p{2cm}|p{2.5cm}|p{4cm}|p{3.5cm}|}
-\hline
-**時刻** & **対応者** & **実施内容・状況** & **結果・判断** \\
-\hline
-\endfirsthead
-\hline
-**時刻** & **対応者** & **実施内容・状況** & **結果・判断** \\
-\hline
-\endhead
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-\end{longtable}
+| **時刻** | **対応者** | **実施内容・状況** | **結果・判断** |
+|----------|------------|--------------------|--------------
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
+| ___:___ |            |                    |              |
 
 % 重要な判断・決定事項
 
-**\large 重要な判断・決定事項**
+**重要な判断・決定事項**
 
 
 
 
-\begin{longtable}{|p{2cm}|p{4cm}|p{2.5cm}|p{3.5cm}|}
-\hline
-**時刻** & **決定事項** & **決定者** & **根拠・理由** \\
-\hline
-\endfirsthead
-\hline
-**時刻** & **決定事項** & **決定者** & **根拠・理由** \\
-\hline
-\endhead
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-: &  &  &  \\[0.5cm]
-\hline
-\end{longtable}
+| **時刻** | **決定事項** | **決定者** | **根拠・理由** |
+|----------|-------------|------------|---------------
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
+| ___:___ |             |            |               |
 
 % 外部機関連絡記録
 
-**\large 外部機関連絡記録**
+**外部機関連絡記録**
 
 
 
 
-\begin{longtable}{|p{1.5cm}|p{2.5cm}|p{2cm}|p{3cm}|p{2cm}|}
-\hline
-**時刻** & **連絡先** & **連絡方法** & **内容** & **結果** \\
-\hline
-\endfirsthead
-\hline
-**時刻** & **連絡先** & **連絡方法** & **内容** & **結果** \\
-\hline
-\endhead
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-: &  & 電話/メール/その他 &  &  \\[0.5cm]
-\hline
-\end{longtable}
+| **時刻** | **連絡先** | **連絡方法** | **内容** | **結果** |
+|----------|------------|-------------|----------|----------|
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
+| ___:___ |            | 電話/メール/その他 |          |          |
 
 % リソース状況変化
 
-**\large リソース状況変化**
+**リソース状況変化**
 
 
 
 
-\checkedbox 電力状況 \\
-\hspace*{1cm}\underlinespace{1cm}時：正常 → \underlinespace{1cm}時：停電 → \underlinespace{1cm}時：復旧
+☑ 電力状況  
+　　____時：正常 → ____時：停電 → ____時：復旧
 
 
 
-\checkedbox 水道状況 \\
-\hspace*{1cm}\underlinespace{1cm}時：正常 → \underlinespace{1cm}時：断水 → \underlinespace{1cm}時：復旧
+☑ 水道状況  
+　　____時：正常 → ____時：断水 → ____時：復旧
 
 
 
-\checkedbox 通信状況 \\
-\hspace*{1cm}\underlinespace{1cm}時：正常 → \underlinespace{1cm}時：不通 → \underlinespace{1cm}時：復旧
+☑ 通信状況  
+　　____時：正常 → ____時：不通 → ____時：復旧
 
 
 
-\checkedbox スタッフ参集状況 \\
-\hspace*{1cm}\underlinespace{1cm}時：\underlinespace{1cm}名 → \underlinespace{1cm}時：\underlinespace{1cm}名 → \underlinespace{1cm}時：\underlinespace{1cm}名
+☑ スタッフ参集状況  
+　　____時：____名 → ____時：____名 → ____時：____名
 
 
 
 % 患者状況変化
 
-**\large 患者状況変化**
+**患者状況変化**
 
 
 
 
-\checkedbox 施設内患者数 \\
-発災時：\underlinespace{1.5cm}名 → 現在：\underlinespace{1.5cm}名
+☑ 施設内患者数  
+発災時：______名 → 現在：______名
 
 
 
-\checkedbox 透析継続患者数 \\
-発災時：\underlinespace{1.5cm}名 → 現在：\underlinespace{1.5cm}名
+☑ 透析継続患者数  
+発災時：______名 → 現在：______名
 
 
 
-\checkedbox 搬送患者数 \\
-緊急搬送：\underlinespace{1.5cm}名、他施設搬送：\underlinespace{1.5cm}名
+☑ 搬送患者数  
+緊急搬送：______名、他施設搬送：______名
 
 
 
 % 発生した問題と対応
 
-**\large 発生した問題と対応**
+**発生した問題と対応**
 
 
 
 
-\begin{longtable}{|p{3cm}|p{2cm}|p{3.5cm}|p{3.5cm}|}
-\hline
-**問題・課題** & **発生時刻** & **対応策** & **解決状況** \\
-\hline
-\endfirsthead
-\hline
-**問題・課題** & **発生時刻** & **対応策** & **解決状況** \\
-\hline
-\endhead
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
- & : &  &  \\[0.5cm]
-\hline
-\end{longtable}
+| **問題・課題** | **発生時刻** | **対応策** | **解決状況** |
+|---------------|-------------|------------|-------------|
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
+|               | ___:___    |            |             |
 
 % 教訓・改善点
 
-**\large 教訓・改善点**
+**教訓・改善点**
 
 
 
 
-\checkedbox うまくいった対応 \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm}
+☑ うまくいった対応  
+・____________________________________________  
+・____________________________________________  
+・____________________________________________
 
 
 
-\checkedbox 課題となった対応 \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm}
+☑ 課題となった対応  
+・____________________________________________  
+・____________________________________________  
+・____________________________________________
 
 
 
-\checkedbox 今後の改善案 \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm} \\
-・\underlinespace{12cm}
+☑ 今後の改善案  
+・____________________________________________  
+・____________________________________________  
+・____________________________________________
 
 
 
 % 記録終了時点の状況
 
-**\large 記録終了時点の状況**
+**記録終了時点の状況**
 
 
 
 
-**【記録終了】**\underlinespace{1.5cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**【記録終了】**______年____月____日____時____分
 
 
 
-**【施設状況】**\checkbox 正常運営 / \checkbox 一部制限 / \checkbox 運営停止
+**【施設状況】**☐ 正常運営 / ☐ 一部制限 / ☐ 運営停止
 
 
 
-**【透析状況】**\checkbox 通常通り / \checkbox 短時間透析 / \checkbox 停止中
+**【透析状況】**☐ 通常通り / ☐ 短時間透析 / ☐ 停止中
 
 
 
-**【次の課題】**\underlinespace{10cm}
+**【次の課題】**______________________________________

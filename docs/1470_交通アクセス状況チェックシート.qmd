@@ -19,199 +19,152 @@ format:
       - right=20mm
       - footskip=18mm
       - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
 version: "2025.09.06版"
 header-right: "223 交通アクセス状況チェックシート（発災直後対応） 2025.09.06版"
 ---
 
-% 手動でタイトルを作成
 
 # 交通アクセス状況チェックシート（発災直後対応）
 
 
 
-**施設名：** \underlinespace{8cm}
+**施設名：** ____________________________
 
 
 
-**発災日時：**\underlinespace{2cm}年\underlinespace{1cm}月\underlinespace{1cm}日\underlinespace{1cm}時\underlinespace{1cm}分
+**発災日時：** ______年____月____日____時____分
 
 
 
-**確認者：** \underlinespace{4cm}      **確認時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+**確認者：** ________________      **確認時刻：** ____時____分
 
 
 
-% 主要道路・アクセス路の被害状況
-
-**\large 主要道路・アクセス路の被害状況**
-
-
-
-
-\begin{longtable}{|p{4cm}|p{2.5cm}|p{2.5cm}|p{3cm}|}
-\hline
-**道路・区間名** & **通行状況** & **被害状況** & **迂回路の有無** \\
-\hline
-\endfirsthead
-\hline
-**道路・区間名** & **通行状況** & **被害状況** & **迂回路の有無** \\
-\hline
-\endhead
-\underlinespace{3.5cm} & \checkbox 通行可能 & \checkbox 被害なし & \checkbox 迂回路あり \\
-                       & \checkbox 通行困難 & \checkbox 一部損傷 & \checkbox 迂回路なし \\
-                       & \checkbox 通行不可 & \checkbox 重大損傷 & \checkbox 調査中 \\[0.5cm]
-\hline
-\underlinespace{3.5cm} & \checkbox 通行可能 & \checkbox 被害なし & \checkbox 迂回路あり \\
-                       & \checkbox 通行困難 & \checkbox 一部損傷 & \checkbox 迂回路なし \\
-                       & \checkbox 通行不可 & \checkbox 重大損傷 & \checkbox 調査中 \\[0.5cm]
-\hline
-\underlinespace{3.5cm} & \checkbox 通行可能 & \checkbox 被害なし & \checkbox 迂回路あり \\
-                       & \checkbox 通行困難 & \checkbox 一部損傷 & \checkbox 迂回路なし \\
-                       & \checkbox 通行不可 & \checkbox 重大損傷 & \checkbox 調査中 \\[0.5cm]
-\hline
-\underlinespace{3.5cm} & \checkbox 通行可能 & \checkbox 被害なし & \checkbox 迂回路あり \\
-                       & \checkbox 通行困難 & \checkbox 一部損傷 & \checkbox 迂回路なし \\
-                       & \checkbox 通行不可 & \checkbox 重大損傷 & \checkbox 調査中 \\[0.5cm]
-\hline
-\underlinespace{3.5cm} & \checkbox 通行可能 & \checkbox 被害なし & \checkbox 迂回路あり \\
-                       & \checkbox 通行困難 & \checkbox 一部損傷 & \checkbox 迂回路なし \\
-                       & \checkbox 通行不可 & \checkbox 重大損傷 & \checkbox 調査中 \\[0.5cm]
-\hline
-\end{longtable}
-
-
-
-% 公共交通機関の運行状況
-
-**\large 公共交通機関の運行状況**
+**主要道路・アクセス路の被害状況**
 
 
 
 
-\checkbox JR線：\checkbox 正常運行      \checkbox 一部運休      \checkbox 全面運休      \checkbox 該当なし
+| **道路・区間名** | **通行状況** | **被害状況** | **迂回路の有無** |
+|------------------|--------------|--------------|------------------|
+| ______________ | ☐ 通行可能<br>☐ 通行困難<br>☐ 通行不可 | ☐ 被害なし<br>☐ 一部損傷<br>☐ 重大損傷 | ☐ 迂回路あり<br>☐ 迂回路なし<br>☐ 調査中 |
+| ______________ | ☐ 通行可能<br>☐ 通行困難<br>☐ 通行不可 | ☐ 被害なし<br>☐ 一部損傷<br>☐ 重大損傷 | ☐ 迂回路あり<br>☐ 迂回路なし<br>☐ 調査中 |
+| ______________ | ☐ 通行可能<br>☐ 通行困難<br>☐ 通行不可 | ☐ 被害なし<br>☐ 一部損傷<br>☐ 重大損傷 | ☐ 迂回路あり<br>☐ 迂回路なし<br>☐ 調査中 |
+| ______________ | ☐ 通行可能<br>☐ 通行困難<br>☐ 通行不可 | ☐ 被害なし<br>☐ 一部損傷<br>☐ 重大損傷 | ☐ 迂回路あり<br>☐ 迂回路なし<br>☐ 調査中 |
+| ______________ | ☐ 通行可能<br>☐ 通行困難<br>☐ 通行不可 | ☐ 被害なし<br>☐ 一部損傷<br>☐ 重大損傷 | ☐ 迂回路あり<br>☐ 迂回路なし<br>☐ 調査中 |
 
 
 
-運休区間・理由：\underlinespace{10cm}
+**公共交通機関の運行状況**
 
 
 
-\checkbox 私鉄・地下鉄：\checkbox 正常運行      \checkbox 一部運休      \checkbox 全面運休      \checkbox 該当なし
+
+☐ JR線：☐ 正常運行    ☐ 一部運休    ☐ 全面運休    ☐ 該当なし
+
+運休区間・理由：______________________________________
 
 
 
-運休路線・理由：\underlinespace{10cm}
+☐ 私鉄・地下鉄：☐ 正常運行    ☐ 一部運休    ☐ 全面運休    ☐ 該当なし
+
+運休路線・理由：______________________________________
 
 
 
-\checkbox バス路線：\checkbox 正常運行      \checkbox 一部運休      \checkbox 全面運休
+☐ バス路線：☐ 正常運行    ☐ 一部運休    ☐ 全面運休
 
-
-
-運休路線・理由：\underlinespace{10cm}
+運休路線・理由：______________________________________
 
 
 
 % 施設周辺のアクセス状況
 
-**\large 施設周辺のアクセス状況**
+**施設周辺のアクセス状況**
 
 
 
 
-\checkbox 施設正面アクセス：\checkbox 通行可能      \checkbox 通行困難      \checkbox 通行不可
+☐ 施設正面アクセス：☐ 通行可能      ☐ 通行困難      ☐ 通行不可
 
 
 
-阻害要因：\underlinespace{10cm}
+阻害要因：______________________________________
 
 
 
-\checkbox 駐車場への進入：\checkbox 可能      \checkbox 困難      \checkbox 不可
+☐ 駐車場への進入：☐ 可能      ☐ 困難      ☐ 不可
 
 
 
-問題状況：\underlinespace{10cm}
+問題状況：______________________________________
 
 
 
-\checkbox 緊急車両の進入：\checkbox 可能      \checkbox 制限あり      \checkbox 不可
+☐ 緊急車両の進入：☐ 可能      ☐ 制限あり      ☐ 不可
 
 
 
-制限・阻害内容：\underlinespace{10cm}
+制限・阻害内容：______________________________________
 
 
 
-\checkbox 患者送迎車両の運行：\checkbox 可能      \checkbox 困難      \checkbox 不可
+☐ 患者送迎車両の運行：☐ 可能      ☐ 困難      ☐ 不可
 
 
 
 % 交通規制・通行止め情報
 
-**\large 交通規制・通行止め情報**
+**交通規制・通行止め情報**
 
 
 
 
-\checkbox 警察による交通規制：\checkbox なし      \checkbox 一部区間      \checkbox 広域規制
+☐ 警察による交通規制：☐ なし      ☐ 一部区間      ☐ 広域規制
 
 
 
-規制区間・内容：\underlinespace{10cm}
+規制区間・内容：______________________________________
 
 
 
-\checkbox 道路管理者による通行止め：\checkbox なし      \checkbox 一部区間      \checkbox 広域規制
+☐ 道路管理者による通行止め：☐ なし      ☐ 一部区間      ☐ 広域規制
 
 
 
-通行止め区間・理由：\underlinespace{10cm}
+通行止め区間・理由：______________________________________
 
 
 
-\checkbox 橋梁の通行制限：\checkbox なし      \checkbox 重量制限      \checkbox 通行止め
+☐ 橋梁の通行制限：☐ なし      ☐ 重量制限      ☐ 通行止め
 
 
 
-制限対象橋梁：\underlinespace{10cm}
+制限対象橋梁：______________________________________
 
 
 
 % 患者搬送への影響評価
 
-**\large 患者搬送への影響評価**
+**患者搬送への影響評価**
 
 
 
 
-\checkbox 通常透析患者の来院：\checkbox 支障なし      \checkbox 一部困難      \checkbox 大幅困難
+☐ 通常透析患者の来院：☐ 支障なし      ☐ 一部困難      ☐ 大幅困難
 
 
 
-\checkbox 他施設からの受入搬送：\checkbox 可能      \checkbox 制限あり      \checkbox 困難
+☐ 他施設からの受入搬送：☐ 可能      ☐ 制限あり      ☐ 困難
 
 
 
-\checkbox 他施設への搬送：\checkbox 可能      \checkbox 制限あり      \checkbox 困難
+☐ 他施設への搬送：☐ 可能      ☐ 制限あり      ☐ 困難
 
 
 
-搬送困難の主要因：\checkbox 道路損壊      \checkbox 交通規制      \checkbox 渋滞      \checkbox 車両不足
+搬送困難の主要因：☐ 道路損壊      ☐ 交通規制      ☐ 渋滞      ☐ 車両不足
 
 
 
@@ -219,75 +172,75 @@ header-right: "223 交通アクセス状況チェックシート（発災直後�
 
 
 
-近隣施設への搬送：平常時の\underlinespace{2cm}倍（約\underlinespace{2cm}分）
+近隣施設への搬送：平常時の________倍（約________分）
 
 
 
-遠方施設への搬送：平常時の\underlinespace{2cm}倍（約\underlinespace{2cm}分）
+遠方施設への搬送：平常時の________倍（約________分）
 
 
 
 % スタッフ参集への影響
 
-**\large スタッフ参集への影響**
+**スタッフ参集への影響**
 
 
 
 
-\checkbox 徒歩での参集：\checkbox 可能      \checkbox 一部困難      \checkbox 困難
+☐ 徒歩での参集：☐ 可能      ☐ 一部困難      ☐ 困難
 
 
 
-\checkbox 自転車での参集：\checkbox 可能      \checkbox 一部困難      \checkbox 困難
+☐ 自転車での参集：☐ 可能      ☐ 一部困難      ☐ 困難
 
 
 
-\checkbox 自動車での参集：\checkbox 可能      \checkbox 一部困難      \checkbox 困難
+☐ 自動車での参集：☐ 可能      ☐ 一部困難      ☐ 困難
 
 
 
-\checkbox 公共交通での参集：\checkbox 可能      \checkbox 一部困難      \checkbox 困難
+☐ 公共交通での参集：☐ 可能      ☐ 一部困難      ☐ 困難
 
 
 
-参集困難の主要因：\underlinespace{10cm}
+参集困難の主要因：______________________________________
 
 
 
 % 対応策・代替手段
 
-**\large 対応策・代替手段**
+**対応策・代替手段**
 
 
 
 
-\checkbox 迂回ルートの設定：\checkbox 設定済      \checkbox 検討中      \checkbox 設定困難
+☐ 迂回ルートの設定：☐ 設定済      ☐ 検討中      ☐ 設定困難
 
 
 
-推奨ルート：\underlinespace{10cm}
+推奨ルート：______________________________________
 
 
 
-\checkbox 代替交通手段：\checkbox 確保済      \checkbox 調整中      \checkbox 確保困難
+☐ 代替交通手段：☐ 確保済      ☐ 調整中      ☐ 確保困難
 
 
 
-（\checkbox 送迎バス      \checkbox タクシー      \checkbox 救急車      \checkbox ボランティア車両）
+（☐ 送迎バス      ☐ タクシー      ☐ 救急車      ☐ ボランティア車両）
 
 
 
-\checkbox 関係機関との調整：\checkbox 完了      \checkbox 実施中      \checkbox 未実施
+☐ 関係機関との調整：☐ 完了      ☐ 実施中      ☐ 未実施
 
 
 
-（\checkbox 警察      \checkbox 道路管理者      \checkbox 消防      \checkbox 自治体）
+（☐ 警察      ☐ 道路管理者      ☐ 消防      ☐ 自治体）
 
 
 
 % 情報更新・次回確認
 
-**\large 情報更新・次回確認**
+**情報更新・次回確認**
 
 
 
@@ -296,25 +249,25 @@ header-right: "223 交通アクセス状況チェックシート（発災直後�
 
 
 
-（\checkbox 道路情報センター      \checkbox 警察      \checkbox ラジオ      \checkbox インターネット      \checkbox 現地確認）
+（☐ 道路情報センター      ☐ 警察      ☐ ラジオ      ☐ インターネット      ☐ 現地確認）
 
 
 
-**次回確認予定時刻：** \underlinespace{2cm}時\underlinespace{2cm}分（\underlinespace{2cm}時間後）
+**次回確認予定時刻：** ________時________分（________時間後）
 
 
 
-**確認完了時刻：** \underlinespace{1cm}時\underlinespace{1cm}分
+**確認完了時刻：** ____時____分
 
 
 
-**確認責任者：** \underlinespace{4cm}      **確認印：** \underlinespace{3cm}
+**確認責任者：** ________________      **確認印：** ____________
 
 
 
 % 防災情報QRコード
 
-**\large 関連防災情報サイト**
+**関連防災情報サイト**
 
 
 

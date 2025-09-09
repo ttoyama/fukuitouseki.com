@@ -100,16 +100,27 @@ jobs:
           
           # Combine all files, stripping individual YAML frontmatters
           # ファイル一覧を.bookorderから動的に読み込み（コメント行除く）
+          first_file=true
           while IFS= read -r file; do
             [ -z "$file" ] && continue
             [[ "$file" =~ ^[[:space:]]*# ]] && continue
-            echo "" >> combined.md
-            echo "\\newpage" >> combined.md
-            echo "" >> combined.md
-            # Skip YAML frontmatter and add content, then clean LaTeX artifacts
+            
+            # 最初のファイル以外は改ページを確実に挿入
+            if [ "$first_file" = true ]; then
+              first_file=false
+            else
+              echo "" >> combined.md
+              echo "\\newpage" >> combined.md
+              echo "" >> combined.md
+              echo "<!-- ファイル: $file -->" >> combined.md
+              echo "" >> combined.md
+            fi
+            
+            # Skip YAML frontmatter and add content, preserve newpage commands correctly
             sed '1,/^---$/d; /^---$/,/^---$/d' "$file" | \
             sed 's/^% .*$//' | \
-            sed 's/ewpage$/\\newpage/' | \
+            sed 's/^ewpage$/\\newpage/' | \
+            sed 's/\\ewpage/\\newpage/g' | \
             sed '/^[[:space:]]*$/N; /^[[:space:]]*\n[[:space:]]*$/d' >> combined.md
           done < .bookorder.with_cover
           

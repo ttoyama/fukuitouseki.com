@@ -19,24 +19,11 @@ format:
       - right=20mm
       - footskip=18mm
       - headsep=12mm
-    include-in-header:
-      - text: |
-          \usepackage{setspace}
-          \setstretch{1.3}
-          \usepackage{array}
-          \usepackage{longtable}
-          \usepackage{amssymb}
-          \usepackage{multirow}
-          \usepackage{booktabs}
-          \newcommand{\checkbox}{$\square$\ }
-          \newcommand{\checkedbox}{$\blacksquare$\ }
-          \newcommand{\underlinespace}[1]{\underline{\hspace{#1}}}
-          \newcommand{\circlecheck}{$\bigcirc$\ }
 lang: ja
 version: "2025-09-08版"
 header-right: "563 二次避難患者受入チェックシート 2025-09-08版"
 ---
 
-\maketitle
+# 二次避難患者受入チェックシート
 
-% Content to be developed
+このチェックシートの内容は今後開発予定です。

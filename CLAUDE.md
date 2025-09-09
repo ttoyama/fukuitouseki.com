@@ -154,6 +154,41 @@ quarto render docs/000_マニュアル本体/01-各施設の役割と対応.qmd
 quarto check
 ```
 
+### PDF生成コマンド
+
+docsフォルダ内の全QMDファイルをPDF変換する際の推奨方法：
+
+#### 1. GitHub Actions（推奨）
+```bash
+# 最も簡単な方法：変更をプッシュするだけで自動PDF生成
+git add .
+git commit -m "PDF生成用の更新"
+git push
+
+# GitHub Actionsが自動実行され、booklet-pdf/に統合PDFが生成される
+```
+
+#### 2. 個別ファイルのPDF生成
+```bash
+# 特定のQMDファイルをPDF化
+quarto render docs/1410_初動対応チェックシート_0-30分.qmd --to pdf
+
+# docsフォルダ内の全QMDファイルを個別PDF化
+find docs/ -name "*.qmd" -exec quarto render {} --to pdf \;
+```
+
+#### 3. 統合PDF生成（手動）
+```bash
+# 全QMDファイルを1つの統合PDFに変換
+# GitHub Actionsと同じ処理をローカルで実行
+```
+
+#### 4. よくある指示例
+- 「docs内の全QMDファイルをPDF化して」→ GitHub Actions実行
+- 「統合PDFを作成して」→ GitHub Actions実行  
+- 「個別のPDFファイルを作成して」→ find + quarto render実行
+- 「特定のファイルだけPDF化」→ quarto render [ファイル名] --to pdf
+
 注：QuartoはPython、R、Juliaなどの環境をサポートしますが、このプロジェクトは主にMarkdownベースのドキュメント生成に使用されています。
 
 ## コンテンツガイドライン
